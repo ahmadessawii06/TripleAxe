@@ -1,6 +1,6 @@
 import { playSound } from '../utils/audio';
 
-export function HomeScreen({ onSelectMode }) {
+export function HomeScreen({ onSelectMode, onOpenSettings }) {
   const gameModes = [
     {
       id: 'quiz',
@@ -67,7 +67,27 @@ export function HomeScreen({ onSelectMode }) {
 
   return (
     <div className="home-shell">
-      <div className="home-hero-panel">
+      <div className="home-hero-panel" style={{ position: 'relative' }}>
+        <button
+          type="button"
+          onClick={onOpenSettings}
+          style={{
+            position: 'absolute',
+            top: '12px',
+            left: '12px',
+            backgroundColor: '#111',
+            border: '1px solid rgba(255,255,255,0.12)',
+            color: '#e0e0e0',
+            padding: '8px 12px',
+            borderRadius: '10px',
+            fontSize: '0.85rem',
+            cursor: 'pointer',
+            boxShadow: '0 2px 12px rgba(0,0,0,0.25)'
+          }}
+        >
+          ⚙️ إعدادات
+        </button>
+
         <h1 className="mc-font home-title">Triple Axe</h1>
 
         <div className="home-badge">

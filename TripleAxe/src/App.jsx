@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { HomeScreen } from './components/HomeScreen';
 import { QuizScreen } from './components/QuizScreen';
 import { playSound } from './utils/audio';
@@ -36,7 +36,7 @@ function App() {
   const [ammoorScore, setAmmoorScore] = useState(0);
 
   const [currentMode, setCurrentMode] = useState('home');
-  const [showSetupModal, setShowSetupModal] = useState(true);
+  const [showSetupModal, setShowSetupModal] = useState(false);
   const [player1Name, setPlayer1Name] = useState('اللاعب الأول');
   const [player2Name, setPlayer2Name] = useState('اللاعب الثاني');
   const [player1Block, setPlayer1Block] = useState(blockOptions[0]);
@@ -63,27 +63,61 @@ function App() {
         <div style={{
           position: 'fixed',
           inset: 0,
-          backgroundColor: 'rgba(0,0,0,0.85)',
+          backgroundColor: 'rgba(0,0,0,0.33)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           padding: '16px',
           zIndex: 2000,
-          backdropFilter: 'blur(3px)'
+          backdropFilter: 'blur(6px)'
         }}>
-          {/* Main modal card */}
           <div style={{
             width: '100%',
-            maxWidth: '480px',
-            backgroundColor: '#2b2b2b',
-            border: '4px solid #c6a06b',
-            borderRadius: '12px',
-            padding: '20px 18px 24px',
-            boxShadow: '0 20px 60px rgba(0,0,0,0.7), inset 0 1px 0 #5a4a32',
-            backgroundImage: 'linear-gradient(145deg, #3a3a3a 0%, #242424 100%)',
+            maxWidth: '420px',
+            backgroundColor: '#171717',
+            border: '2px solid rgba(255,255,255,0.08)',
+            borderRadius: '14px',
+            padding: '18px 16px',
+            boxShadow: '0 24px 80px rgba(0,0,0,0.45)',
             position: 'relative'
           }}>
-            {/* Decorative top bar */}
+            <button
+              type="button"
+              onClick={() => setShowSetupModal(false)}
+              style={{
+                position: 'absolute',
+                top: '12px',
+                right: '12px',
+                background: 'rgba(255,255,255,0.08)',
+                border: '1px solid rgba(255,255,255,0.15)',
+                color: '#eee',
+                width: '32px',
+                height: '32px',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontSize: '1rem',
+                lineHeight: '1'
+              }}
+            >
+              ✕
+            </button>
+            <div style={{ textAlign: 'center', marginBottom: '10px' }}>
+              <h2 style={{
+                margin: '0 0 4px 0',
+                color: '#aad8ff',
+                fontSize: '1.4rem',
+                fontWeight: '800'
+              }}>
+                🚀 إعدادات اللعبة
+              </h2>
+              <p style={{
+                margin: 0,
+                color: '#c8d8eb',
+                fontSize: '0.95rem'
+              }}>
+                عدّل الأسماء والبلوك قبل اللعب.
+              </p>
+            </div>
             <div style={{
               height: '4px',
               background: 'linear-gradient(90deg, #ffaa00, #ffdd55, #ffaa00)',
@@ -124,7 +158,6 @@ function App() {
               </p>
             </div>
 
-            {/* Player 1 Name */}
             <label style={{
               display: 'block',
               marginBottom: '12px',
@@ -137,19 +170,26 @@ function App() {
                 value={player1Name}
                 onChange={(e) => setPlayer1Name(e.target.value)}
                 style={{
-                  width: '100%',
-                  marginTop: '5px',
+                  width: '50%',
+                  marginTop: '6px',
+                  marginRight: '14px',
                   padding: '10px 12px',
-                  borderRadius: '6px',
-                  border: '2px solid #5a4a32',
-                  background: '#1a1a1a',
+                  borderRadius: '10px',
+                  border: '1px solid rgba(255,255,255,0.12)',
+                  background: '#111',
                   color: '#fff',
-                  fontSize: '1rem',
+                  fontSize: '0.98rem',
                   outline: 'none',
-                  transition: 'border-color 0.2s'
+                  transition: 'border-color 0.2s, box-shadow 0.2s'
                 }}
-                onFocus={(e) => e.target.style.borderColor = '#55ffff'}
-                onBlur={(e) => e.target.style.borderColor = '#5a4a32'}
+                onFocus={(e) => {
+                  e.target.style.borderColor = '#55ffff';
+                  e.target.style.boxShadow = '0 0 10px rgba(85,255,255,0.14)';
+                }}
+                onBlur={(e) => {
+                  e.target.style.borderColor = 'rgba(255,255,255,0.12)';
+                  e.target.style.boxShadow = 'none';
+                }}
               />
             </label>
 
@@ -166,8 +206,9 @@ function App() {
                 value={player2Name}
                 onChange={(e) => setPlayer2Name(e.target.value)}
                 style={{
-                  width: '100%',
+                  width: '50%',
                   marginTop: '5px',
+                  marginRight: '14px',
                   padding: '10px 12px',
                   borderRadius: '6px',
                   border: '2px solid #5a4a32',
@@ -433,7 +474,10 @@ function App() {
 
       {/* الانتقال بين الشاشات */}
       {currentMode === 'home' && (
-        <HomeScreen onSelectMode={(modeId) => setCurrentMode(modeId)} />
+        <HomeScreen
+          onSelectMode={(modeId) => setCurrentMode(modeId)}
+          onOpenSettings={() => setShowSetupModal(true)}
+        />
       )}
 
       {currentMode === 'quiz' && (
