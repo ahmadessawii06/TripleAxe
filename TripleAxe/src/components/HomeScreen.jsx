@@ -6,7 +6,7 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
       id: 'quiz',
       title: 'أسئلة التحدي ⚔️',
       desc: 'سهل - متوسط - صعب - مستحيل',
-      badge: '4 مستويات',
+      badge: '4 مستويات - 30 سؤال',
       color: '#4CAF50'
     },
     {
