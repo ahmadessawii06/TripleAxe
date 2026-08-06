@@ -13,13 +13,8 @@ export const questions = [
   { id: 12, difficulty: 'easy', question: "شو بنحتاج عشان نضيء المكان ونمنع ظهور الوحوش؟", answer: "المشاعل (Torches)" },
   { id: 13, difficulty: 'easy', question: "شو اسم الفاكهة الحمراء اللي منلاقيها بالغابة ومنقدر ناكلها مباشرة؟", answer: "التفاح (Apple)" },
   { id: 14, difficulty: 'easy', question: "شو اسم الحيوان اللي منقدر نركبه بعد ما نحطله سرج (Saddle)؟", answer: "الحصان (Horse)" },
-  { id: 15, difficulty: 'easy', question: "شو أول مادة بنكسرها عادة من الشجر؟", answer: "جذوع الخشب (Wood Logs)" },
   { id: 16, difficulty: 'easy', question: "شو اسم الوحش الذي يشبه الإنسان الأخضر ويهاجم بالليل؟", answer: "الزومبي (Zombie)" },
   { id: 17, difficulty: 'easy', question: "شو اسم الجهاز اللي بنستخدمه لطبخ اللحمة والأكل؟", answer: "الفرن (Furnace)" },
-  { id: 18, difficulty: 'easy', question: "شو لون الـ Redstone؟", answer: "أحمر" },
-  { id: 19, difficulty: 'easy', question: "شو اسم الحيوان الصغير الوردي اللي منقدر ناخد منه اللحمة؟", answer: "الخنزير (Pig)" },
-  { id: 20, difficulty: 'easy', question: "شو بنستخدم عشان نصطاد السمك؟", answer: "قصبة الصيد (Fishing Rod)" },
-  { id: 21, difficulty: 'easy', question: "شو اسم الكتلة اللي منحطها ونفتحها لتخزين الأغراض؟", answer: "الصندوق (Chest)" },
 
   // ============================
   // 🟡 أسئلة متوسطة (Medium) - 26 إلى 50

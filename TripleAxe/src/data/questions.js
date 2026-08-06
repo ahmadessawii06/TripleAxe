@@ -74,8 +74,8 @@ export const questions = [
         id: 10,
         difficulty: 'hard',
         question: "أين تجد أجنحة الطيران (Elytra) في عالم ماينكرافت؟",
-        answer: "داخل السفن المعلقة في مدن النهاية (End City Ships)"
-        , imageUrl: "https://www.minecraft101.net/r/i/treasure-room.png"
+        answer: "داخل السفن المعلقة في مدن النهاية (End City Ships)",
+        imageUrl: "https://www.minecraft101.net/r/i/treasure-room.png"
     },
 
     // --- أسئلة مستحيلة ---
@@ -93,12 +93,65 @@ export const questions = [
         answer: "20 Ticks بالثانية (20 TPS)"
     },
 
-    { id: 13, difficulty: 'easy', question: "من أي حيوان نحصل على الحليب؟", answer: "البقرة (Cow)", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4gs9oyUNG_kxzNowK4SN3E4LnjNiXdJ0qJNKt-vxDdA&s" },
+    {
+        id: 13,
+        difficulty: 'easy',
+        question: "من أي حيوان نحصل على الحليب؟",
+        answer: "البقرة (Cow)",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4gs9oyUNG_kxzNowK4SN3E4LnjNiXdJ0qJNKt-vxDdA&s"
+    },
 
-    { id: 14, difficulty: 'easy', question: "شو لون قلب الحياة بشريط اللاعب؟", answer: "أحمر", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-9WC8WekO38d56FP7kqVg1Kasr-ZRBWwn74TYlWvo4YndmLp1znEZHSc&s=10" },
+    {
+        id: 14,
+        difficulty: 'easy',
+        question: "شو لون قلب الحياة بشريط اللاعب؟",
+        answer: "أحمر",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-9WC8WekO38d56FP7kqVg1Kasr-ZRBWwn74TYlWvo4YndmLp1znEZHSc&s=10"
+    },
 
-    { id: 15, difficulty: 'impossible', question: "شو أقصى عدد ممكن نكدسه من مادة واحدة بخانة واحدة بالجرد عادةً؟", answer: "64 قطعة", imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSQYTkyzFwy1B-2Z4MvnqW7yFAedWQMq3QAPC3QVn92rJkSyRnAwU9ncEs&s=10" },
+    {
+        id: 15,
+        difficulty: 'impossible',
+        question: "شو أقصى عدد ممكن نكدسه من مادة واحدة بخانة واحدة بالجرد عادةً؟",
+        answer: "64 قطعة",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSQYTkyzFwy1B-2Z4MvnqW7yFAedWQMq3QAPC3QVn92rJkSyRnAwU9ncEs&s=10"
+    },
 
+    {
+        id: 16,
+        difficulty: 'easy',
+        question: "من هو مطور لعبة ماينكرافت؟",
+        answer: "نوتش - Notch",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZRDaDHA1gadvdN1zUcXK1vm_YCht-PJfzczXyzNN6lQ&s=10"
+    },
+    {
+        id: 17,
+        difficulty: 'easy',
+        question: "شو اسم الإشي الي بنحط فيه الأغراض؟",
+        answer: "الصندوق - Chest",
+        imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3d/Chest_%28S%29_JE1.png/revision/latest?cb=20200128020353"
+    },
+    {
+        id: 18,
+        difficulty: 'easy',
+        question: "ما هي الأداة التي نستعملها للصيد؟",
+        answer: "الصنارة - The Rod",
+        imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/7f/Fishing_Rod_JE2_BE2.png/revision/latest?cb=20200201063839"
+    },
+    {
+        id: 19,
+        difficulty: 'easy',
+        question: "شو لون الRedStone ؟",
+        answer: "أحمر",
+        imageUrl: "https://static.wikia.nocookie.net/minecraft/images/e/eb/Redstonedust.png/revision/latest/scale-to-width/360?cb=20200220012322"
+    },
+    {
+        id: 20,
+        difficulty: 'easy',
+        question: "شو اول اشي تكسره او تجمعه في ماينكرافت ؟",
+        answer: "الخشب",
+        imageUrl: "https://minecraft.wiki/images/Oak_Wood_%28UD%29_JE7_BE2.png?74743"
+    }
 
 
 ];
