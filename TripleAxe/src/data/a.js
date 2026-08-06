@@ -1,7 +1,6 @@
 export const questions = [
  
   { id: 1, difficulty: 'easy', question: "ما اسم الأداة التي نستخدمها لحفر الحجر والمعادن؟", answer: "المعول (Pickaxe)" },
-  { id: 2, difficulty: 'easy', question: "من أي حيوان نحصل على الحليب؟", answer: "البقرة (Cow)" },
   { id: 3, difficulty: 'easy', question: "شو اسم الأداة المستخدمة لقطع الأشجار؟", answer: "الفأس (Axe)" },
   { id: 4, difficulty: 'easy', question: "شو اسم الوحش الأخضر اللي بينفجر لما يقرب منك؟", answer: "الكريبر (Creeper)" },
   { id: 5, difficulty: 'easy', question: "شو بنحتاج عشان نصنع مشعل (Torch)؟", answer: "فحم (Coal) + عصا (Stick)" },
@@ -21,10 +20,6 @@ export const questions = [
   { id: 19, difficulty: 'easy', question: "شو اسم الحيوان الصغير الوردي اللي منقدر ناخد منه اللحمة؟", answer: "الخنزير (Pig)" },
   { id: 20, difficulty: 'easy', question: "شو بنستخدم عشان نصطاد السمك؟", answer: "قصبة الصيد (Fishing Rod)" },
   { id: 21, difficulty: 'easy', question: "شو اسم الكتلة اللي منحطها ونفتحها لتخزين الأغراض؟", answer: "الصندوق (Chest)" },
-  { id: 22, difficulty: 'easy', question: "شو لون قلب الحياة بشريط اللاعب؟", answer: "أحمر" },
-  { id: 23, difficulty: 'easy', question: "شو اسم الطعام اللي منقدر ناخده من البقرة غير الحليب؟", answer: "اللحمة (Beef)" },
-  { id: 24, difficulty: 'easy', question: "شو بنحتاج عشان نصنع سرير (Bed) وننام بالليل؟", answer: "3 صوف (Wool) + 3 خشب (Planks)" },
-  { id: 25, difficulty: 'easy', question: "شو الأكل اللي بتطعميه للذئب (Wolf) عشان تروضه ويصير إلك؟", answer: "العظام (Bone)" },
 
   // ============================
   // 🟡 أسئلة متوسطة (Medium) - 26 إلى 50
@@ -87,12 +82,10 @@ export const questions = [
   // ============================
   // ⚫ أسئلة مستحيلة (Impossible) - 76 إلى 100
   // ============================
-  { id: 76, difficulty: 'impossible', question: "شو اسم الوحش الأعمى المرعب بمنطقة الـ Deep Dark اللي بيمشي عالصوت؟", answer: "الوارضن (The Warden)" },
   { id: 77, difficulty: 'impossible', question: "كم عدد الـ Ticks بالثانية بالسيرفر الطبيعي لماينكرافت؟", answer: "20 Tick بالثانية (20 TPS)" },
   { id: 78, difficulty: 'impossible', question: "شو أقصى ارتفاع للبناء بعد تحديث الكهوف والجبال (1.18)؟", answer: "من -64 إلى 320 (المجموع 384 بلوكة)" },
   { id: 79, difficulty: 'impossible', question: "شو أعمق مستوى Y ممكن نوصله تحت الأرض حالياً؟", answer: "المستوى -64" },
   { id: 80, difficulty: 'impossible', question: "شو نوع الخوارزميات اللي بتستخدمها اللعبة لتوليد العالم بشكل عشوائي؟", answer: "خوارزميات الضجيج الإجرائي (مثل Perlin Noise)" },
-  { id: 81, difficulty: 'impossible', question: "شو أقصى عدد ممكن نكدسه من مادة واحدة بخانة واحدة بالجرد عادةً؟", answer: "64 قطعة" },
   { id: 82, difficulty: 'impossible', question: "بأي سنة صدرت النسخة الرسمية الأولى (1.0) من ماينكرافت؟", answer: "سنة 2011" },
   { id: 83, difficulty: 'impossible', question: "من هو المطور الأساسي الذي ابتكر لعبة ماينكرافت؟", answer: "ماركوس بيرسون، الملقب Notch" },
   { id: 84, difficulty: 'impossible', question: "شو اسم الشركة اللي اشترت لعبة ماينكرافت وشركة موجانج؟", answer: "مايكروسوفت (Microsoft)" },
