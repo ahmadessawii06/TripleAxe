@@ -62,6 +62,7 @@ function App() {
       {showSetupModal && (
         <div style={{
           position: 'fixed',
+          fontFamily: 'tahoma, sans-serif',
           inset: 0,
           backgroundColor: 'rgba(0,0,0,0.33)',
           display: 'flex',
@@ -88,7 +89,7 @@ function App() {
                 position: 'absolute',
                 top: '12px',
                 right: '12px',
-                background: 'rgba(255,255,255,0.08)',
+                background: 'red',
                 border: '1px solid rgba(255,255,255,0.15)',
                 color: '#eee',
                 width: '32px',
@@ -101,6 +102,7 @@ function App() {
             >
               ✕
             </button>
+
             <div style={{ textAlign: 'center', marginBottom: '10px' }}>
               <h2 style={{
                 margin: '0 0 4px 0',
@@ -108,16 +110,17 @@ function App() {
                 fontSize: '1.4rem',
                 fontWeight: '800'
               }}>
-                🚀 إعدادات اللعبة
+                 إعدادات اللعبة
               </h2>
               <p style={{
                 margin: 0,
                 color: '#c8d8eb',
                 fontSize: '0.95rem'
               }}>
-                عدّل الأسماء والبلوك قبل اللعب.
+                عدّل الأسماء والبلوكات قبل اللعب.
               </p>
             </div>
+            
             <div style={{
               height: '4px',
               background: 'linear-gradient(90deg, #ffaa00, #ffdd55, #ffaa00)',
@@ -125,16 +128,20 @@ function App() {
               marginBottom: '16px'
             }} />
 
-            <div style={{ textAlign: 'center', marginBottom: '18px' }}>
+            <div style={{ textAlign: 'center', marginBottom: '18px' ,border:" 1px solid rgba(255,255,255,0.12)", padding: "10px", borderRadius: "8px", backgroundColor: "#1a1a1a"}}>
               <h2 style={{
+                textAlign: 'center',
+                direction: 'ltr',
                 margin: '0 0 4px 0',
-                color: '#ffdd55',
+                color: '#55ff55', 
                 fontSize: '1.7rem',
                 fontWeight: 'bold',
-                textShadow: '2px 2px 0 #8b6b2a, 0 2px 10px rgba(255,170,0,0.3)',
-                letterSpacing: '1px'
+                fontFamily: 'MonoCraft',
+         
+                letterSpacing: '1px',
+                marginBottom: '20px'
               }}>
-                ⚔️ TripleAxe
+                ⚔️ TripleAxe  ⚔️
               </h2>
               <p style={{
                 margin: 0,
@@ -143,19 +150,12 @@ function App() {
                 background: 'rgba(0,0,0,0.3)',
                 display: 'inline-block',
                 padding: '2px 14px',
-                borderRadius: '20px',
+                
                 border: '1px solid #555'
               }}>
-                🕊️ طورها الحمامة
+               🕊️ طورها الحمامة 🕊️
               </p>
-              <p style={{
-                margin: '10px 0 0 0',
-                color: '#ccc',
-                fontSize: '1rem',
-                fontWeight: '300'
-              }}>
-                ناوي تبدا؟
-              </p>
+          
             </div>
 
             <label style={{
@@ -258,6 +258,7 @@ function App() {
                     onClick={() => setPlayer1Block(block)}
                     type="button"
                     style={{
+                      fontFamily: 'MonoCraft, monospace',
                       background: 'transparent',
                       border: player1Block.id === block.id ? '3px solid #ffdd55' : '2px solid #555',
                       borderRadius: '8px',
@@ -336,6 +337,7 @@ function App() {
                     onClick={() => setPlayer2Block(block)}
                     type="button"
                     style={{
+                      fontFamily: 'MonoCraft, monospace',
                       background: 'transparent',
                       border: player2Block.id === block.id ? '3px solid #ffdd55' : '2px solid #555',
                       borderRadius: '8px',
@@ -424,7 +426,7 @@ function App() {
                 e.target.style.boxShadow = '0 6px 0 #1f4a1f, 0 8px 16px rgba(0,0,0,0.4)';
               }}
             >
-              🚀 انطلق يلعب
+              قول يارب وبلش ...
             </button>
           </div>
         </div>
