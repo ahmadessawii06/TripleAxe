@@ -10,6 +10,10 @@ const difficultyBadges = {
   impossible: { label: '💜 مستحيل', color: '#aa00aa' }
 };
 
+  const akramBg = "https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.19/assets/minecraft/textures/block/diamond_block.png";
+  const ammoorBg = "https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.19/assets/minecraft/textures/block/emerald_block.png";
+
+
 // دالة الخلط العشوائي للأسئلة
 const shuffleArray = (array) => {
   const shuffled = [...array];
@@ -237,6 +241,53 @@ export function QuizScreen({ onBack, onAddPoint }) {
                   gap: '10px'
                 }}>
 
+                  
+
+
+
+ {/* 💎 كبسة: أكرم */}
+                  <button
+                    className="minecraft-btn"
+                    onClick={() => handleGivePoint('akram')}
+                    disabled={isButtonDisabled('akram')}
+                    style={{
+                      padding: '12px 4px',
+                      backgroundColor: '#29cece',
+                    backgroundImage: `url(${akramBg})`,
+                      border: pointGiven === 'akram' ? '3px solid #ffffff' : '3px solid #0d5252',
+                      boxShadow: pointGiven === 'akram' 
+                        ? 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4), 0 0 30px rgba(0,255,255,0.3)' 
+                        : 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4)',
+                      opacity: isButtonDisabled('akram') ? 0.5 : 1,
+                      cursor: isButtonDisabled('akram') ? 'not-allowed' : 'pointer',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      gap: '4px',
+                      position: 'relative',
+                      overflow: 'hidden'
+                    }}
+                  >
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                      <span style={{ 
+                        fontSize: '1.2rem', 
+                        fontWeight: 'bold', 
+                        color: '#ffffff', 
+                        textShadow: '2px 2px 0px #002222' 
+                      }}>1+</span>
+                    
+                    </div>
+                    <span style={{
+                      fontSize: '0.95rem',
+                      fontWeight: '900',
+                      color: '#ffffff',
+                      textShadow: '2px 2px 0px #003344, -1px -1px 0px #003344'
+                    }}>
+                      أكرم
+                    </span>
+                  </button>
+
                   {/* 💣 كبسة: ولا حد */}
                   <button
                     className="minecraft-btn"
@@ -273,11 +324,7 @@ export function QuizScreen({ onBack, onAddPoint }) {
                         color: '#e6c280', 
                         textShadow: '2px 2px 0px #000' 
                       }}>0</span>
-                      <img 
-                        src="https://minecraft.wiki/images/TNT_JE2_BE2.png" 
-                        alt="TNT" 
-                        style={{ width: '22px', height: '22px', imageRendering: 'pixelated' }} 
-                      />
+                     
                     </div>
                     <span style={{
                       fontSize: '0.95rem',
@@ -289,6 +336,8 @@ export function QuizScreen({ onBack, onAddPoint }) {
                     </span>
                   </button>
 
+
+
                   {/* ❇️ كبسة: عمور */}
                   <button
                     className="minecraft-btn"
@@ -297,7 +346,7 @@ export function QuizScreen({ onBack, onAddPoint }) {
                     style={{
                       padding: '12px 4px',
                       backgroundColor: '#00aa55',
-                      backgroundImage: 'linear-gradient(135deg, #00cc66 0%, #008844 50%, #005522 100%)',
+                    backgroundImage: `url(${ammoorBg})`,
                       border: pointGiven === 'ammoor' ? '3px solid #ffffff' : '3px solid #116633',
                       boxShadow: pointGiven === 'ammoor' 
                         ? 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4), 0 0 30px rgba(0,255,100,0.3)' 
@@ -320,11 +369,7 @@ export function QuizScreen({ onBack, onAddPoint }) {
                         color: '#ffffff', 
                         textShadow: '2px 2px 0px #003311' 
                       }}>1+</span>
-                      <img 
-                        src="https://minecraft.wiki/images/Ender_Pearl_JE3_BE2.png" 
-                        alt="Ender Pearl" 
-                        style={{ width: '20px', height: '20px', imageRendering: 'pixelated', filter: 'drop-shadow(0 0 4px #55ff55)' }} 
-                      />
+                   
                     </div>
                     <span style={{
                       fontSize: '0.95rem',
@@ -336,52 +381,7 @@ export function QuizScreen({ onBack, onAddPoint }) {
                     </span>
                   </button>
 
-                  {/* 💎 كبسة: أكرم */}
-                  <button
-                    className="minecraft-btn"
-                    onClick={() => handleGivePoint('akram')}
-                    disabled={isButtonDisabled('akram')}
-                    style={{
-                      padding: '12px 4px',
-                      backgroundColor: '#29cece',
-                      backgroundImage: 'linear-gradient(135deg, #50e4e4 0%, #22b5b5 50%, #147a7a 100%)',
-                      border: pointGiven === 'akram' ? '3px solid #ffffff' : '3px solid #0d5252',
-                      boxShadow: pointGiven === 'akram' 
-                        ? 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4), 0 0 30px rgba(0,255,255,0.3)' 
-                        : 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4)',
-                      opacity: isButtonDisabled('akram') ? 0.5 : 1,
-                      cursor: isButtonDisabled('akram') ? 'not-allowed' : 'pointer',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: '4px',
-                      position: 'relative',
-                      overflow: 'hidden'
-                    }}
-                  >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                      <span style={{ 
-                        fontSize: '1.2rem', 
-                        fontWeight: 'bold', 
-                        color: '#ffffff', 
-                        textShadow: '2px 2px 0px #002222' 
-                      }}>1+</span>
-                      <img 
-                        src="https://minecraft.wiki/images/Diamond_JE3_BE3.png" 
-                        alt="Diamond" 
-                        style={{ width: '20px', height: '20px', imageRendering: 'pixelated', filter: 'drop-shadow(0 0 4px #88ffff)' }} 
-                      />
-                    </div>
-                    <span style={{
-                      fontSize: '0.95rem',
-                      fontWeight: '900',
-                      color: '#ffffff',
-                      textShadow: '2px 2px 0px #003344, -1px -1px 0px #003344'
-                    }}>
-                      أكرم
-                    </span>
-                  </button>
+                 
 
                 </div>
 
