@@ -132,7 +132,7 @@ export const questions = [
         difficulty: 'easy',
         question: "شو لون الRedStone ؟",
         answer: "أحمر",
-        imageUrl: "https://static.wikia.nocookie.net/thetekkit/images/3/31/Redstone.png/revision/latest?cb=20121229101150"
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBxMyjZFrwHDy6iN_HxyDbJG8v35604QKVjOW29XKa7w&s"
     },
     {
         id: 20,
@@ -160,7 +160,7 @@ export const questions = [
         difficulty: "easy",
         question: "ما اسم الأداة التي نستخدمها لحفر الحجر والمعادن؟",
         answer: "Pickaxe",
-        imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/e/e7/Diamond_Pickaxe_JE3_BE3.png/revision/latest/scale-to-width/360?cb=20250628224016"
+        imageUrl: "https://minecraft.wiki/images/Diamond_Pickaxe_JE3_BE3.png?7409d"
     },
     {
         id: 24,

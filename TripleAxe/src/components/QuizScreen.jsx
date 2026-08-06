@@ -14,7 +14,6 @@ const difficultyBadges = {
   const ammoorBg = "https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.19/assets/minecraft/textures/block/emerald_block.png";
 
 
-// دالة الخلط العشوائي للأسئلة
 const shuffleArray = (array) => {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
