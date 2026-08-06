@@ -10,10 +10,6 @@ const difficultyBadges = {
   impossible: { label: '💜 مستحيل', color: '#aa00aa' }
 };
 
-  const akramBg = "https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.19/assets/minecraft/textures/block/diamond_block.png";
-  const ammoorBg = "https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.19/assets/minecraft/textures/block/emerald_block.png";
-
-
 const shuffleArray = (array) => {
   const shuffled = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
@@ -23,7 +19,7 @@ const shuffleArray = (array) => {
   return shuffled;
 };
 
-export function QuizScreen({ onBack, onAddPoint }) {
+export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, playerOneBlock, playerTwoBlock }) {
   const [shuffledQuestions] = useState(() => shuffleArray(questions));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
@@ -252,7 +248,7 @@ export function QuizScreen({ onBack, onAddPoint }) {
                     style={{
                       padding: '12px 4px',
                       backgroundColor: '#29cece',
-                    backgroundImage: `url(${akramBg})`,
+                      backgroundImage: `url(${playerOneBlock?.image || ''})`,
                       border: pointGiven === 'akram' ? '3px solid #ffffff' : '3px solid #0d5252',
                       boxShadow: pointGiven === 'akram' 
                         ? 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4), 0 0 30px rgba(0,255,255,0.3)' 
@@ -283,7 +279,7 @@ export function QuizScreen({ onBack, onAddPoint }) {
                       color: '#ffffff',
                       textShadow: '2px 2px 0px #003344, -1px -1px 0px #003344'
                     }}>
-                      أكرم
+                      {playerOneName}
                     </span>
                   </button>
 
@@ -345,7 +341,7 @@ export function QuizScreen({ onBack, onAddPoint }) {
                     style={{
                       padding: '12px 4px',
                       backgroundColor: '#00aa55',
-                    backgroundImage: `url(${ammoorBg})`,
+                      backgroundImage: `url(${playerTwoBlock?.image || ''})`,
                       border: pointGiven === 'ammoor' ? '3px solid #ffffff' : '3px solid #116633',
                       boxShadow: pointGiven === 'ammoor' 
                         ? 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4), 0 0 30px rgba(0,255,100,0.3)' 
@@ -376,7 +372,7 @@ export function QuizScreen({ onBack, onAddPoint }) {
                       color: '#aaffcc',
                       textShadow: '2px 2px 0px #003311, -1px -1px 0px #003311'
                     }}>
-                      عمور
+                      {playerTwoName}
                     </span>
                   </button>
 
@@ -394,7 +390,7 @@ export function QuizScreen({ onBack, onAddPoint }) {
                     fontWeight: 'bold',
                     textShadow: '1px 1px 0px #000'
                   }}>
-                    {pointGiven === 'none' ? '❌ لم يتم إضافة نقاط لأحد' : `✅ تمت إضافة +1 نقطة لـ ${pointGiven === 'akram' ? 'أكرم' : 'عمور'}`}
+                    {pointGiven === 'none' ? '❌ لم يتم إضافة نقاط لأحد' : `✅ تمت إضافة +1 نقطة لـ ${pointGiven === 'akram' ? playerOneName : playerTwoName}`}
                   </div>
                 )}
 

@@ -66,54 +66,19 @@ export function HomeScreen({ onSelectMode }) {
   };
 
   return (
-    <div style={{ padding: '5px 0 20px 0' }}>
-      
-      {/* هيدر أسطوري للتلفون */}
-      <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-        <h1 className="mc-font" style={{ 
-          fontSize: '1.8rem', 
-          color: '#55ff55', 
-          margin: '0 0 8px 0', 
-          textShadow: '3px 3px 0px #000, -2px -2px 0px #000, 2px -2px 0px #000, -2px 2px 0px #000',
-          letterSpacing: '1px'
-        }}>
-          Triple Axe
-        </h1>
+    <div className="home-shell">
+      <div className="home-hero-panel">
+        <h1 className="mc-font home-title">Triple Axe</h1>
 
-        <div style={{
-          display: 'inline-block',
-          backgroundColor: '#000',
-          border: '2px solid #ffaa00',
-          padding: '4px 12px',
-          borderRadius: '20px',
-          boxShadow: '0 4px 0 rgba(0,0,0,0.5)'
-        }}>
-          <p style={{ 
-            color: '#ffaa00', 
-            fontSize: '0.85rem', 
-            margin: 0,
-            fontWeight: '900'
-          }}>
+        <div className="home-badge">
+          <p className="home-badge-text">
             🕊️ تم تصميم الموقع عن طريق الحمامة
           </p>
         </div>
       </div>
 
-      {/* سؤال الصفحة الرئيسية */}
-      <div className="minecraft-card" style={{
-        padding: '12px 15px',
-        marginBottom: '18px',
-        textAlign: 'center',
-        borderColor: '#55ff55',
-        backgroundColor: '#1b2b1b'
-      }}>
-        <h2 style={{ 
-          margin: 0, 
-          color: '#ffffff', 
-          fontSize: '1.25rem',
-          fontWeight: '900',
-          textShadow: '1px 1px 0px #000'
-        }}>
+      <div className="minecraft-card home-question-card">
+        <h2 className="home-question-title">
           شوو بدنا نلعب اليوم؟ 🤔
         </h2>
       </div>
