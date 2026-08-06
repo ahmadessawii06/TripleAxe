@@ -102,7 +102,7 @@ export const questions = [
     {
         id: 15,
         difficulty: 'impossible',
-        question: "شو أقصى عدد ممكن نكدسه من مادة واحدة بخانة واحدة بالجرد عادةً؟",
+        question: "شو أقصى عدد ممكن نكدسه من مادة واحدة بخانة واحد عادةً؟",
         answer: "64 قطعة",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSQYTkyzFwy1B-2Z4MvnqW7yFAedWQMq3QAPC3QVn92rJkSyRnAwU9ncEs&s=10"
     },
@@ -118,21 +118,21 @@ export const questions = [
         difficulty: 'easy',
         question: "شو اسم الإشي الي بنحط فيه الأغراض؟",
         answer: "الصندوق - Chest",
-        imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/3d/Chest_%28S%29_JE1.png/revision/latest?cb=20200128020353"
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOVmtodtKU2rJKt4FZ5whcEEtzqVTM799KTwbF0B49uA&s"
     },
     {
         id: 18,
         difficulty: 'easy',
         question: "ما هي الأداة التي نستعملها للصيد؟",
         answer: "الصنارة - The Rod",
-        imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/7f/Fishing_Rod_JE2_BE2.png/revision/latest?cb=20200201063839"
+        imageUrl: "https://minecraft.wiki/images/thumb/Fishing_Rod_artifact.png/150px-Fishing_Rod_artifact.png?6b6fe"
     },
     {
         id: 19,
         difficulty: 'easy',
         question: "شو لون الRedStone ؟",
         answer: "أحمر",
-        imageUrl: "https://static.wikia.nocookie.net/minecraft/images/e/eb/Redstonedust.png/revision/latest/scale-to-width/360?cb=20200220012322"
+        imageUrl: "https://static.wikia.nocookie.net/thetekkit/images/3/31/Redstone.png/revision/latest?cb=20121229101150"
     },
     {
         id: 20,
