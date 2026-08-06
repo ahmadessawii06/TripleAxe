@@ -91,5 +91,6 @@ export const questions = [
     difficulty: 'impossible',
     question: "كم عدد التكات (Ticks) في الثانية الواحدة داخل السيرفر الطبيعي لماينكرافت؟",
     answer: "20 Ticks بالثانية (20 TPS)"
-  }
+  },
+  
 ];
