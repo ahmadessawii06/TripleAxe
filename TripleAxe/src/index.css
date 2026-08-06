@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@700;900&display=swap');
+
+/* تحميل خط Monocraft مباشرة */
+@font-face {
+  font-family: 'Monocraft';
+  src: url('https://cdn.jsdelivr.net/gh/IdreesInc/Monocraft@main/web/Monocraft.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/IdreesInc/Monocraft@main/web/Monocraft.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --mc-green: #55ff55;
+  --mc-gold: #ffaa00;
+  --mc-red: #ff5555;
+  --mc-dark: #121212;
+  --mc-card-bg: #222222;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Tajawal', 'Monocraft', sans-serif;
+  direction: rtl;
+  background-color: var(--mc-dark);
+  background-image: 
+    linear-gradient(rgba(18, 18, 18, 0.88), rgba(18, 18, 18, 0.88)),
+    radial-gradient(#333 15%, transparent 16%),
+    radial-gradient(#222 15%, transparent 16%);
+  background-size: 60px 60px, 16px 16px, 16px 16px;
+  background-position: 0 0, 0 0, 8px 8px;
+  color: #ffffff;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* تطبيق خط Monocraft */
+.mc-font {
+  font-family: 'Monocraft', monospace !important;
+}
+
+/* أزرار وكروت بستايل ماينكرافت 3D */
+.minecraft-btn {
+  font-family: 'Tajawal', 'Monocraft', sans-serif;
+  font-weight: 900;
+  border: 3px solid #000;
+  box-shadow: inset -4px -4px 0px rgba(0,0,0,0.5), inset 4px 4px 0px rgba(255,255,255,0.35);
+  border-radius: 4px;
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: transform 0.05s, filter 0.1s;
+}
+
+.minecraft-btn:active {
+  transform: translateY(2px) scale(0.97);
+  box-shadow: inset 4px 4px 0px rgba(0,0,0,0.7);
+}
+
+.minecraft-card {
+  background-color: var(--mc-card-bg);
+  border: 3px solid #000;
+  box-shadow: inset -3px -3px 0px rgba(0,0,0,0.6), inset 3px 3px 0px rgba(255,255,255,0.15), 0 5px 0 #000;
+  border-radius: 6px;
+}
+
+/* مربع النتيجة الخلفية فوقها الرقم */
+.score-box-container {
+  position: relative;
+  width: 85px;
+  height: 85px;
+  margin: 6px auto;
+  border: 3px solid #000;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.8), 0 4px 0 #000;
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+
+/* طبقة تغشية سفلية لضمان وضوح الرقم فوق الصورة */
+.score-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-number {
+  font-family: 'Monocraft', monospace;
+  font-size: 2.2rem;
+  color: #ffcc00;
+  text-shadow: 3px 3px 0px #000, -2px -2px 0px #000, 2px -2px 0px #000, -2px 2px 0px #000;
+  z-index: 2;
+}
+
+/* شبكة الألعاب للتلفون */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.mobile-game-card {
+  padding: 15px 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 105px;
+}
