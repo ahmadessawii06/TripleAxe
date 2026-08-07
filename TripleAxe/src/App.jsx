@@ -1,6 +1,7 @@
 ﻿import { useState } from 'react';
 import { HomeScreen } from './components/HomeScreen';
 import { QuizScreen } from './components/QuizScreen';
+import { WhoAmIScreen } from './components/WhoAmIScreen'; // 👈 استيراد المكون
 import { playSound } from './utils/audio';
 
 const blockOptions = [
@@ -110,7 +111,7 @@ function App() {
                 fontSize: '1.4rem',
                 fontWeight: '800'
               }}>
-                 إعدادات اللعبة
+                إعدادات اللعبة
               </h2>
               <p style={{
                 margin: 0,
@@ -137,11 +138,10 @@ function App() {
                 fontSize: '1.7rem',
                 fontWeight: 'bold',
                 fontFamily: 'MonoCraft',
-         
                 letterSpacing: '1px',
                 marginBottom: '20px'
               }}>
-                ⚔️ TripleAxe  ⚔️
+                ⚔️ TripleAxe ⚔️
               </h2>
               <p style={{
                 margin: 0,
@@ -150,12 +150,10 @@ function App() {
                 background: 'rgba(0,0,0,0.3)',
                 display: 'inline-block',
                 padding: '2px 14px',
-                
                 border: '1px solid #555'
               }}>
-               🕊️ طورها الحمامة 🕊️
+                🕊️ طورها الحمامة 🕊️
               </p>
-          
             </div>
 
             <label style={{
@@ -493,7 +491,18 @@ function App() {
         />
       )}
 
-      {currentMode !== 'home' && currentMode !== 'quiz' && (
+      {/* 🧩 شاشة لعبة: من أنا؟ */}
+      {currentMode === 'who-am-i' && (
+        <WhoAmIScreen
+          onBack={() => setCurrentMode('home')}
+          onAddPoint={addPoint}
+          playerOneName={displayPlayer1Name}
+          playerTwoName={displayPlayer2Name}
+        />
+      )}
+
+      {/* الأطوار المتبقية قيد الإعداد */}
+      {currentMode !== 'home' && currentMode !== 'quiz' && currentMode !== 'who-am-i' && (
         <div className="minecraft-card" style={{ padding: '25px 15px', textAlign: 'center' }}>
           <button
             className="minecraft-btn"
