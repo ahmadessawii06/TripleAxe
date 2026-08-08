@@ -4,10 +4,10 @@ import { playSound } from '../utils/audio';
 
 // شارات مستويات الصعوبة والألوان الخاصة بها
 const difficultyBadges = {
-  easy: { label: '🟢 سهل', color: '#55ff55' },
-  medium: { label: '🟡 متوسط', color: '#ffaa00' },
-  hard: { label: '🔴 صعب', color: '#ff5555' },
-  impossible: { label: '💀 مستحيل', color: '#aa00aa' }
+  easy: { label: '🟢 سهل 🟢', color: '#55ff55' },
+  medium: { label: '🟡 متوسط 🟡', color: '#ffaa00' },
+  hard: { label: '🔴 صعب 🔴', color: '#ff5555' },
+  impossible: { label: '💀 مستحيل 💀', color: '#aa00aa' }
 };
 
 const shuffleArray = (array) => {
