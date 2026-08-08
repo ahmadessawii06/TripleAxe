@@ -122,7 +122,7 @@ function App() {
                 عدّل الأسماء والبلوكات قبل اللعب.
               </p>
             </div>
-            
+
             <div style={{
               height: '4px',
               background: 'linear-gradient(90deg, #ffaa00, #ffdd55, #ffaa00)',
@@ -130,12 +130,12 @@ function App() {
               marginBottom: '16px'
             }} />
 
-            <div style={{ textAlign: 'center', marginBottom: '18px' ,border:" 1px solid rgba(255,255,255,0.12)", padding: "10px", borderRadius: "8px", backgroundColor: "#1a1a1a"}}>
+            <div style={{ textAlign: 'center', marginBottom: '18px', border: " 1px solid rgba(255,255,255,0.12)", padding: "10px", borderRadius: "8px", backgroundColor: "#1a1a1a" }}>
               <h2 style={{
                 textAlign: 'center',
                 direction: 'ltr',
                 margin: '0 0 4px 0',
-                color: '#55ff55', 
+                color: '#55ff55',
                 fontSize: '1.7rem',
                 fontWeight: 'bold',
                 fontFamily: 'MonoCraft',
@@ -499,6 +499,8 @@ function App() {
           onAddPoint={addPoint}
           playerOneName={displayPlayer1Name}
           playerTwoName={displayPlayer2Name}
+          playerOneBlock={player1Block}
+          playerTwoBlock={player2Block}
         />
       )}
 
