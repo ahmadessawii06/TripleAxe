@@ -465,7 +465,7 @@ export const questions = [
     difficulty: "impossible",
     question: "شو اسم أندر خام موجود في العالم العادي من ماينكرافت؟",
     answer: "Emerald Ore",
-    imageUrl: "https://minecraft.wiki/images/Emerald_Ore_JE4_BE3.png?02ea7"
+    imageUrl: "https://minecraft.wiki/images/Emerald_Ore_JE4_BE3.png?02ea7"},
 {
     id: 67,
     difficulty: "impossible",
