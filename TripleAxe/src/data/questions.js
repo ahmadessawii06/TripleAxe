@@ -195,7 +195,7 @@ export const questions = [
         difficulty: "easy",
         question: "ما اسم المكان الذي ننام فيه لتخطي الليل وتحديد نقطة الإحياء؟",
         answer: "السرير (Bed)",
-        imageUrl: "https://static.wikia.nocookie.net/minecraft/images/c/c5/Bed.png/revision/latest/thumbnail/width/360/height/360?cb=20191103220226"
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUHFUJJqO93YEf02jGlFjdzcx9M0PKDIGrWsnzBgKD9A&s=10"
     },
     {
         id: 29,
@@ -237,7 +237,7 @@ export const questions = [
     difficulty: "easy",
     question: "شو اسم البلوك اللي بنستخدمه عشان نطبخ الأكل ونصهر المعادن؟",
     answer: "الفرن (Furnace)",
-    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/08/Lit_Furnace_%28S%29_BE2.png/revision/latest/scale-to-width/360?cb=20210114131429"
+    imageUrl: "https://www.lifewire.com/thmb/pyD7UKuGR8P-mFENYBfmxYk26wA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/014_how-to-make-a-furnace-in-minecraft-5085276-9cefd65977ec435b9046e63a2d197b1e.jpg"
 },
 {
     id: 35,
@@ -251,7 +251,7 @@ export const questions = [
     difficulty: "easy",
     question: "شو اسم المعدن الأصفر الموجود في ماينكرافت？",
     answer: "الذهب (Gold)",
-    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/8/8a/Gold_Ingot_JE4_BE2.png/revision/latest/thumbnail/width/360/height/360?cb=20200224211607"
+    imageUrl: "https://minecraft.wiki/images/Block_of_Gold_JE6_BE3.png?09478"
 },
 {
     id: 37,
@@ -372,7 +372,7 @@ export const questions = [
     difficulty: "medium",
     question: "شو اسم البلوك اللي بنستخدمه لتخزين الأغراض وما بنقدر نكسره بإيدنا بسهولة؟",
     answer: "الصندوق (Chest)",
-    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/11/Chest_%28S%29_BE1.png/revision/latest?cb=20191203082210"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTH5LS9RlM72-oukxgWJN-LMi5lOPmB9H0srXf312aMDEQ1P3MFdmqOmeDd&s=10"
 },
 {
     id: 54,
@@ -386,7 +386,7 @@ export const questions = [
     difficulty: "medium",
     question: "شو اسم الحيوان اللي بنستخدمه عشان نحصل على الحبر الأسود؟",
     answer: "الحبار (Squid)",
-    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/67/Squid_JE2_BE2.png/revision/latest?cb=20190806115829"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSfe-l0rkRYsFJiCmcQQOdpkn4OuTNNZiccIOZoCppUn8eUS8mbMjNfM4&s=10"
 },
 
 {
@@ -436,7 +436,7 @@ export const questions = [
     difficulty: "hard",
     question: "شو اسم البلوك اللي بنستخدمه عشان نسحر الأدوات والأسلحة؟",
     answer: "Enchanting Table",
-    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/77/Enchanting_Table_JE4_BE2.png/revision/latest?cb=20200315175031"
+    imageUrl: "https://minecraft.wiki/images/thumb/Enchanting-Table.png/300px-Enchanting-Table.png?4d22b"
 },
 {
     id: 63,
@@ -457,7 +457,7 @@ export const questions = [
     difficulty: "hard",
     question: "شو اسم البلوك اللي بيستخدمه القروي الـ Librarian كمحطة عمل؟",
     answer: "Lectern",
-    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/17/Lectern_with_Book_%28S%29.png/revision/latest/scale-to-width/360?cb=20211224073803"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTddVmFLevBmoZY3Ha2OXWjXErwjhaay4UgJmzXQkKhGCWKoemQWYA0H_vG&s=10"
 },
 
 {
@@ -485,7 +485,7 @@ export const questions = [
     difficulty: "impossible",
     question: "شو اسم أندر Mob ممكن تلاقيه بشكل طبيعي إذا كان صغير وراكب دجاجة؟",
     answer: "Chicken Jockey",
-    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/d/d3/Chicken_Jockey.png/revision/latest?cb=20250409082551"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp3cYlFQGqXiTjdNEhEr96AOdYpJN_cynQUqOFXlC1T_Gph25A4kAB5G37&s=10"
 },
 {
     id: 70,
@@ -541,7 +541,7 @@ export const questions = [
     difficulty: "hard",
     question: "شو اسم البلوك اللي بنستخدمه لتخزين الـ XP والـ Enchantments؟",
     answer: "Enchanting Table",
-    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/77/Enchanting_Table_JE4_BE2.png/revision/latest?cb=20200315175031"
+    imageUrl: "https://minecraft.wiki/images/thumb/Enchanting-Table.png/300px-Enchanting-Table.png?4d22b"
 },
 {
     id: 78,
@@ -676,7 +676,7 @@ export const questions = [
     difficulty: "impossible",
     question: "شو اسم البلوك اللي لازم تكسره أو تتفاعل معه عشان تقدر تحصل على الـ Dragon Egg بعد هزيمة التنين؟",
     answer: "Dragon Egg",
-    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/3/38/Dragon_Egg_JE4.png/revision/latest?cb=20211218053415"
+    imageUrl: "https://media.forgecdn.net/avatars/561/950/637914928524005235.png"
 },
 {
     id: 97,

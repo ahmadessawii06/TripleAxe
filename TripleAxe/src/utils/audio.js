@@ -24,3 +24,12 @@ export const playSound = (type) => {
     console.log("Audio Error:", e);
   }
 };
+
+const soundLibrary = {
+  jump: '/sounds/crit.ogg',
+  coin: '/sounds/coin.mp3',
+  explosion: '/sounds/explosion.mp3',
+  portal: '/sounds/portal.mp3',
+  chest: '/sounds/chest.mp3',
+  warning: '/sounds/warning.mp3'
+}

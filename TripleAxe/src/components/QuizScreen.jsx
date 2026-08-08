@@ -7,7 +7,7 @@ const difficultyBadges = {
   easy: { label: '🟢 سهل', color: '#55ff55' },
   medium: { label: '🟡 متوسط', color: '#ffaa00' },
   hard: { label: '🔴 صعب', color: '#ff5555' },
-  impossible: { label: '💜 مستحيل', color: '#aa00aa' }
+  impossible: { label: '💀 مستحيل', color: '#aa00aa' }
 };
 
 const shuffleArray = (array) => {
@@ -19,7 +19,14 @@ const shuffleArray = (array) => {
   return shuffled;
 };
 
-export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, playerOneBlock, playerTwoBlock }) {
+export function QuizScreen({ 
+  onBack, 
+  onAddPoint, 
+  playerOneName = 'أكرم', 
+  playerTwoName = 'عمور', 
+  playerOneBlock, 
+  playerTwoBlock 
+}) {
   const [shuffledQuestions] = useState(() => shuffleArray(questions));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
@@ -34,15 +41,29 @@ export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, p
     setPointGiven(null);
   }, [currentIndex]);
 
+  // دعم اختصارات الكيبورد والتنقل السريع
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'ArrowLeft') handleNext();
+      if (e.key === 'ArrowRight') handlePrev();
+      if (e.code === 'Space') {
+        e.preventDefault();
+        handleToggleAnswer();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [currentIndex, showAnswer]);
+
   const handleNext = () => {
     if (currentIndex < shuffledQuestions.length - 1) {
-      setCurrentIndex(currentIndex + 1);
+      setCurrentIndex((prev) => prev + 1);
     }
   };
 
   const handlePrev = () => {
     if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
+      setCurrentIndex((prev) => prev - 1);
     }
   };
 
@@ -54,7 +75,6 @@ export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, p
   };
 
   const handleGivePoint = (player) => {
-    // منع إضافة أكثر من نقطة لكل سؤال
     if (pointGiven !== null) {
       playSound('error');
       return;
@@ -70,14 +90,35 @@ export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, p
     }
   };
 
-  // التحقق مما إذا كان الزر مفعلاً
   const isButtonDisabled = (player) => {
     return pointGiven !== null && pointGiven !== player;
   };
 
+  // نسبة تقدم الأسئلة لشريط التقدم
+  const progressPercent = ((currentIndex + 1) / shuffledQuestions.length) * 100;
+
   return (
-    <div className="minecraft-card" style={{ padding: '16px' }}>
+    <div className="minecraft-card" style={{ padding: '16px', position: 'relative' }}>
       
+      {/* شريط تقدم الأسئلة التفاعلي */}
+      <div style={{
+        width: '100%',
+        height: '6px',
+        backgroundColor: '#222',
+        borderRadius: '3px',
+        overflow: 'hidden',
+        marginBottom: '12px',
+        border: '1px solid #444'
+      }}>
+        <div style={{
+          width: `${progressPercent}%`,
+          height: '100%',
+          backgroundColor: '#55ff55',
+          transition: 'width 0.3s ease-in-out',
+          boxShadow: '0 0 8px #55ff55'
+        }} />
+      </div>
+
       {/* الهيدر وزر العودة */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
         <h2 style={{ color: '#55ff55', margin: 0, fontSize: '1.1rem' }}>⛏️ تحدي ماينكرافت العشوائي</h2>
@@ -146,7 +187,7 @@ export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, p
             {showAnswer ? '🙈 إخفاء الإجابة' : '👁️ إظهار الإجابة'}
           </button>
 
-          {/* عرض الإجابة والصورة المكبرة وأزرار النقاط الماينكرافتية المطوّرة */}
+          {/* عرض الإجابة والصورة المكبرة وأزرار النقاط الماينكرافتية */}
           {showAnswer && (
             <div style={{
               backgroundColor: '#181818',
@@ -190,7 +231,7 @@ export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, p
                 </div>
               )}
 
-              {/* 🎮 قسم توزيع النقاط الماينكرافتي المصمم بنسبة 100% مثل الصورة */}
+              {/* قسم توزيع النقاط الماينكرافتي */}
               <div style={{
                 backgroundColor: '#121212',
                 border: '4px solid #4a4a4a',
@@ -208,14 +249,8 @@ export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, p
                 <div style={{ position: 'absolute', bottom: -4, left: -4, width: 8, height: 8, backgroundColor: '#8b8b8b', border: '1px solid #333' }} />
                 <div style={{ position: 'absolute', bottom: -4, right: -4, width: 8, height: 8, backgroundColor: '#8b8b8b', border: '1px solid #333' }} />
 
-                {/* العنوان: مين صاحب الإجابة الصحيحة؟ */}
-                <div style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '8px',
-                  marginBottom: '16px'
-                }}>
+                {/* العنوان */}
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', marginBottom: '16px' }}>
                   <h3 style={{
                     margin: 0,
                     fontSize: '1.25rem',
@@ -229,61 +264,38 @@ export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, p
                   <span style={{ fontSize: '1.3rem', filter: 'drop-shadow(2px 2px 0px #000)' }}>🏹🎯</span>
                 </div>
 
-                {/* شبكة البلوكات الثلاثية */}
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: 'repeat(3, 1fr)',
-                  gap: '10px'
-                }}>
+                {/* شبكة أزرار اللاعبين الثلاثية */}
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
 
-                  
-
-
-
- {/* 💎 كبسة: أكرم */}
+                  {/* كبسة: اللاعب الأول (player1) */}
                   <button
                     className="minecraft-btn"
-                    onClick={() => handleGivePoint('akram')}
-                    disabled={isButtonDisabled('akram')}
+                    onClick={() => handleGivePoint('player1')}
+                    disabled={isButtonDisabled('player1')}
                     style={{
                       padding: '12px 4px',
                       backgroundColor: '#29cece',
                       backgroundImage: `url(${playerOneBlock?.image || ''})`,
-                      border: pointGiven === 'akram' ? '3px solid #ffffff' : '3px solid #0d5252',
-                      boxShadow: pointGiven === 'akram' 
+                      border: pointGiven === 'player1' ? '3px solid #ffffff' : '3px solid #0d5252',
+                      boxShadow: pointGiven === 'player1' 
                         ? 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4), 0 0 30px rgba(0,255,255,0.3)' 
                         : 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4)',
-                      opacity: isButtonDisabled('akram') ? 0.5 : 1,
-                      cursor: isButtonDisabled('akram') ? 'not-allowed' : 'pointer',
+                      opacity: isButtonDisabled('player1') ? 0.5 : 1,
+                      cursor: isButtonDisabled('player1') ? 'not-allowed' : 'pointer',
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      gap: '4px',
-                      position: 'relative',
-                      overflow: 'hidden'
+                      gap: '4px'
                     }}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                      <span style={{ 
-                        fontSize: '1.2rem', 
-                        fontWeight: 'bold', 
-                        color: '#ffffff', 
-                        textShadow: '2px 2px 0px #002222' 
-                      }}>1+</span>
-                    
-                    </div>
-                    <span style={{
-                      fontSize: '0.95rem',
-                      fontWeight: '900',
-                      color: '#ffffff',
-                      textShadow: '2px 2px 0px #003344, -1px -1px 0px #003344'
-                    }}>
+                    <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 0px #002222' }}>+1</span>
+                    <span style={{ fontSize: '0.95rem', fontWeight: '900', color: '#ffffff', textShadow: '2px 2px 0px #003344' }}>
                       {playerOneName}
                     </span>
                   </button>
 
-                  {/* 💣 كبسة: ولا حد */}
+                  {/* كبسة: ولا حد (none) */}
                   <button
                     className="minecraft-btn"
                     onClick={() => handleGivePoint('none')}
@@ -291,12 +303,6 @@ export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, p
                     style={{
                       padding: '12px 4px',
                       backgroundColor: '#110b15',
-                      backgroundImage: `
-                        linear-gradient(135deg, rgba(80, 20, 90, 0.3) 25%, transparent 25%), 
-                        linear-gradient(225deg, rgba(80, 20, 90, 0.3) 25%, transparent 25%), 
-                        linear-gradient(45deg, rgba(20, 10, 30, 0.9) 50%, rgba(5, 5, 10, 0.95) 50%)
-                      `,
-                      backgroundSize: '12px 12px',
                       border: pointGiven === 'none' ? '3px solid #ff3333' : '3px solid #3d2b4d',
                       boxShadow: pointGiven === 'none' 
                         ? 'inset -3px -3px 0px rgba(0,0,0,0.8), inset 3px 3px 0px rgba(255,255,255,0.1), 0 0 20px rgba(255,50,50,0.3)' 
@@ -307,80 +313,46 @@ export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, p
                       flexDirection: 'column',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      gap: '4px',
-                      position: 'relative',
-                      overflow: 'hidden'
+                      gap: '4px'
                     }}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                      <span style={{ 
-                        fontSize: '1.2rem', 
-                        fontWeight: 'bold', 
-                        color: '#e6c280', 
-                        textShadow: '2px 2px 0px #000' 
-                      }}>0</span>
-                     
-                    </div>
-                    <span style={{
-                      fontSize: '0.95rem',
-                      fontWeight: '900',
-                      color: '#d0c0b0',
-                      textShadow: '2px 2px 0px #000'
-                    }}>
+                    <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#e6c280', textShadow: '2px 2px 0px #000' }}>0</span>
+                    <span style={{ fontSize: '0.95rem', fontWeight: '900', color: '#d0c0b0', textShadow: '2px 2px 0px #000' }}>
                       ولا حد
                     </span>
                   </button>
 
-
-
-                  {/* ❇️ كبسة: عمور */}
+                  {/* كبسة: اللاعب الثاني (player2) */}
                   <button
                     className="minecraft-btn"
-                    onClick={() => handleGivePoint('ammoor')}
-                    disabled={isButtonDisabled('ammoor')}
+                    onClick={() => handleGivePoint('player2')}
+                    disabled={isButtonDisabled('player2')}
                     style={{
                       padding: '12px 4px',
                       backgroundColor: '#00aa55',
                       backgroundImage: `url(${playerTwoBlock?.image || ''})`,
-                      border: pointGiven === 'ammoor' ? '3px solid #ffffff' : '3px solid #116633',
-                      boxShadow: pointGiven === 'ammoor' 
+                      border: pointGiven === 'player2' ? '3px solid #ffffff' : '3px solid #116633',
+                      boxShadow: pointGiven === 'player2' 
                         ? 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4), 0 0 30px rgba(0,255,100,0.3)' 
                         : 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4)',
-                      opacity: isButtonDisabled('ammoor') ? 0.5 : 1,
-                      cursor: isButtonDisabled('ammoor') ? 'not-allowed' : 'pointer',
+                      opacity: isButtonDisabled('player2') ? 0.5 : 1,
+                      cursor: isButtonDisabled('player2') ? 'not-allowed' : 'pointer',
                       display: 'flex',
                       flexDirection: 'column',
                       alignItems: 'center',
                       justifyContent: 'center',
-                      gap: '4px',
-                      position: 'relative',
-                      overflow: 'hidden'
+                      gap: '4px'
                     }}
                   >
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-                      <span style={{ 
-                        fontSize: '1.2rem', 
-                        fontWeight: 'bold', 
-                        color: '#ffffff', 
-                        textShadow: '2px 2px 0px #003311' 
-                      }}>1+</span>
-                   
-                    </div>
-                    <span style={{
-                      fontSize: '0.95rem',
-                      fontWeight: '900',
-                      color: '#aaffcc',
-                      textShadow: '2px 2px 0px #003311, -1px -1px 0px #003311'
-                    }}>
+                    <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 0px #003311' }}>+1</span>
+                    <span style={{ fontSize: '0.95rem', fontWeight: '900', color: '#aaffcc', textShadow: '2px 2px 0px #003311' }}>
                       {playerTwoName}
                     </span>
                   </button>
 
-                 
-
                 </div>
 
-                {/* نص التنسيق الصغير الذي يظهر مين أخذ النقطة */}
+                {/* نص التنبيه عند اختيار الفائز */}
                 {pointGiven && (
                   <div style={{ 
                     marginTop: '10px', 
@@ -390,7 +362,7 @@ export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, p
                     fontWeight: 'bold',
                     textShadow: '1px 1px 0px #000'
                   }}>
-                    {pointGiven === 'none' ? '❌ لم يتم إضافة نقاط لأحد' : `✅ تمت إضافة +1 نقطة لـ ${pointGiven === 'akram' ? playerOneName : playerTwoName}`}
+                    {pointGiven === 'none' ? '❌ لم يتم إضافة نقاط لأحد' : `✅ تمت إضافة +1 نقطة لـ ${pointGiven === 'player1' ? playerOneName : playerTwoName}`}
                   </div>
                 )}
 
@@ -398,7 +370,7 @@ export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, p
             </div>
           )}
 
-          {/* أزرار التنقل بين الأسئلة */}
+          {/* أزرار التنقل بين الأسئلة (الاتجاهات مضبوطة لـ RTL) */}
           <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px', marginTop: '10px' }}>
             <button 
               className="minecraft-btn"
@@ -413,7 +385,7 @@ export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, p
                 cursor: currentIndex === 0 ? 'not-allowed' : 'pointer'
               }}
             >
-              ⬅️ السابق
+              ➡️ السابق
             </button>
             <button 
               className="minecraft-btn"
@@ -428,7 +400,7 @@ export function QuizScreen({ onBack, onAddPoint, playerOneName, playerTwoName, p
                 cursor: currentIndex === shuffledQuestions.length - 1 ? 'not-allowed' : 'pointer'
               }}
             >
-              التالي ➡️
+              التالي ⬅️
             </button>
           </div>
 
