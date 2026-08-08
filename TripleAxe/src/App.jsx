@@ -1,7 +1,8 @@
 ﻿import { useState } from 'react';
 import { HomeScreen } from './components/HomeScreen';
 import { QuizScreen } from './components/QuizScreen';
-import { WhoAmIScreen } from './components/WhoAmIScreen'; // 👈 استيراد المكون
+import { WhoAmIScreen } from './components/WhoAmIScreen';
+import { SoundQuizScreen } from './components/SoundQuizScreen';
 import { playSound } from './utils/audio';
 
 const blockOptions = [
@@ -501,8 +502,20 @@ function App() {
         />
       )}
 
+      {/* 🎵 شاشة لعبة: تحدي الأصوات */}
+      {currentMode === 'sound-quiz' && (
+        <SoundQuizScreen
+          onBack={() => setCurrentMode('home')}
+          onAddPoint={addPoint}
+          playerOneName={displayPlayer1Name}
+          playerTwoName={displayPlayer2Name}
+          playerOneBlock={player1Block}
+          playerTwoBlock={player2Block}
+        />
+      )}
+
       {/* الأطوار المتبقية قيد الإعداد */}
-      {currentMode !== 'home' && currentMode !== 'quiz' && currentMode !== 'who-am-i' && (
+      {currentMode !== 'home' && currentMode !== 'quiz' && currentMode !== 'who-am-i' && currentMode !== 'sound-quiz' && (
         <div className="minecraft-card" style={{ padding: '25px 15px', textAlign: 'center' }}>
           <button
             className="minecraft-btn"
