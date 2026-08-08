@@ -19,13 +19,13 @@ const shuffleArray = (array) => {
   return shuffled;
 };
 
-export function QuizScreen({ 
-  onBack, 
-  onAddPoint, 
-  playerOneName = 'أكرم', 
-  playerTwoName = 'عمور', 
-  playerOneBlock, 
-  playerTwoBlock 
+export function QuizScreen({
+  onBack,
+  onAddPoint,
+  playerOneName = 'أكرم',
+  playerTwoName = 'عمور',
+  playerOneBlock,
+  playerTwoBlock
 }) {
   const [shuffledQuestions] = useState(() => shuffleArray(questions));
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -99,7 +99,7 @@ export function QuizScreen({
 
   return (
     <div className="minecraft-card" style={{ padding: '16px', position: 'relative' }}>
-      
+
       {/* شريط تقدم الأسئلة التفاعلي */}
       <div style={{
         width: '100%',
@@ -122,9 +122,9 @@ export function QuizScreen({
       {/* الهيدر وزر العودة */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
         <h2 style={{ color: '#55ff55', margin: 0, fontSize: '1.1rem' }}>
-أسئلة التحدي الماينكرافتية 🌚          
-          </h2>
-        <button 
+          أسئلة التحدي الماينكرافتية 🌚
+        </h2>
+        <button
           className="minecraft-btn"
           onClick={onBack}
           style={{ backgroundColor: '#ff5555', color: '#fff', padding: '4px 10px', fontSize: '0.8rem' }}
@@ -138,11 +138,11 @@ export function QuizScreen({
         <span style={{ color: '#aaa', fontSize: '0.8rem' }}>
           سؤال {currentIndex + 1} من {shuffledQuestions.length}
         </span>
-        <span style={{ 
-          backgroundColor: '#222', 
+        <span style={{
+          backgroundColor: '#222',
           border: `1px solid ${diffInfo.color}`,
           color: diffInfo.color,
-          padding: '3px 8px', 
+          padding: '3px 8px',
           borderRadius: '4px',
           fontSize: '0.75rem',
           fontWeight: 'bold'
@@ -174,19 +174,19 @@ export function QuizScreen({
           </div>
 
           {/* زر إظهار / إخفاء الإجابة */}
-          <button 
+          <button
             className="minecraft-btn"
             onClick={handleToggleAnswer}
-            style={{ 
-              width: '100%', 
-              padding: '10px', 
-              backgroundColor: showAnswer ? '#333' : '#ffaa00', 
-              color: showAnswer ? '#aaa' : '#000', 
-              marginBottom: '14px', 
-              fontSize: '0.9rem' 
+            style={{
+              width: '100%',
+              padding: '10px',
+              backgroundColor: showAnswer ? '#333' : '#ffaa00',
+              color: showAnswer ? '#aaa' : '#000',
+              marginBottom: '14px',
+              fontSize: '0.9rem'
             }}
           >
-            {showAnswer ? '🙈 إخفاء الإجابة' : '👁️ إظهار الإجابة'}
+            {showAnswer ? '🙈 إخفاء الإجابة 🙈' : '👁️ إظهار الإجابة 👁️'}
           </button>
 
           {/* عرض الإجابة والصورة المكبرة وأزرار النقاط الماينكرافتية */}
@@ -206,7 +206,7 @@ export function QuizScreen({
 
               {/* صورة الإجابة */}
               {currentQ.imageUrl && (
-                <div style={{ 
+                <div style={{
                   margin: '10px 0 14px 0',
                   display: 'flex',
                   justifyContent: 'center',
@@ -217,18 +217,18 @@ export function QuizScreen({
                   padding: '12px',
                   boxShadow: 'inset 0 0 10px rgba(0,0,0,0.8)'
                 }}>
-                  <img 
-                    src={currentQ.imageUrl} 
-                    alt={currentQ.answer} 
-                    style={{ 
+                  <img
+                    src={currentQ.imageUrl}
+                    alt={currentQ.answer}
+                    style={{
                       width: 'auto',
-                      maxWidth: '100%', 
-                      maxHeight: '230px', 
+                      maxWidth: '100%',
+                      maxHeight: '230px',
                       borderRadius: '4px',
                       objectFit: 'contain',
-                      imageRendering: 'pixelated', 
+                      imageRendering: 'pixelated',
                       filter: 'drop-shadow(0px 4px 6px rgba(0,0,0,0.6))'
-                    }} 
+                    }}
                   />
                 </div>
               )}
@@ -244,7 +244,7 @@ export function QuizScreen({
                 position: 'relative',
                 backgroundImage: 'radial-gradient(circle, rgba(30,30,30,0.9) 0%, rgba(10,10,10,0.95) 100%)'
               }}>
-                
+
                 {/* زوايا إطار GUI المعدنية */}
                 <div style={{ position: 'absolute', top: -4, left: -4, width: 8, height: 8, backgroundColor: '#8b8b8b', border: '1px solid #333' }} />
                 <div style={{ position: 'absolute', top: -4, right: -4, width: 8, height: 8, backgroundColor: '#8b8b8b', border: '1px solid #333' }} />
@@ -279,8 +279,8 @@ export function QuizScreen({
                       backgroundColor: '#29cece',
                       backgroundImage: `url(${playerOneBlock?.image || ''})`,
                       border: pointGiven === 'player1' ? '3px solid #ffffff' : '3px solid #0d5252',
-                      boxShadow: pointGiven === 'player1' 
-                        ? 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4), 0 0 30px rgba(0,255,255,0.3)' 
+                      boxShadow: pointGiven === 'player1'
+                        ? 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4), 0 0 30px rgba(0,255,255,0.3)'
                         : 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4)',
                       opacity: isButtonDisabled('player1') ? 0.5 : 1,
                       cursor: isButtonDisabled('player1') ? 'not-allowed' : 'pointer',
@@ -291,7 +291,7 @@ export function QuizScreen({
                       gap: '4px'
                     }}
                   >
-                    <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 0px #002222' }}>+1</span>
+                    <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 0px #002222' }}>1+</span>
                     <span style={{ fontSize: '0.95rem', fontWeight: '900', color: '#ffffff', textShadow: '2px 2px 0px #003344' }}>
                       {playerOneName}
                     </span>
@@ -306,8 +306,8 @@ export function QuizScreen({
                       padding: '12px 4px',
                       backgroundColor: '#110b15',
                       border: pointGiven === 'none' ? '3px solid #ff3333' : '3px solid #3d2b4d',
-                      boxShadow: pointGiven === 'none' 
-                        ? 'inset -3px -3px 0px rgba(0,0,0,0.8), inset 3px 3px 0px rgba(255,255,255,0.1), 0 0 20px rgba(255,50,50,0.3)' 
+                      boxShadow: pointGiven === 'none'
+                        ? 'inset -3px -3px 0px rgba(0,0,0,0.8), inset 3px 3px 0px rgba(255,255,255,0.1), 0 0 20px rgba(255,50,50,0.3)'
                         : 'inset -3px -3px 0px rgba(0,0,0,0.8), inset 3px 3px 0px rgba(255,255,255,0.1)',
                       opacity: isButtonDisabled('none') ? 0.5 : 1,
                       cursor: isButtonDisabled('none') ? 'not-allowed' : 'pointer',
@@ -334,8 +334,8 @@ export function QuizScreen({
                       backgroundColor: '#00aa55',
                       backgroundImage: `url(${playerTwoBlock?.image || ''})`,
                       border: pointGiven === 'player2' ? '3px solid #ffffff' : '3px solid #116633',
-                      boxShadow: pointGiven === 'player2' 
-                        ? 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4), 0 0 30px rgba(0,255,100,0.3)' 
+                      boxShadow: pointGiven === 'player2'
+                        ? 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4), 0 0 30px rgba(0,255,100,0.3)'
                         : 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4)',
                       opacity: isButtonDisabled('player2') ? 0.5 : 1,
                       cursor: isButtonDisabled('player2') ? 'not-allowed' : 'pointer',
@@ -346,7 +346,7 @@ export function QuizScreen({
                       gap: '4px'
                     }}
                   >
-                    <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 0px #003311' }}>+1</span>
+                    <span style={{ fontSize: '1.2rem', fontWeight: 'bold', color: '#ffffff', textShadow: '2px 2px 0px #003311' }}>1+</span>
                     <span style={{ fontSize: '0.95rem', fontWeight: '900', color: '#aaffcc', textShadow: '2px 2px 0px #003311' }}>
                       {playerTwoName}
                     </span>
@@ -356,9 +356,9 @@ export function QuizScreen({
 
                 {/* نص التنبيه عند اختيار الفائز */}
                 {pointGiven && (
-                  <div style={{ 
-                    marginTop: '10px', 
-                    fontSize: '0.8rem', 
+                  <div style={{
+                    marginTop: '10px',
+                    fontSize: '0.8rem',
                     color: pointGiven === 'none' ? '#ff6666' : '#55ff55',
                     textAlign: 'center',
                     fontWeight: 'bold',
@@ -374,14 +374,14 @@ export function QuizScreen({
 
           {/* أزرار التنقل بين الأسئلة (الاتجاهات مضبوطة لـ RTL) */}
           <div style={{ display: 'flex', justifyContent: 'space-between', gap: '10px', marginTop: '10px' }}>
-            <button 
+            <button
               className="minecraft-btn"
               onClick={handlePrev}
               disabled={currentIndex === 0}
-              style={{ 
-                flex: 1, 
-                padding: '8px', 
-                backgroundColor: currentIndex === 0 ? '#333' : '#555', 
+              style={{
+                flex: 1,
+                padding: '8px',
+                backgroundColor: currentIndex === 0 ? '#333' : '#555',
                 color: '#fff',
                 opacity: currentIndex === 0 ? 0.5 : 1,
                 cursor: currentIndex === 0 ? 'not-allowed' : 'pointer'
@@ -389,14 +389,14 @@ export function QuizScreen({
             >
               ➡️ السابق
             </button>
-            <button 
+            <button
               className="minecraft-btn"
               onClick={handleNext}
               disabled={currentIndex === shuffledQuestions.length - 1}
-              style={{ 
-                flex: 1, 
-                padding: '8px', 
-                backgroundColor: currentIndex === shuffledQuestions.length - 1 ? '#333' : '#555', 
+              style={{
+                flex: 1,
+                padding: '8px',
+                backgroundColor: currentIndex === shuffledQuestions.length - 1 ? '#333' : '#555',
                 color: '#fff',
                 opacity: currentIndex === shuffledQuestions.length - 1 ? 0.5 : 1,
                 cursor: currentIndex === shuffledQuestions.length - 1 ? 'not-allowed' : 'pointer'
