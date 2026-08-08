@@ -46,14 +46,22 @@ function App() {
 
   const addPoint = (player) => {
     playSound('point');
-    if (player === 'akram') setAkramScore(akramScore + 1);
-    if (player === 'ammoor') setAmmoorScore(ammoorScore + 1);
+    if (player === 'akram' || player === 'player1') {
+      setAkramScore((prev) => prev + 1);
+    }
+    if (player === 'ammoor' || player === 'player2') {
+      setAmmoorScore((prev) => prev + 1);
+    }
   };
 
   const removePoint = (player) => {
     playSound('minus');
-    if (player === 'akram') setAkramScore(Math.max(0, akramScore - 1));
-    if (player === 'ammoor') setAmmoorScore(Math.max(0, ammoorScore - 1));
+    if (player === 'akram' || player === 'player1') {
+      setAkramScore((prev) => Math.max(0, prev - 1));
+    }
+    if (player === 'ammoor' || player === 'player2') {
+      setAmmoorScore((prev) => Math.max(0, prev - 1));
+    }
   };
 
   const displayPlayer1Name = player1Name.trim() || 'اللاعب الأول';
