@@ -121,7 +121,9 @@ export function QuizScreen({
 
       {/* الهيدر وزر العودة */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
-        <h2 style={{ color: '#55ff55', margin: 0, fontSize: '1.1rem' }}>⛏️ تحدي ماينكرافت العشوائي</h2>
+        <h2 style={{ color: '#55ff55', margin: 0, fontSize: '1.1rem' }}>
+أسئلة التحدي الماينكرافتية 🌚          
+          </h2>
         <button 
           className="minecraft-btn"
           onClick={onBack}
