@@ -1,1 +1,101 @@
-export const soundQuizData = [ { id: 1, title: 'استمع جيدًا... ما هذا الصوت؟', soundType: 'creeper', answer: 'كريبر يستعد للانفجار' }, { id: 2, title: 'ما الذي سمعته؟', soundType: 'chestOpen', answer: 'فتح صندوق' }, { id: 3, title: 'استمع للصوت ثم خمن الحدث', soundType: 'chestClose', answer: 'إغلاق صندوق' }, { id: 4, title: 'ما هذا الصوت؟', soundType: 'anvil', answer: 'سندان' }, { id: 5, title: 'استمع جيدًا', soundType: 'explosion', answer: 'انفجار' }, { id: 6, title: 'ما الذي سمعته؟', soundType: 'fire', answer: 'نار' }, { id: 7, title: 'خمن الصوت', soundType: 'glassBreak', answer: 'تحطم زجاج' }, { id: 8, title: 'ما هذا الصوت؟', soundType: 'doorOpen', answer: 'فتح باب' }, { id: 9, title: 'استمع جيدًا', soundType: 'doorClose', answer: 'إغلاق باب' }, { id: 10, title: 'ما الذي سمعته؟', soundType: 'click', answer: 'ضغط / نقرة' }, { id: 11, title: 'استمع للصوت', soundType: 'fizz', answer: 'فوران / اختفاء' }, { id: 12, title: 'ما هذا الصوت؟', soundType: 'levelUp', answer: 'ارتفاع المستوى' }, { id: 13, title: 'خمن الحدث', soundType: 'orb', answer: 'جمع خبرة' }, { id: 14, title: 'استمع جيدًا... ما هذا؟', soundType: 'bow', answer: 'إطلاق سهم' }, { id: 15, title: 'ما الذي سمعته؟', soundType: 'hurt', answer: 'تلقي ضربة' }, { id: 16, title: 'خمن الصوت', soundType: 'eat', answer: 'أكل' }, { id: 17, title: 'استمع للصوت ثم أجب', soundType: 'splash', answer: 'رشة ماء' }, { id: 18, title: 'ما هذا الصوت؟', soundType: 'water', answer: 'ماء' }, { id: 19, title: 'استمع جيدًا', soundType: 'lava', answer: 'حمم بركانية' }, { id: 20, title: 'ما الذي سمعته؟', soundType: 'portal', answer: 'بوابة النذر' } ];
+export const soundQuizData = [{
+    id: 1,
+    title: 'استمع جيدًا... ما هذا الصوت؟',
+    soundType: 'creeper',
+    answer: 'كريبر يستعد للانفجار'
+}, {
+    id: 2,
+    title: 'ما الذي سمعته؟',
+    soundType: 'chestOpen',
+    answer: 'فتح صندوق'
+}, {
+    id: 3,
+    title: 'استمع للصوت ثم خمن الحدث',
+    soundType: 'crop',
+    answer: 'زراغة / حصاد المحاصيل'
+}, {
+    id: 4,
+    title: 'ما هذا الصوت؟',
+    soundType: 'anvil',
+    answer: 'انفيل تسقط على الأرض'
+}, {
+    id: 5,
+    title: 'استمع جيدًا',
+    soundType: 'fireWorks',
+    answer: 'firework / انفجار'
+}, {
+    id: 6,
+    title: 'ما الذي سمعته؟',
+    soundType: 'fire',
+    answer: 'نار'
+}, {
+    id: 7,
+    title: 'خمن الصوت',
+    soundType: 'glassBreak',
+    answer: 'تكسير زجاج'
+}, {
+    id: 8,
+    title: 'ما هذا الصوت؟',
+    soundType: 'doorOpen',
+    answer: 'فتح باب'
+}, {
+    id: 9,
+    title: 'استمع جيدًا',
+    soundType: 'doorClose',
+    answer: 'إغلاق باب'
+}, {
+    id: 10,
+    title: 'ما الذي سمعته؟',
+    soundType: 'click',
+    answer: 'ضغط / نقرة'
+}, {
+    id: 11,
+    title: 'استمع للصوت',
+    soundType: 'fizz',
+    answer: 'فوران / اختفاء'
+}, {
+    id: 12,
+    title: 'ما هذا الصوت؟',
+    soundType: 'levelUp',
+    answer: 'ارتفاع المستوى'
+}, {
+    id: 13,
+    title: 'خمن الحدث',
+    soundType: 'orb',
+    answer: 'جمع خبرة'
+}, {
+    id: 14,
+    title: 'استمع جيدًا... ما هذا؟',
+    soundType: 'bow',
+    answer: 'إطلاق سهم'
+}, {
+    id: 15,
+    title: 'ما الذي سمعته؟',
+    soundType: 'hurt',
+    answer: 'تلقي ضربة'
+}, {
+    id: 16,
+    title: 'خمن الصوت',
+    soundType: 'eat',
+    answer: 'أكل'
+}, {
+    id: 17,
+    title: 'استمع للصوت ثم أجب',
+    soundType: 'splash',
+    answer: 'رشة ماء'
+}, {
+    id: 18,
+    title: 'ما هذا الصوت؟',
+    soundType: 'water',
+    answer: 'ماء'
+}, {
+    id: 19,
+    title: 'استمع جيدًا',
+    soundType: 'lava',
+    answer: 'Lava'
+}, {
+    id: 20,
+    title: 'ما الذي سمعته؟',
+    soundType: 'portal',
+    answer: 'بوابة النذر'
+}];

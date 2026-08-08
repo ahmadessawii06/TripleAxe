@@ -23,12 +23,28 @@ const soundURLs = {
 // ========================================
 
 const soundLibrary = {
-  jump: '/sounds/crit.ogg',
-  coin: '/sounds/coin.mp3',
-  explosion: '/sounds/explosion.mp3',
-  portal: '/sounds/portal.mp3',
-  chest: '/sounds/chest.mp3',
-  warning: '/sounds/warning.mp3'
+  creeper: '/sounds/creeper.ogg',
+  chestOpen: '/sounds/chestOpen.ogg',
+  chestClose: '/sounds/chestClose.ogg',
+  anvil: '/sounds/anvil.ogg',
+  explosion: '/sounds/explosion.ogg',
+  fire: '/sounds/fire.ogg',
+  glassBreak: '/sounds/glassBreak.ogg',
+  doorOpen: '/sounds/doorOpen.ogg',
+  doorClose: '/sounds/doorClose.ogg',
+  click: '/sounds/click.ogg',
+  fizz: '/sounds/fizz.ogg',
+  levelUp: '/sounds/levelUp.ogg',
+  orb: '/sounds/orb.ogg',
+  bow: '/sounds/bow.ogg',
+  hurt: '/sounds/hurt.ogg',
+  eat: '/sounds/eat.ogg',
+  splash: '/sounds/splash.ogg',
+  water: '/sounds/water.ogg',
+  lava: '/sounds/lava.ogg',
+  portal: '/sounds/portal.ogg',
+  fireWorks: '/sounds/fireWorks.ogg',
+  crop: '/sounds/crop.ogg'
 };
 
 
@@ -46,10 +62,10 @@ export function playSound(sound) {
 
     let url;
 
-    // إذا كان رابط مباشر
+    // إذا كان رابط مباشر أو مسار محلي يبدأ بـ / أو ./ أو ../
     if (
       typeof sound === 'string' &&
-      (sound.startsWith('http://') || sound.startsWith('https://'))
+      (sound.startsWith('http://') || sound.startsWith('https://') || sound.startsWith('/') || sound.startsWith('./') || sound.startsWith('../'))
     ) {
       url = sound;
     }
@@ -59,7 +75,7 @@ export function playSound(sound) {
       url = soundURLs[sound];
     }
 
-    // إذا كان موجودًا في الأصوات المحلية
+    // إذا كان موجودًا في الأصوات المحلية المعرفة هنا
     else if (soundLibrary[sound]) {
       url = soundLibrary[sound];
     }

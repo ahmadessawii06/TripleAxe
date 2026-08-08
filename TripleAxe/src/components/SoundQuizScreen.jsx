@@ -2,7 +2,30 @@ import { useState } from 'react';
 import { soundQuizData } from '../data/soundQuizData';
 import { playSound } from '../utils/audio';
 
-const soundLibrary = { creeper: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/random/fuse.ogg', chestOpen: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/block/chest/open.ogg', chestClose: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/block/chest/close.ogg', anvil: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/random/anvil_land.ogg', explosion: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/random/explode.ogg', fire: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/fire/fire.ogg', glassBreak: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/random/glass1.ogg', doorOpen: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/random/door_open.ogg', doorClose: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/random/door_close.ogg', click: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/random/click.ogg', fizz: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/random/fizz.ogg', levelUp: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/random/levelup.ogg', orb: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/random/orb.ogg', bow: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/random/bow.ogg', hurt: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/damage/hit1.ogg', eat: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/random/eat1.ogg', splash: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/random/splash.ogg', water: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/liquid/water.ogg', lava: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/liquid/lava.ogg', portal: 'https://mcasset.cloud/1.21.4/assets/minecraft/sounds/portal/portal.ogg' };
+const soundLibrary = {
+    creeper: '/sounds/creeper.ogg',
+    chestOpen: '/sounds/chestOpen.ogg',
+    chestClose: '/sounds/chestClose.ogg',
+    anvil: '/sounds/anvil.ogg',
+    explosion: '/sounds/explosion.ogg',
+    fire: '/sounds/fire.ogg',
+    glassBreak: '/sounds/glassBreak.ogg',
+    doorOpen: '/sounds/doorOpen.ogg',
+    doorClose: '/sounds/doorClose.ogg',
+    click: '/sounds/click.ogg',
+    fizz: '/sounds/fizz.ogg',
+    levelUp: '/sounds/levelUp.ogg',
+    orb: '/sounds/orb.ogg',
+    bow: '/sounds/bow.ogg',
+    hurt: '/sounds/hurt.ogg',
+    eat: '/sounds/eat.ogg',
+    splash: '/sounds/splash.ogg',
+    water: '/sounds/water.ogg',
+    lava: '/sounds/lava.ogg',
+    portal: '/sounds/portal.ogg',
+    fireWorks: '/sounds/fireWorks.ogg',
+    crop: '/sounds/crop.ogg',
+};
 
 function shuffleArray(array) {
     const copy = [...array];
@@ -18,21 +41,12 @@ export function SoundQuizScreen({ onBack, onAddPoint, playerOneName, playerTwoNa
     const [currentIndex, setCurrentIndex] = useState(0);
     const [showAnswer, setShowAnswer] = useState(false);
     const [pointGiven, setPointGiven] = useState(null);
-    const [score, setScore] = useState({ akram: 0, ammoor: 0 });
 
     const currentQ = questions[currentIndex];
 
     const playCurrentSound = () => {
-        const source = soundLibrary[currentQ?.soundType];
-        if (!source) return;
-
-        try {
-            const audio = new Audio(source);
-            audio.volume = 0.9;
-            audio.play().catch(() => { });
-        } catch {
-            // تجاهل الخطأ في المتصفح
-        }
+        if (!currentQ?.soundType) return;
+        playSound(currentQ.soundType);
     };
 
     const handleToggleAnswer = () => {
@@ -49,16 +63,12 @@ export function SoundQuizScreen({ onBack, onAddPoint, playerOneName, playerTwoNa
         if (player === 'none') {
             playSound('minus');
             setPointGiven('none');
-        } else {
-            onAddPoint(player);
-            playSound('score');
-            setPointGiven(player);
-            const scoreKey = player === 'akram' ? 'akram' : 'ammoor';
-            setScore((prev) => ({
-                ...prev,
-                [scoreKey]: prev[scoreKey] + 1
-            }));
+            return;
         }
+
+        onAddPoint(player);
+        playSound('score');
+        setPointGiven(player);
     };
 
     const handleNext = () => {
@@ -108,9 +118,9 @@ export function SoundQuizScreen({ onBack, onAddPoint, playerOneName, playerTwoNa
                     </div>
 
                     {(() => {
-                        const imageToShow = pointGiven === 'akram'
+                        const imageToShow = pointGiven === 'player1'
                             ? playerOneBlock?.image
-                            : pointGiven === 'ammoor'
+                            : pointGiven === 'player2'
                                 ? playerTwoBlock?.image
                                 : pointGiven === 'none'
                                     ? null
@@ -179,18 +189,18 @@ export function SoundQuizScreen({ onBack, onAddPoint, playerOneName, playerTwoNa
                         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px' }}>
                             <button
                                 className="minecraft-btn"
-                                onClick={() => handleGivePoint('akram')}
-                                disabled={isButtonDisabled('akram')}
+                                onClick={() => handleGivePoint('player1')}
+                                disabled={isButtonDisabled('player1')}
                                 style={{
                                     padding: '12px 4px',
                                     backgroundColor: '#29cece',
                                     backgroundImage: `url(${playerOneBlock?.image || ''})`,
-                                    border: pointGiven === 'akram' ? '3px solid #ffffff' : '3px solid #0d5252',
-                                    boxShadow: pointGiven === 'akram'
+                                    border: pointGiven === 'player1' ? '3px solid #ffffff' : '3px solid #0d5252',
+                                    boxShadow: pointGiven === 'player1'
                                         ? 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4), 0 0 30px rgba(0,255,255,0.3)'
                                         : 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4)',
-                                    opacity: isButtonDisabled('akram') ? 0.5 : 1,
-                                    cursor: isButtonDisabled('akram') ? 'not-allowed' : 'pointer',
+                                    opacity: isButtonDisabled('player1') ? 0.5 : 1,
+                                    cursor: isButtonDisabled('player1') ? 'not-allowed' : 'pointer',
                                     display: 'flex',
                                     flexDirection: 'column',
                                     alignItems: 'center',
@@ -246,18 +256,18 @@ export function SoundQuizScreen({ onBack, onAddPoint, playerOneName, playerTwoNa
 
                             <button
                                 className="minecraft-btn"
-                                onClick={() => handleGivePoint('ammoor')}
-                                disabled={isButtonDisabled('ammoor')}
+                                onClick={() => handleGivePoint('player2')}
+                                disabled={isButtonDisabled('player2')}
                                 style={{
                                     padding: '12px 4px',
                                     backgroundColor: '#00aa55',
                                     backgroundImage: `url(${playerTwoBlock?.image || ''})`,
-                                    border: pointGiven === 'ammoor' ? '3px solid #ffffff' : '3px solid #116633',
-                                    boxShadow: pointGiven === 'ammoor'
+                                    border: pointGiven === 'player2' ? '3px solid #ffffff' : '3px solid #116633',
+                                    boxShadow: pointGiven === 'player2'
                                         ? 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4), 0 0 30px rgba(0,255,100,0.3)'
                                         : 'inset -3px -3px 0px rgba(0,0,0,0.5), inset 3px 3px 0px rgba(255,255,255,0.4)',
-                                    opacity: isButtonDisabled('ammoor') ? 0.5 : 1,
-                                    cursor: isButtonDisabled('ammoor') ? 'not-allowed' : 'pointer',
+                                    opacity: isButtonDisabled('player2') ? 0.5 : 1,
+                                    cursor: isButtonDisabled('player2') ? 'not-allowed' : 'pointer',
                                     display: 'flex',
                                     flexDirection: 'column',
                                     alignItems: 'center',
@@ -285,7 +295,7 @@ export function SoundQuizScreen({ onBack, onAddPoint, playerOneName, playerTwoNa
                                 fontWeight: 'bold',
                                 textShadow: '1px 1px 0px #000'
                             }}>
-                                {pointGiven === 'none' ? '❌ لم يتم إضافة نقاط لأحد' : `✅ تمت إضافة +1 نقطة لـ ${pointGiven === 'akram' ? playerOneName : playerTwoName}`}
+                                {pointGiven === 'none' ? '❌ لم يتم إضافة نقاط لأحد' : `✅ تمت إضافة +1 نقطة لـ ${pointGiven === 'player1' ? playerOneName : playerTwoName}`}
                             </div>
                         )}
                     </div>
@@ -295,15 +305,12 @@ export function SoundQuizScreen({ onBack, onAddPoint, playerOneName, playerTwoNa
             {showAnswer && (
                 <div style={{ textAlign: 'center' }}>
                     <button className="minecraft-btn" onClick={handleNext} style={{ backgroundColor: '#55ff55', color: '#000', padding: '8px 12px' }}>
-                        السؤال التالي ▶
+                        السؤال التالي
                     </button>
                 </div>
             )}
 
-            <div style={{ marginTop: '14px', display: 'flex', justifyContent: 'space-between', color: '#ccc', fontSize: '0.8rem' }}>
-                <span>🎯 {playerOneName}: {score.akram}</span>
-                <span>🎯 {playerTwoName}: {score.ammoor}</span>
-            </div>
+
         </div>
     );
 }
