@@ -18,73 +18,74 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
       desc: 'حزازير الوحوش والأغراض',
       badge: 'حزازير',
       color: '#9C27B0',
-      // sound: 'https://www.myinstants.com/media/sounds/minecraft-villager.mp3'
+      backgroundImage: 'url(/images/HomeImages/2.png)',
+      sound: 'https://www.myinstants.com/media/sounds/levelup.mp3'
     },
     {
       id: 'true-false',
       title: 'صح أم خطأ ⏱️',
       desc: 'تحدي الإجابة السريعة',
       badge: 'سرعة',
-      color: '#FF9800',
-      // sound: 'https://www.myinstants.com/media/sounds/minecraft-click.mp3'
+      color: '#FF9800'
     },
     {
       id: 'crafting',
       title: 'الكرافتينج 🛠️',
       desc: 'طاولة الصنع 3x3',
       badge: 'تفاعلي',
-      color: '#FFFFFF',
-      // sound: 'https://www.myinstants.com/media/sounds/minecraft-ding.mp3'
+      color: '#FFFFFF'
     },
     {
       id: 'sound-quiz',
       title: 'تحدي الأصوات 🎵',
       desc: 'احزر صوت اللعبة',
       badge: 'سماعي',
-      color: '#E91E63',
-      // sound: 'https://www.myinstants.com/media/sounds/minecraft-level-up.mp3'
+      color: '#E91E63'
     },
     {
       id: 'memory-game',
       title: 'الذاكرة 🃏',
       desc: 'مطابقة البلوكات',
       badge: 'تركيز',
-      color: '#3F51B5',
-      // sound: 'https://www.myinstants.com/media/sounds/minecraft-chest-open.mp3'
+      color: '#3F51B5'
     },
     {
       id: 'zoom-quiz',
       title: 'خمن الصورة 🔍',
       desc: 'الزوم المستحيل',
       badge: 'ملاحظة',
-      color: '#00BCD4',
-      // sound: 'https://www.myinstants.com/media/sounds/minecraft-orb.mp3'
+      color: '#00BCD4'
     },
     {
       id: 'auction-quiz',
       title: 'أقرب رقم 🔢',
       desc: 'تخمين الأرقام والقلوب',
       badge: 'تخمين',
-      color: '#FF5722',
-      // sound: 'https://www.myinstants.com/media/sounds/minecraft-anvil-landing.mp3'
+      color: '#FF5722'
     }
   ];
 
   const handleModeClick = (mode) => {
-    // تشغيل صوت اللعبة
-    playSound(mode.sound);
+    if (mode.sound) {
+      playSound(mode.sound);
+    }
 
-    // الانتقال إلى اللعبة
     onSelectMode(mode.id);
   };
 
   return (
-    <div className="home-shell">
+    <div>
 
+      {/* =========================
+          الهيدر
+      ========================== */}
       <div
         className="home-hero-panel"
-        style={{ position: 'relative' }}
+        style={{
+          position: 'relative'
+        }}
       >
+        {/* زر الإعدادات */}
         <button
           type="button"
           onClick={onOpenSettings}
@@ -92,23 +93,56 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
             position: 'absolute',
             top: '12px',
             left: '12px',
-            backgroundColor: '#111',
-            border: '1px solid rgba(255,255,255,0.12)',
+
+            background:
+              'linear-gradient(135deg, #151515, #080808)',
+
+            border: '1px solid rgba(255,255,255,0.15)',
+
             color: '#e0e0e0',
+
             padding: '8px 12px',
+
             borderRadius: '10px',
+
             fontSize: '0.85rem',
+
+            fontWeight: '700',
+
             cursor: 'pointer',
-            boxShadow: '0 2px 12px rgba(0,0,0,0.25)'
+
+            boxShadow:
+              '0 4px 15px rgba(0,0,0,0.4)',
+
+            transition:
+              'all 0.2s ease',
+
+            zIndex: 10
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform =
+              'translateY(-2px)';
+
+            e.currentTarget.style.boxShadow =
+              '0 6px 20px rgba(0,0,0,0.6)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform =
+              'translateY(0)';
+
+            e.currentTarget.style.boxShadow =
+              '0 4px 15px rgba(0,0,0,0.4)';
           }}
         >
           ⚙️ إعدادات
         </button>
 
+        {/* العنوان */}
         <h1 className="mc-font home-title">
           Triple Axe
         </h1>
 
+        {/* Badge */}
         <div className="home-badge">
           <p className="home-badge-text">
             🕊️ تم تصميم الموقع عن طريق الحمامة
@@ -116,79 +150,400 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
         </div>
       </div>
 
-      <div className="minecraft-card home-question-card">
+
+      {/* =========================
+          عنوان الألعاب
+      ========================== */}
+      <div
+        className="minecraft-card home-question-card"
+        style={{
+          marginBottom: '15px'
+        }}
+      >
         <h2 className="home-question-title">
           شوو بدنا نلعب اليوم؟ 🤔
         </h2>
       </div>
 
-      {/* شبكة الألعاب */}
-      <div className="game-grid">
+
+      {/* =========================
+          شبكة الألعاب
+      ========================== */}
+      <div
+        className="game-grid"
+        style={{
+          display: 'grid',
+
+          gridTemplateColumns:
+            'repeat(auto-fit, minmax(180px, 1fr))',
+
+          gap: '18px',
+
+          padding: '10px'
+        }}
+      >
+
         {gameModes.map((mode) => (
+
           <div
             key={mode.id}
             className="minecraft-card minecraft-btn mobile-game-card"
-            onClick={() => handleModeClick(mode)}
+
+            onClick={() =>
+              handleModeClick(mode)
+            }
+
             style={{
               position: 'relative',
-              backgroundImage: mode.backgroundImage || 'none',
+
+              height: '210px',
+
+              minHeight: '210px',
+
+              overflow: 'hidden',
+
+              cursor: 'pointer',
+
+              border:
+                `3px solid ${mode.color}`,
+
+              borderRadius: '12px',
+
+              backgroundImage:
+                mode.backgroundImage || 'none',
+
               backgroundSize: 'cover',
+
               backgroundPosition: 'center',
+
               backgroundRepeat: 'no-repeat',
-              border: `4px solid ${mode.color}`,
-              cursor: 'pointer'
+
+              boxShadow: `
+                0 0 0 1px rgba(255,255,255,0.08) inset,
+                0 8px 25px rgba(0,0,0,0.55),
+                0 0 18px ${mode.color}55
+              `,
+
+              transition:
+                'transform 0.25s ease, box-shadow 0.25s ease, background-size 0.4s ease',
+
+              isolation: 'isolate'
+            }}
+
+            onMouseEnter={(e) => {
+
+              e.currentTarget.style.transform =
+                'translateY(-7px) scale(1.025)';
+
+              e.currentTarget.style.boxShadow = `
+                0 0 0 1px rgba(255,255,255,0.15) inset,
+                0 14px 35px rgba(0,0,0,0.75),
+                0 0 35px ${mode.color}99,
+                0 0 70px ${mode.color}44
+              `;
+
+              e.currentTarget.style.backgroundSize =
+                '110%';
+            }}
+
+            onMouseLeave={(e) => {
+
+              e.currentTarget.style.transform =
+                'translateY(0) scale(1)';
+
+              e.currentTarget.style.boxShadow = `
+                0 0 0 1px rgba(255,255,255,0.08) inset,
+                0 8px 25px rgba(0,0,0,0.55),
+                0 0 18px ${mode.color}55
+              `;
+
+              e.currentTarget.style.backgroundSize =
+                'cover';
             }}
           >
 
-            {/* شارة اللعبة */}
-            <span
+            {/* =========================
+                التظليل السينمائي
+            ========================== */}
+            <div
               style={{
                 position: 'absolute',
-                top: '5px',
-                left: '5px',
-                backgroundColor: '#111',
-                color: mode.color,
-                fontSize: '0.65rem',
-                padding: '2px 5px',
-                borderRadius: '3px',
-                fontWeight: 'bold'
-              }}
-            >
-              {mode.badge}
-            </span>
 
-            <h3
-              style={{
-                margin: '12px 0 5px 0',
-                fontSize: '1.05rem',
-                color: '#fff',
-                fontWeight: '900',
-                lineHeight: '1.3'
-              }}
-            >
-              {mode.title}
-            </h3>
+                inset: 0,
 
-            <p
+                background: `
+                  linear-gradient(
+                    to bottom,
+                    rgba(0,0,0,0.03) 0%,
+                    rgba(0,0,0,0.10) 22%,
+                    rgba(0,0,0,0.25) 42%,
+                    rgba(0,0,0,0.65) 68%,
+                    rgba(0,0,0,0.96) 100%
+                  )
+                `,
+
+                zIndex: 0,
+
+                pointerEvents: 'none'
+              }}
+            />
+
+
+            {/* =========================
+                لمعان علوي
+            ========================== */}
+            <div
               style={{
-                margin: 0,
-                fontSize: '0.75rem',
-                color: '#fff',
-                backgroundColor: 'rgba(0, 20, 0, 0.4)',
-                borderBottom: '1px solid green',
-                fontWeight: 'bold'
+                position: 'absolute',
+
+                top: 0,
+
+                left: 0,
+
+                right: 0,
+
+                height: '50%',
+
+                background:
+                  'linear-gradient(to bottom, rgba(255,255,255,0.12), transparent)',
+
+                opacity: 0.35,
+
+                zIndex: 1,
+
+                pointerEvents: 'none'
+              }}
+            />
+
+
+            {/* =========================
+                الخط المضيء
+            ========================== */}
+            <div
+              style={{
+                position: 'absolute',
+
+                top: 0,
+
+                left: 0,
+
+                right: 0,
+
+                height: '3px',
+
+                background:
+                  mode.color,
+
+                boxShadow: `
+                  0 0 8px ${mode.color},
+                  0 0 20px ${mode.color}
+                `,
+
+                zIndex: 5,
+
+                pointerEvents: 'none'
+              }}
+            />
+
+
+            {/* =========================
+                المحتوى السفلي
+            ========================== */}
+            <div
+              style={{
+                position: 'absolute',
+
+                left: '10px',
+
+                right: '10px',
+
+                bottom: '10px',
+
+                zIndex: 3,
+
+                display: 'flex',
+
+                flexDirection: 'column',
+
+                alignItems: 'center',
+
+                textAlign: 'center'
               }}
             >
-              {mode.desc}
-            </p>
+
+              {/* Badge */}
+              <span
+                style={{
+                  display: 'inline-flex',
+
+                  alignItems: 'center',
+
+                  justifyContent: 'center',
+
+                  width: 'fit-content',
+
+                  padding: '4px 9px',
+
+                  marginBottom: '6px',
+
+                  background:
+                    'linear-gradient(135deg, rgba(0,0,0,0.95), rgba(20,20,20,0.75))',
+
+                  color:
+                    mode.color,
+
+                  border:
+                    `1px solid ${mode.color}99`,
+
+                  borderRadius: '5px',
+
+                  fontSize: '0.62rem',
+
+                  fontWeight: '900',
+
+                  letterSpacing: '0.3px',
+
+                  boxShadow: `
+                    0 0 8px ${mode.color}44,
+                    inset 0 0 8px rgba(255,255,255,0.04)
+                  `,
+
+                  textShadow:
+                    `0 0 8px ${mode.color}`
+                }}
+              >
+                {mode.badge}
+              </span>
+
+
+              {/* =========================
+                  اسم اللعبة
+              ========================== */}
+              <h3
+                style={{
+                  margin:
+                    '0 0 5px 0',
+
+                  color:
+                    '#fff',
+
+                  fontSize:
+                    '1.15rem',
+
+                  fontWeight:
+                    '950',
+
+                  lineHeight:
+                    '1.2',
+
+                  textShadow: `
+                    2px 2px 0 #000,
+                    0 0 8px rgba(0,0,0,0.9),
+                    0 0 15px ${mode.color}66
+                  `
+                }}
+              >
+                {mode.title}
+              </h3>
+
+
+              {/* =========================
+                  وصف اللعبة
+              ========================== */}
+              <div
+                style={{
+                  display:
+                    'inline-flex',
+
+                  alignItems:
+                    'center',
+
+                  justifyContent:
+                    'center',
+
+                  padding:
+                    '4px 10px',
+
+                  maxWidth:
+                    '95%',
+
+                  background:
+                    'rgba(0,0,0,0.72)',
+
+                  borderTop:
+                    `1px solid ${mode.color}66`,
+
+                  borderBottom:
+                    `2px solid ${mode.color}`,
+
+                  borderRadius:
+                    '4px',
+
+                  color:
+                    '#eee',
+
+                  fontSize:
+                    '0.72rem',
+
+                  fontWeight:
+                    '700',
+
+                  lineHeight:
+                    '1.3',
+
+                  textShadow:
+                    '1px 1px 3px #000',
+
+                  boxShadow:
+                    '0 3px 12px rgba(0,0,0,0.4)'
+                }}
+              >
+                {mode.desc}
+              </div>
+
+            </div>
+
+
+            {/* =========================
+                تأثير الزاوية
+            ========================== */}
+            <div
+              style={{
+                position:
+                  'absolute',
+
+                bottom: 0,
+
+                right: 0,
+
+                width:
+                  '60px',
+
+                height:
+                  '60px',
+
+                background: `
+                  linear-gradient(
+                    135deg,
+                    transparent 50%,
+                    ${mode.color}22 50%
+                  )
+                `,
+
+                zIndex:
+                  2,
+
+                pointerEvents:
+                  'none'
+              }}
+            />
 
           </div>
         ))}
+
       </div>
 
     </div>
   );
 }
-
-
 
