@@ -40,7 +40,9 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
       title: 'تحدي الأصوات 🎵',
       desc: 'احزر صوت اللعبة',
       badge: 'سماعي',
-      color: '#E91E63'
+      color: '#E91E63',
+      backgroundImage: 'url(/images/HomeImages/3.png)',
+      sound: 'https://www.myinstants.com/media/sounds/levelup.mp3'
     },
     {
       id: 'memory-game',
