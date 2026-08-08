@@ -8,7 +8,7 @@ export const whoAmIData = [
       "أستطيع الانتقال بسرعة وأحمل البلوكات."
     ],
     answer: "الإندرمان (Enderman)",
-    imageUrl: "https://minecraft.wiki/images/Enderman_JE3_BE3.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraftallmobs/images/0/05/Enderman_normal.png/revision/latest/thumbnail/width/360/height/450?cb=20180921170052"
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ export const whoAmIData = [
       "أنا أخضر وأنفجر عندما أقترب منك."
     ],
     answer: "الكريبر (Creeper)",
-    imageUrl: "https://minecraft.wiki/images/Creeper_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraftallmobs/images/0/05/Enderman_normal.png/revision/latest/thumbnail/width/360/height/450?cb=20180921170052"
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ export const whoAmIData = [
       "أنفي كبير وأرتدي رداءً."
     ],
     answer: "القروي (Villager)",
-    imageUrl: "https://minecraft.wiki/images/Plains_Villager_Base.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/d/d8/Plains_Villager_Base.png/revision/latest?cb=20260104164016"
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ export const whoAmIData = [
       "أعيش غالباً في النذر."
     ],
     answer: "الغاست (Ghast)",
-    imageUrl: "https://minecraft.wiki/images/Ghast_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/d/d8/Plains_Villager_Base.png/revision/latest?cb=20260104164016"
   },
   {
     id: 5,
@@ -52,7 +52,7 @@ export const whoAmIData = [
       "أنا هيكل عظمي يحمل قوساً."
     ],
     answer: "الهيكل العظمي (Skeleton)",
-    imageUrl: "https://minecraft.wiki/images/Skeleton_JE6_BE4.png"
+    imageUrl: "https://minecraft.wiki/images/Lefthandedskeleton.png?2221f"
   },
   {
     id: 6,
@@ -63,7 +63,7 @@ export const whoAmIData = [
       "أنا من أشهر الوحوش في العالم العلوي."
     ],
     answer: "الزومبي (Zombie)",
-    imageUrl: "https://minecraft.wiki/images/Zombie_JE3_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Zombie_JE5_BE2.png/150px-Zombie_JE5_BE2.png?d709c"
   },
   {
     id: 7,
@@ -74,7 +74,7 @@ export const whoAmIData = [
       "يمكن استخدام أجنحتي للطيران."
     ],
     answer: "الـ Shulker",
-    imageUrl: "https://minecraft.wiki/images/Shulker_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Shulker_JE1_BE1.png?02a87"
   },
   {
     id: 8,
@@ -85,7 +85,7 @@ export const whoAmIData = [
       "أنا كلب ماينكرافت."
     ],
     answer: "الذئب (Wolf)",
-    imageUrl: "https://minecraft.wiki/images/Wolf_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Wolf_JE2_BE2.png/150px-Wolf_JE2_BE2.png?ee46e"
   },
   {
     id: 9,
@@ -96,7 +96,7 @@ export const whoAmIData = [
       "لوني غالباً أخضر ويمكنني القفز."
     ],
     answer: "الضفدع (Frog)",
-    imageUrl: "https://minecraft.wiki/images/Frog_JE1_BE1.png"
+    imageUrl: "https://minecraft.wiki/images/Temperate_Frog_JE1_BE1.gif?5a0ff"
   },
   {
     id: 10,
@@ -107,7 +107,7 @@ export const whoAmIData = [
       "أنا من أشهر الكائنات البحرية في ماينكرافت."
     ],
     answer: "الحبار (Squid)",
-    imageUrl: "https://minecraft.wiki/images/Squid_JE2_BE2.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyZnC0LJAd5-DoLg7e5pF1U9pACgmMik87LU3AKfg9Xw&s=10"
   },
 
   {
@@ -119,7 +119,7 @@ export const whoAmIData = [
       "أنا زومبي لكنني مختلف قليلاً."
     ],
     answer: "الـ Husk",
-    imageUrl: "https://minecraft.wiki/images/Husk_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Husk_JE4_BE2.png/150px-Husk_JE4_BE2.png?a6767"
   },
   {
     id: 12,
@@ -130,7 +130,7 @@ export const whoAmIData = [
       "أنا نسخة مختلفة من الهيكل العظمي."
     ],
     answer: "الـ Stray",
-    imageUrl: "https://minecraft.wiki/images/Stray_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Stray_JE2_BE4.png?ef82d"
   },
   {
     id: 13,
@@ -141,7 +141,7 @@ export const whoAmIData = [
       "أستطيع أن أكون خطيراً جداً إذا اقتربت مني."
     ],
     answer: "الـ Piglin",
-    imageUrl: "https://minecraft.wiki/images/Piglin_JE2_BE2.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToBCfCdpoN1yz-osPe0fcepU80RuIPHcEn6afTmDBZqHqT9eSeWuByCP4&s=10"
   },
   {
     id: 14,
@@ -152,7 +152,7 @@ export const whoAmIData = [
       "أنا خنزير يعيش في النذر."
     ],
     answer: "الـ Piglin",
-    imageUrl: "https://minecraft.wiki/images/Piglin_JE2_BE2.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToBCfCdpoN1yz-osPe0fcepU80RuIPHcEn6afTmDBZqHqT9eSeWuByCP4&s=10"
   },
   {
     id: 15,
@@ -163,7 +163,7 @@ export const whoAmIData = [
       "أنا الزعيم الذي ينتظرك في النهاية."
     ],
     answer: "تنين الإندر (Ender Dragon)",
-    imageUrl: "https://minecraft.wiki/images/Ender_Dragon_JE2_BE2.png"
+    imageUrl: "https://cdn.ouiheberg.com/blog/covers/1773221384_tl13nAF0.webp"
   },
   {
     id: 16,
@@ -174,7 +174,7 @@ export const whoAmIData = [
       "أنا الوحش المرعب في الـ Deep Dark."
     ],
     answer: "الـ Warden",
-    imageUrl: "https://minecraft.wiki/images/Warden_JE1_BE1.png"
+    imageUrl: "https://minecraft.wiki/images/Warden_JE1_BE1.https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVD6dqVzRDxc8BDNbJktyUU-62CjlNbHzN_PwLCzr9GN3BHvhOJeliaOE&s=10"
   },
   {
     id: 17,
@@ -196,7 +196,7 @@ export const whoAmIData = [
       "أنا ماعز ماينكرافت."
     ],
     answer: "الماعز (Goat)",
-    imageUrl: "https://minecraft.wiki/images/Goat_JE1_BE1.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS56mx_vxxTaFz2oP9I0bRcyJgWBbkwNbWa_oz4YAGVFA&s"
   },
   {
     id: 19,
@@ -207,7 +207,7 @@ export const whoAmIData = [
       "ألواني كثيرة ومشهورة جداً."
     ],
     answer: "الببغاء (Parrot)",
-    imageUrl: "https://minecraft.wiki/images/Parrot_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Red_Parrot_JE1_BE1.png/150px-Red_Parrot_JE1_BE1.png?90904"
   },
   {
     id: 20,
@@ -218,7 +218,7 @@ export const whoAmIData = [
       "أنا حيوان بني صغير يحب الموز في الألعاب؟"
     ],
     answer: "الباندا (Panda)",
-    imageUrl: "https://minecraft.wiki/images/Panda_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Lazy_Panda_JE1_BE1.png/180px-Lazy_Panda_JE1_BE1.png?14f6b"
   },
 
   {
@@ -230,7 +230,7 @@ export const whoAmIData = [
       "أنا من أخطر الكائنات البحرية."
     ],
     answer: "الـ Drowned",
-    imageUrl: "https://minecraft.wiki/images/Drowned_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Drowned_BE2.png/132px-Drowned_BE2.png?a92ef"
   },
   {
     id: 22,
@@ -241,7 +241,7 @@ export const whoAmIData = [
       "أستطيع إطلاق شعاع مؤذٍ."
     ],
     answer: "الـ Guardian",
-    imageUrl: "https://minecraft.wiki/images/Guardian_JE2_BE2.png"
+    imageUrl: "https://blendswap.com/blend_previews/15399/0/0"
   },
   {
     id: 23,
@@ -252,7 +252,7 @@ export const whoAmIData = [
       "يمكنني إعطاء اللاعب Mining Fatigue."
     ],
     answer: "الـ Elder Guardian",
-    imageUrl: "https://minecraft.wiki/images/Elder_Guardian_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/9/96/Elder_Guardian_%28Retracted%29.png/revision/latest?cb=20190816155550"
   },
   {
     id: 24,
@@ -263,7 +263,7 @@ export const whoAmIData = [
       "أنا هيكل عظمي أسود."
     ],
     answer: "الـ Wither Skeleton",
-    imageUrl: "https://minecraft.wiki/images/Wither_Skeleton_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Wither_Skeleton_JE4_BE3.png/150px-Wither_Skeleton_JE4_BE3.png?9c107"
   },
   {
     id: 25,
@@ -274,7 +274,7 @@ export const whoAmIData = [
       "أعيش في قصور الـ Woodland."
     ],
     answer: "الـ Vex",
-    imageUrl: "https://minecraft.wiki/images/Vex_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft/images/b/bc/Vex.png/revision/latest?cb=20191024011425"
   },
   {
     id: 26,
@@ -285,7 +285,7 @@ export const whoAmIData = [
       "أنا من الـ Illagers."
     ],
     answer: "الـ Vindicator",
-    imageUrl: "https://minecraft.wiki/images/Vindicator_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Vindicator_attacking.png/150px-Vindicator_attacking.png?9b581"
   },
   {
     id: 27,
@@ -296,7 +296,7 @@ export const whoAmIData = [
       "أنا قائد من قادة الـ Illagers."
     ],
     answer: "الـ Evoker",
-    imageUrl: "https://minecraft.wiki/images/Evoker_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/6/61/Evoker_JE1_BE1.png/revision/latest?cb=20220625034342"
   },
   {
     id: 28,
@@ -307,7 +307,7 @@ export const whoAmIData = [
       "أنا مخلوق ضخم يشبه الثور."
     ],
     answer: "الـ Ravager",
-    imageUrl: "https://minecraft.wiki/images/Ravager_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/a/a3/Ravager_JE1.png/revision/latest/scale-to-width-down/1200?cb=20210120025723"
   },
   {
     id: 29,
@@ -318,7 +318,7 @@ export const whoAmIData = [
       "إذا ضربتني قد أغضب مع باقي أفراد مجموعتي."
     ],
     answer: "الـ Zombified Piglin",
-    imageUrl: "https://minecraft.wiki/images/Zombified_Piglin_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Zombified_Piglin_BE6.png/150px-Zombified_Piglin_BE6.png?1a419"
   },
   {
     id: 30,
@@ -329,7 +329,7 @@ export const whoAmIData = [
       "أرمي عليك كرات نارية صغيرة."
     ],
     answer: "الـ Blaze",
-    imageUrl: "https://minecraft.wiki/images/Blaze_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/MCSM_Blaze.png?1e6d0"
   },
 
   {
@@ -341,7 +341,7 @@ export const whoAmIData = [
       "أعيش غالباً في المستنقعات."
     ],
     answer: "الـ Slime",
-    imageUrl: "https://minecraft.wiki/images/Slime_JE2_BE2.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgrSktKQ51iT6e2mvvQhLFgI_ud3DLWRrBcAzz8RnhHQ&s=10"
   },
   {
     id: 32,
@@ -352,7 +352,7 @@ export const whoAmIData = [
       "لوني أسود وأقفز بطريقة مختلفة."
     ],
     answer: "الـ Magma Cube",
-    imageUrl: "https://minecraft.wiki/images/Magma_Cube_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Magma_Cube_JE2_BE2.png?dc507"
   },
   {
     id: 33,
@@ -363,7 +363,7 @@ export const whoAmIData = [
       "أستطيع مهاجمة اللاعب إذا اقترب."
     ],
     answer: "الـ Cave Spider",
-    imageUrl: "https://minecraft.wiki/images/Cave_Spider_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Cave_Spider_JE3_BE3.png?86c1d"
   },
   {
     id: 34,
@@ -374,7 +374,7 @@ export const whoAmIData = [
       "أنا أكبر من العنكبوت العادي."
     ],
     answer: "العنكبوت (Spider)",
-    imageUrl: "https://minecraft.wiki/images/Spider_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/1f/Spider_JE4_BE3.png/revision/latest?cb=20240729213340"
   },
   {
     id: 35,
@@ -385,7 +385,7 @@ export const whoAmIData = [
       "أنا عنكبوت كبير."
     ],
     answer: "العنكبوت (Spider)",
-    imageUrl: "https://minecraft.wiki/images/Spider_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/1/1f/Spider_JE4_BE3.png/revision/latest?cb=20240729213340"
   },
   {
     id: 36,
@@ -396,7 +396,7 @@ export const whoAmIData = [
       "أستطيع أن أبيع لك أشياء مختلفة."
     ],
     answer: "القروي (Villager)",
-    imageUrl: "https://minecraft.wiki/images/Plains_Villager_Base.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpYNKgv0j67uDnckysqupu-TgrycaI-u8NSFKhz3eHDA&s"
   },
   {
     id: 37,
@@ -407,7 +407,7 @@ export const whoAmIData = [
       "أظهر أحياناً مع الـ Wandering Trader."
     ],
     answer: "الـ Wandering Trader",
-    imageUrl: "https://minecraft.wiki/images/Wandering_Trader_JE1_BE1.png"
+    imageUrl: "https://minecraft.wiki/images/Wandering_Trader_JE1_BE1.png?309b9"
   },
   {
     id: 38,
@@ -418,7 +418,7 @@ export const whoAmIData = [
       "لدي أنواع وألوان مختلفة."
     ],
     answer: "السمكة (Fish)",
-    imageUrl: "https://minecraft.wiki/images/Cod_JE2_BE2.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTckZHigkebGKZZFms1QEujr3PGEVWUguTsSDGCiiMb3cz8FYG5R75Ft94&s=10"
   },
   {
     id: 39,
@@ -429,7 +429,7 @@ export const whoAmIData = [
       "يمكنني أن أكون خطيراً في الماء."
     ],
     answer: "الدلفين (Dolphin)",
-    imageUrl: "https://minecraft.wiki/images/Dolphin_JE1_BE1.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/5/55/Dolphin_BE_Revision_1.png/revision/latest?cb=20191001160033"
   },
   {
     id: 40,
@@ -440,7 +440,7 @@ export const whoAmIData = [
       "أنا حيوان بحري لطيف."
     ],
     answer: "السلحفاة (Turtle)",
-    imageUrl: "https://minecraft.wiki/images/Turtle_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/e/e9/Turtle.png/revision/latest?cb=20240729213403"
   },
 
   {
@@ -452,7 +452,7 @@ export const whoAmIData = [
       "صدفتي مفيدة في صناعة خوذة."
     ],
     answer: "السلحفاة (Turtle)",
-    imageUrl: "https://minecraft.wiki/images/Turtle_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/e/e9/Turtle.png/revision/latest?cb=20240729213403"
   },
   {
     id: 42,
@@ -463,7 +463,7 @@ export const whoAmIData = [
       "أستطيع إعطاءك الحليب."
     ],
     answer: "البقرة (Cow)",
-    imageUrl: "https://minecraft.wiki/images/Cow_JE7_BE4.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Cow_JE7_BE4.png/150px-Cow_JE7_BE4.png?3de94"
   },
   {
     id: 43,
@@ -474,7 +474,7 @@ export const whoAmIData = [
       "أنا أبيض وأسود غالباً."
     ],
     answer: "البقرة (Cow)",
-    imageUrl: "https://minecraft.wiki/images/Cow_JE7_BE4.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Cow_JE7_BE4.png/150px-Cow_JE7_BE4.png?3de94"
   },
   {
     id: 44,
@@ -485,7 +485,7 @@ export const whoAmIData = [
       "يمكنك قص صوفي باستخدام المقص."
     ],
     answer: "الخروف (Sheep)",
-    imageUrl: "https://minecraft.wiki/images/Sheep_JE3_BE6.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSuHegG5J_jdFtZ2Qr1wc5-9jf9AwhOzgQfyXUrAbkng&s"
   },
   {
     id: 45,
@@ -496,7 +496,7 @@ export const whoAmIData = [
       "يمكن تلوين صوفي."
     ],
     answer: "الخروف (Sheep)",
-    imageUrl: "https://minecraft.wiki/images/Sheep_JE3_BE6.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSuHegG5J_jdFtZ2Qr1wc5-9jf9AwhOzgQfyXUrAbkng&s"
   },
   {
     id: 46,
@@ -507,7 +507,7 @@ export const whoAmIData = [
       "لوني وردي."
     ],
     answer: "الخنزير (Pig)",
-    imageUrl: "https://minecraft.wiki/images/Pig_JE3_BE2.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwgC1t0N9D5Eq5jJNFQtxV51UyEC_319AajqoVBvk4hw&s=10"
   },
   {
     id: 47,
@@ -518,7 +518,7 @@ export const whoAmIData = [
       "أنا حيوان وردي."
     ],
     answer: "الخنزير (Pig)",
-    imageUrl: "https://minecraft.wiki/images/Pig_JE3_BE2.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwgC1t0N9D5Eq5jJNFQtxV51UyEC_319AajqoVBvk4hw&s=10"
   },
   {
     id: 48,
@@ -529,7 +529,7 @@ export const whoAmIData = [
       "أنا من أشهر حيوانات Minecraft."
     ],
     answer: "الحصان (Horse)",
-    imageUrl: "https://minecraft.wiki/images/Horse_JE7_BE4.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw6pDs_rMjYUt4KC6gBZjEeFUdlb4ayhS9vBq6vnZ5bw&s=10"
   },
   {
     id: 49,
@@ -540,7 +540,7 @@ export const whoAmIData = [
       "يمكنك ركوب ظهري."
     ],
     answer: "الحصان (Horse)",
-    imageUrl: "https://minecraft.wiki/images/Horse_JE7_BE4.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw6pDs_rMjYUt4KC6gBZjEeFUdlb4ayhS9vBq6vnZ5bw&s=10"
   },
   {
     id: 50,
@@ -551,7 +551,7 @@ export const whoAmIData = [
       "أنا قريب من الحصان لكنني أصغر."
     ],
     answer: "الحمار (Donkey)",
-    imageUrl: "https://minecraft.wiki/images/Donkey_JE3_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Donkey_JE5.png?9e2a1"
   },
 
   {
@@ -563,7 +563,7 @@ export const whoAmIData = [
       "أنا قريب من الحصان والبغل."
     ],
     answer: "الحمار (Donkey)",
-    imageUrl: "https://minecraft.wiki/images/Donkey_JE3_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Donkey_JE5.png?9e2a1"
   },
   {
     id: 52,
@@ -574,7 +574,7 @@ export const whoAmIData = [
       "ألواني كثيرة."
     ],
     answer: "الببغاء (Parrot)",
-    imageUrl: "https://minecraft.wiki/images/Parrot_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Red_Parrot_JE1_BE1.png/150px-Red_Parrot_JE1_BE1.png?90904"
   },
   {
     id: 53,
@@ -585,7 +585,7 @@ export const whoAmIData = [
       "أعيش في الغابة."
     ],
     answer: "الببغاء (Parrot)",
-    imageUrl: "https://minecraft.wiki/images/Parrot_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Red_Parrot_JE1_BE1.png/150px-Red_Parrot_JE1_BE1.png?90904"
   },
   {
     id: 54,
@@ -596,7 +596,7 @@ export const whoAmIData = [
       "أنا صغير ولطيف ويمكن تربيتي."
     ],
     answer: "الأرنب (Rabbit)",
-    imageUrl: "https://minecraft.wiki/images/Rabbit_JE3_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/8/8d/Brown_Rabbit_JE2_BE2.png/revision/latest?cb=20240729213325"
   },
   {
     id: 55,
@@ -607,7 +607,7 @@ export const whoAmIData = [
       "أنا حيوان صغير بأذنين طويلتين."
     ],
     answer: "الأرنب (Rabbit)",
-    imageUrl: "https://minecraft.wiki/images/Rabbit_JE3_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/8/8d/Brown_Rabbit_JE2_BE2.png/revision/latest?cb=20240729213325"
   },
   {
     id: 56,
@@ -618,7 +618,7 @@ export const whoAmIData = [
       "أصبح مخلصاً لك بعد ترويضي."
     ],
     answer: "الذئب (Wolf)",
-    imageUrl: "https://minecraft.wiki/images/Wolf_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Wolf_JE2_BE2.png/150px-Wolf_JE2_BE2.png?ee46e"
   },
   {
     id: 57,
@@ -629,7 +629,7 @@ export const whoAmIData = [
       "أنا قط كبير يمكن ترويضه."
     ],
     answer: "القط (Cat)",
-    imageUrl: "https://minecraft.wiki/images/Cat_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/73/Tuxedo_Cat_JE2_BE2.png/revision/latest?cb=20240729214002"
   },
   {
     id: 58,
@@ -640,7 +640,7 @@ export const whoAmIData = [
       "أنا من أشهر الحيوانات الأليفة."
     ],
     answer: "القط (Cat)",
-    imageUrl: "https://minecraft.wiki/images/Cat_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/7/73/Tuxedo_Cat_JE2_BE2.png/revision/latest?cb=20240729214002"
   },
   {
     id: 59,
@@ -651,7 +651,7 @@ export const whoAmIData = [
       "أنا دجاجة."
     ],
     answer: "الدجاجة (Chicken)",
-    imageUrl: "https://minecraft.wiki/images/Chicken_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/2c/Chicken_JE2_BE2.png/revision/latest/scale-to-width/360?cb=20240729214013"
   },
   {
     id: 60,
@@ -662,7 +662,7 @@ export const whoAmIData = [
       "أنا أصغر من معظم حيوانات المزرعة."
     ],
     answer: "الدجاجة (Chicken)",
-    imageUrl: "https://minecraft.wiki/images/Chicken_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/2c/Chicken_JE2_BE2.png/revision/latest/scale-to-width/360?cb=20240729214013"
   },
 
   {
@@ -674,7 +674,7 @@ export const whoAmIData = [
       "أنا نسخة مختلفة من الحصان."
     ],
     answer: "حصان الهيكل العظمي (Skeleton Horse)",
-    imageUrl: "https://minecraft.wiki/images/Skeleton_Horse_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Saddled_Skeleton_Horse.png/150px-Saddled_Skeleton_Horse.png?5767d"
   },
   {
     id: 62,
@@ -685,7 +685,7 @@ export const whoAmIData = [
       "أظهر أثناء عاصفة رعدية في ظروف معينة."
     ],
     answer: "حصان الهيكل العظمي (Skeleton Horse)",
-    imageUrl: "https://minecraft.wiki/images/Skeleton_Horse_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Saddled_Skeleton_Horse.png/150px-Saddled_Skeleton_Horse.png?5767d"
   },
   {
     id: 63,
@@ -696,7 +696,7 @@ export const whoAmIData = [
       "أستطيع إعطاءك Scute عندما أكبر."
     ],
     answer: "السلحفاة (Turtle)",
-    imageUrl: "https://minecraft.wiki/images/Turtle_JE2_BE2.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHhTPChdCpwhVUBT9vAtEK5at8FAD4kJUW-CJXsyha4A&s=10"
   },
   {
     id: 64,
@@ -707,7 +707,7 @@ export const whoAmIData = [
       "أنا أبيض وأسود وأشبه الدب."
     ],
     answer: "الدب القطبي (Polar Bear)",
-    imageUrl: "https://minecraft.wiki/images/Polar_Bear_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Polar_Bear_JE2_BE2.png?29c45"
   },
   {
     id: 65,
@@ -718,7 +718,7 @@ export const whoAmIData = [
       "أنا دب أبيض."
     ],
     answer: "الدب القطبي (Polar Bear)",
-    imageUrl: "https://minecraft.wiki/images/Polar_Bear_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Polar_Bear_JE2_BE2.png?29c45"
   },
   {
     id: 66,
@@ -729,7 +729,7 @@ export const whoAmIData = [
       "أستطيع أن أكون وسيلة نقل فوق الحمم."
     ],
     answer: "الـ Strider",
-    imageUrl: "https://minecraft.wiki/images/Strider_JE1_BE1.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/24/Baby_Strider_riding_Strider_JE2.png/revision/latest/scale-to-width-down/250?cb=20200618080212"
   },
   {
     id: 67,
@@ -740,7 +740,7 @@ export const whoAmIData = [
       "يمكن ركوب ظهري باستخدام سرج."
     ],
     answer: "الـ Strider",
-    imageUrl: "https://minecraft.wiki/images/Strider_JE1_BE1.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/2/24/Baby_Strider_riding_Strider_JE2.png/revision/latest/scale-to-width-down/250?cb=20200618080212"
   },
   {
     id: 68,
@@ -751,7 +751,7 @@ export const whoAmIData = [
       "أستطيع القفز على اللاعبين."
     ],
     answer: "الـ Silverfish",
-    imageUrl: "https://minecraft.wiki/images/Silverfish_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft-mob/images/6/6a/Download_%2814%29.jpg/revision/latest?cb=20151111224910"
   },
   {
     id: 69,
@@ -762,7 +762,7 @@ export const whoAmIData = [
       "أنا حشرة صغيرة وعدوانية."
     ],
     answer: "الـ Silverfish",
-    imageUrl: "https://minecraft.wiki/images/Silverfish_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft-mob/images/6/6a/Download_%2814%29.jpg/revision/latest?cb=20151111224910"
   },
   {
     id: 70,
@@ -773,7 +773,7 @@ export const whoAmIData = [
       "أهاجمك عندما تكسر أشياء معينة."
     ],
     answer: "الـ Endermite",
-    imageUrl: "https://minecraft.wiki/images/Endermite_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/8/89/Endermite_Revision_2.png/revision/latest?cb=20240729214337"
   },
 
   {
@@ -785,7 +785,7 @@ export const whoAmIData = [
       "لوني بنفسجي."
     ],
     answer: "الـ Endermite",
-    imageUrl: "https://minecraft.wiki/images/Endermite_JE2_BE2.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/8/89/Endermite_Revision_2.png/revision/latest?cb=20240729214337"
   },
   {
     id: 72,
@@ -796,7 +796,7 @@ export const whoAmIData = [
       "يمكن أن أفتح وأغلق مثل الصندوق."
     ],
     answer: "الـ Shulker",
-    imageUrl: "https://minecraft.wiki/images/Shulker_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Shulker_JE1_BE1.png?02a87"
   },
   {
     id: 73,
@@ -807,7 +807,7 @@ export const whoAmIData = [
       "أختبئ داخل صدفة."
     ],
     answer: "الـ Shulker",
-    imageUrl: "https://minecraft.wiki/images/Shulker_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Shulker_JE1_BE1.png?02a87"
   },
   {
     id: 74,
@@ -818,7 +818,7 @@ export const whoAmIData = [
       "أعتمد على الصوت والاهتزازات."
     ],
     answer: "الـ Warden",
-    imageUrl: "https://minecraft.wiki/images/Warden_JE1_BE1.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVD6dqVzRDxc8BDNbJktyUU-62CjlNbHzN_PwLCzr9GN3BHvhOJeliaOE&s=10"
   },
   {
     id: 75,
@@ -829,7 +829,7 @@ export const whoAmIData = [
       "أنا أقوى مخلوق طبيعي تقريباً في اللعبة."
     ],
     answer: "الـ Warden",
-    imageUrl: "https://minecraft.wiki/images/Warden_JE1_BE1.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVD6dqVzRDxc8BDNbJktyUU-62CjlNbHzN_PwLCzr9GN3BHvhOJeliaOE&s=10"
   },
   {
     id: 76,
@@ -840,7 +840,7 @@ export const whoAmIData = [
       "أحتاج إلى 3 رؤوس من نوع معين لاستدعائي."
     ],
     answer: "الـ Wither",
-    imageUrl: "https://minecraft.wiki/images/Wither_JE2_BE2.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOxNf87Ck_9DkzIsJ-F5URa00fjCcuJ6V3QjyTEx9lgw&s=10"
   },
   {
     id: 77,
@@ -851,7 +851,7 @@ export const whoAmIData = [
       "يمكنني إسقاط Nether Star."
     ],
     answer: "الـ Wither",
-    imageUrl: "https://minecraft.wiki/images/Wither_JE2_BE2.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOxNf87Ck_9DkzIsJ-F5URa00fjCcuJ6V3QjyTEx9lgw&s=10"
   },
   {
     id: 78,
@@ -862,7 +862,7 @@ export const whoAmIData = [
       "أنا هيكل عظمي طويل وأسود."
     ],
     answer: "الـ Wither Skeleton",
-    imageUrl: "https://minecraft.wiki/images/Wither_Skeleton_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Wither_Skeleton_JE4_BE3.png/150px-Wither_Skeleton_JE4_BE3.png?9c107"
   },
   {
     id: 79,
@@ -873,7 +873,7 @@ export const whoAmIData = [
       "يمكن أن أسقط رأسي."
     ],
     answer: "الـ Wither Skeleton",
-    imageUrl: "https://minecraft.wiki/images/Wither_Skeleton_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Wither_Skeleton_JE4_BE3.png/150px-Wither_Skeleton_JE4_BE3.png?9c107"
   },
   {
     id: 80,
@@ -884,7 +884,7 @@ export const whoAmIData = [
       "أنا نسخة غاضبة من الـ Piglin."
     ],
     answer: "الـ Piglin Brute",
-    imageUrl: "https://minecraft.wiki/images/Piglin_Brute_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Piglin_Brute_JE1.png?5d4a0"
   },
 
   {
@@ -896,7 +896,7 @@ export const whoAmIData = [
       "أحرس Bastion Remnants."
     ],
     answer: "الـ Piglin Brute",
-    imageUrl: "https://minecraft.wiki/images/Piglin_Brute_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Piglin_Brute_JE1.png?5d4a0"
   },
   {
     id: 82,
@@ -907,7 +907,7 @@ export const whoAmIData = [
       "أستطيع بيع وشراء الأشياء."
     ],
     answer: "القروي (Villager)",
-    imageUrl: "https://minecraft.wiki/images/Plains_Villager_Base.png"
+    imageUrl: "https://cdn.mos.cms.futurecdn.net/v2/t:0,l:560,cw:1440,ch:1440,q:80,w:1440/8pbgXKXWWZBryyVG9zABRf.jpg"
   },
   {
     id: 83,
@@ -918,7 +918,7 @@ export const whoAmIData = [
       "أنا حيوان يشبه الحصان لكنني لست حصاناً."
     ],
     answer: "البغل (Mule)",
-    imageUrl: "https://minecraft.wiki/images/Mule_JE3_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Mule_JE5.png?3c1f0"
   },
   {
     id: 84,
@@ -929,7 +929,7 @@ export const whoAmIData = [
       "أنا أسرع من الحمار غالباً."
     ],
     answer: "البغل (Mule)",
-    imageUrl: "https://minecraft.wiki/images/Mule_JE3_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Mule_JE5.png?3c1f0"
   },
   {
     id: 85,
@@ -940,7 +940,7 @@ export const whoAmIData = [
       "أنا أبيض وأسود."
     ],
     answer: "الباندا (Panda)",
-    imageUrl: "https://minecraft.wiki/images/Panda_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Lazy_Panda_JE1_BE1.png/180px-Lazy_Panda_JE1_BE1.png?14f6b"
   },
   {
     id: 86,
@@ -951,7 +951,7 @@ export const whoAmIData = [
       "أنا من الحيوانات النادرة نسبياً."
     ],
     answer: "الباندا (Panda)",
-    imageUrl: "https://minecraft.wiki/images/Panda_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Lazy_Panda_JE1_BE1.png/180px-Lazy_Panda_JE1_BE1.png?14f6b"
   },
   {
     id: 87,
@@ -962,7 +962,7 @@ export const whoAmIData = [
       "آكل الـ Slimes والـ Magma Cubes بطريقة خاصة."
     ],
     answer: "الضفدع (Frog)",
-    imageUrl: "https://minecraft.wiki/images/Frog_JE1_BE1.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/00/Cold_Frog_JE1_BE1.png/revision/latest?cb=20220603223359"
   },
   {
     id: 88,
@@ -973,7 +973,7 @@ export const whoAmIData = [
       "أنا صغير وأقفز كثيراً."
     ],
     answer: "الضفدع (Frog)",
-    imageUrl: "https://minecraft.wiki/images/Frog_JE1_BE1.png"
+    imageUrl: "https://static.wikia.nocookie.net/minecraft_gamepedia/images/0/00/Cold_Frog_JE1_BE1.png/revision/latest?cb=20220603223359"
   },
   {
     id: 89,
@@ -984,7 +984,7 @@ export const whoAmIData = [
       "إذا سبحت بجانبي قد أساعدك على الحركة."
     ],
     answer: "الدلفين (Dolphin)",
-    imageUrl: "https://minecraft.wiki/images/Dolphin_JE1_BE1.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8r2L-ftgR1ZuFRDOzjLjFK7bEonenT3tZIkFbfmBPeRIlhhCzARQB8S5G&s=10"
   },
   {
     id: 90,
@@ -995,7 +995,7 @@ export const whoAmIData = [
       "أنا دلفين."
     ],
     answer: "الدلفين (Dolphin)",
-    imageUrl: "https://minecraft.wiki/images/Dolphin_JE1_BE1.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8r2L-ftgR1ZuFRDOzjLjFK7bEonenT3tZIkFbfmBPeRIlhhCzARQB8S5G&s=10"
   },
 
   {
@@ -1007,7 +1007,7 @@ export const whoAmIData = [
       "أنا حشرة مرتبطة بالـ Stronghold."
     ],
     answer: "الـ Silverfish",
-    imageUrl: "https://minecraft.wiki/images/Silverfish_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/MCD_Silverfish.png/150px-MCD_Silverfish.png?83812"
   },
   {
     id: 92,
@@ -1018,7 +1018,7 @@ export const whoAmIData = [
       "أهاجم اللاعب بالقفز عليه."
     ],
     answer: "الـ Spider",
-    imageUrl: "https://minecraft.wiki/images/Spider_JE2_BE2.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnUubUlHKlgXHHbqQ4rh-4V1zlzuBtGK9uJ6arpBbYMA&s=10"
   },
   {
     id: 93,
@@ -1029,7 +1029,7 @@ export const whoAmIData = [
       "أنا عنكبوت أصغر من العادي."
     ],
     answer: "الـ Cave Spider",
-    imageUrl: "https://minecraft.wiki/images/Cave_Spider_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Cave_Spider_JE3_BE3.png?86c1d"
   },
   {
     id: 94,
@@ -1040,7 +1040,7 @@ export const whoAmIData = [
       "أستطيع إعطاء اللاعب Fire Resistance بعد قتلي."
     ],
     answer: "الـ Blaze",
-    imageUrl: "https://minecraft.wiki/images/Blaze_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/MCSM_Blaze.png?1e6d0"
   },
   {
     id: 95,
@@ -1051,7 +1051,7 @@ export const whoAmIData = [
       "من قتلي يمكن الحصول على Blaze Rod."
     ],
     answer: "الـ Blaze",
-    imageUrl: "https://minecraft.wiki/images/Blaze_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/MCSM_Blaze.png?1e6d0"
   },
   {
     id: 96,
@@ -1062,7 +1062,7 @@ export const whoAmIData = [
       "أستطيع الانقسام إلى كائنات أصغر."
     ],
     answer: "الـ Slime",
-    imageUrl: "https://minecraft.wiki/images/Slime_JE2_BE2.png"
+    imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgrSktKQ51iT6e2mvvQhLFgI_ud3DLWRrBcAzz8RnhHQ&s=10"
   },
   {
     id: 97,
@@ -1073,7 +1073,7 @@ export const whoAmIData = [
       "أشبه بالـ Slime لكنني مصنوع من الماغما."
     ],
     answer: "الـ Magma Cube",
-    imageUrl: "https://minecraft.wiki/images/Magma_Cube_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/Magma_Cube_JE2_BE2.png?dc507"
   },
   {
     id: 98,
@@ -1084,7 +1084,7 @@ export const whoAmIData = [
       "إذا قتلتني قد تحصل على تأثير Bad Omen في الإصدارات التي تستخدمه."
     ],
     answer: "الـ Pillager",
-    imageUrl: "https://minecraft.wiki/images/Pillager_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Pillager_JE3.png/150px-Pillager_JE3.png?22662"
   },
   {
     id: 99,
@@ -1095,7 +1095,7 @@ export const whoAmIData = [
       "يمكنني الظهور أثناء الـ Raids."
     ],
     answer: "الـ Pillager",
-    imageUrl: "https://minecraft.wiki/images/Pillager_JE2_BE2.png"
+    imageUrl: "https://minecraft.wiki/images/thumb/Pillager_JE3.png/150px-Pillager_JE3.png?22662"
   },
   {
     id: 100,
@@ -1106,6 +1106,6 @@ export const whoAmIData = [
       "إذا هزمتني تحصل على بيضة التنين وتفتح طريق العودة."
     ],
     answer: "تنين الإندر (Ender Dragon)",
-    imageUrl: "https://minecraft.wiki/images/Ender_Dragon_JE2_BE2.png"
+    imageUrl: "https://cdn.ouiheberg.com/blog/covers/1773221384_tl13nAF0.webp"
   }
 ];
