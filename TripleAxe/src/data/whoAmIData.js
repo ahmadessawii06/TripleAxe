@@ -5,7 +5,7 @@ export const whoAmIData = [
     hints: [
       "أنا كائن طويل جداً ولوني أسود.",
       "أكره من ينظر مباشرة في عيني!",
-      "أستطيع الانتقال السريع (Teleport) وأحمل البلوكات."
+      "أستطيع الانتقال بسرعة وأحمل البلوكات."
     ],
     answer: "الإندرمان (Enderman)",
     imageUrl: "https://minecraft.wiki/images/Enderman_JE3_BE3.png"
@@ -14,9 +14,9 @@ export const whoAmIData = [
     id: 2,
     title: "شخصية غامضة #2",
     hints: [
-      "لوني أخضر وأمشي بدون أي صوت...",
-      "أقترب منك بهدوء ثم أصدر صوت 'سسسسس'!",
-      "أخاف جداً من القطط والأوصيلوت."
+      "أتحرك بهدوء ولا أحب أن يسمعني أحد.",
+      "أقترب منك ثم أبدأ بالـ 'سسسسس'!",
+      "أنا أخضر وأنفجر عندما أقترب منك."
     ],
     answer: "الكريبر (Creeper)",
     imageUrl: "https://minecraft.wiki/images/Creeper_JE2_BE2.png"
@@ -27,9 +27,1085 @@ export const whoAmIData = [
     hints: [
       "أعيش في القرى وأحب التجارة.",
       "أصدر صوت 'همممم' باستمرار.",
-      "أنفي كبير وأرتدي رداءً بنياً."
+      "أنفي كبير وأرتدي رداءً."
     ],
     answer: "القروي (Villager)",
     imageUrl: "https://minecraft.wiki/images/Plains_Villager_Base.png"
+  },
+  {
+    id: 4,
+    title: "شخصية غامضة #4",
+    hints: [
+      "أطير في السماء وأعيش في أماكن مظلمة.",
+      "أطلق كرات نارية من فمي.",
+      "أعيش غالباً في النذر."
+    ],
+    answer: "الغاست (Ghast)",
+    imageUrl: "https://minecraft.wiki/images/Ghast_JE2_BE2.png"
+  },
+  {
+    id: 5,
+    title: "شخصية غامضة #5",
+    hints: [
+      "أنا عدو هيكلي وأحب الأماكن المظلمة.",
+      "أستخدم القوس في القتال.",
+      "أنا هيكل عظمي يحمل قوساً."
+    ],
+    answer: "الهيكل العظمي (Skeleton)",
+    imageUrl: "https://minecraft.wiki/images/Skeleton_JE6_BE4.png"
+  },
+  {
+    id: 6,
+    title: "شخصية غامضة #6",
+    hints: [
+      "أتحرك ببطء لكنني لا أرحم أعدائي.",
+      "أحمل سيفاً وأظهر في الليل.",
+      "أنا من أشهر الوحوش في العالم العلوي."
+    ],
+    answer: "الزومبي (Zombie)",
+    imageUrl: "https://minecraft.wiki/images/Zombie_JE3_BE2.png"
+  },
+  {
+    id: 7,
+    title: "شخصية غامضة #7",
+    hints: [
+      "أستطيع الطيران دون أجنحة حقيقية.",
+      "أعيش في مدينة بعيدة جداً.",
+      "يمكن استخدام أجنحتي للطيران."
+    ],
+    answer: "الـ Shulker",
+    imageUrl: "https://minecraft.wiki/images/Shulker_JE2_BE2.png"
+  },
+  {
+    id: 8,
+    title: "شخصية غامضة #8",
+    hints: [
+      "أنا حيوان أليف ويمكنني مساعدتك في القتال.",
+      "إذا أعطيتني عظمة قد أصبح صديقك.",
+      "أنا كلب ماينكرافت."
+    ],
+    answer: "الذئب (Wolf)",
+    imageUrl: "https://minecraft.wiki/images/Wolf_JE2_BE2.png"
+  },
+  {
+    id: 9,
+    title: "شخصية غامضة #9",
+    hints: [
+      "أعيش في الماء.",
+      "يمكنك ركوب ظهري بعد ترويضي.",
+      "لوني غالباً أخضر ويمكنني القفز."
+    ],
+    answer: "الضفدع (Frog)",
+    imageUrl: "https://minecraft.wiki/images/Frog_JE1_BE1.png"
+  },
+  {
+    id: 10,
+    title: "شخصية غامضة #10",
+    hints: [
+      "أنا حيوان أعيش في الماء.",
+      "يمكنني إعطاؤك السمك.",
+      "أنا من أشهر الكائنات البحرية في ماينكرافت."
+    ],
+    answer: "الحبار (Squid)",
+    imageUrl: "https://minecraft.wiki/images/Squid_JE2_BE2.png"
+  },
+
+  {
+    id: 11,
+    title: "شخصية غامضة #11",
+    hints: [
+      "أعيش في الصحراء.",
+      "أستطيع مهاجمتك من بعيد.",
+      "أنا زومبي لكنني مختلف قليلاً."
+    ],
+    answer: "الـ Husk",
+    imageUrl: "https://minecraft.wiki/images/Husk_JE2_BE2.png"
+  },
+  {
+    id: 12,
+    title: "شخصية غامضة #12",
+    hints: [
+      "أعيش في المستنقعات.",
+      "أستخدم سهاماً مسمومة.",
+      "أنا نسخة مختلفة من الهيكل العظمي."
+    ],
+    answer: "الـ Stray",
+    imageUrl: "https://minecraft.wiki/images/Stray_JE2_BE2.png"
+  },
+  {
+    id: 13,
+    title: "شخصية غامضة #13",
+    hints: [
+      "أعيش في النذر.",
+      "أحمل سيفاً من الذهب.",
+      "أستطيع أن أكون خطيراً جداً إذا اقتربت مني."
+    ],
+    answer: "الـ Piglin",
+    imageUrl: "https://minecraft.wiki/images/Piglin_JE2_BE2.png"
+  },
+  {
+    id: 14,
+    title: "شخصية غامضة #14",
+    hints: [
+      "أحب الذهب كثيراً.",
+      "إذا رميت لي سبيكة ذهب قد أعطيك شيئاً بالمقابل.",
+      "أنا خنزير يعيش في النذر."
+    ],
+    answer: "الـ Piglin",
+    imageUrl: "https://minecraft.wiki/images/Piglin_JE2_BE2.png"
+  },
+  {
+    id: 15,
+    title: "شخصية غامضة #15",
+    hints: [
+      "أنا من أقوى الوحوش في اللعبة.",
+      "أستطيع الطيران.",
+      "أنا الزعيم الذي ينتظرك في النهاية."
+    ],
+    answer: "تنين الإندر (Ender Dragon)",
+    imageUrl: "https://minecraft.wiki/images/Ender_Dragon_JE2_BE2.png"
+  },
+  {
+    id: 16,
+    title: "شخصية غامضة #16",
+    hints: [
+      "أنا أعيش تحت الأرض.",
+      "أستطيع سماعك حتى لو لم أرك.",
+      "أنا الوحش المرعب في الـ Deep Dark."
+    ],
+    answer: "الـ Warden",
+    imageUrl: "https://minecraft.wiki/images/Warden_JE1_BE1.png"
+  },
+  {
+    id: 17,
+    title: "شخصية غامضة #17",
+    hints: [
+      "أنا مخلوق صغير أستطيع حمل الأشياء.",
+      "أعيش مع الـ Allay في عالم ماينكرافت.",
+      "أحب جمع الأشياء وإعطائها للاعب."
+    ],
+    answer: "الـ Allay",
+    imageUrl: "https://minecraft.wiki/images/Allay_JE1_BE1.png"
+  },
+  {
+    id: 18,
+    title: "شخصية غامضة #18",
+    hints: [
+      "أعيش في الجبال.",
+      "أستطيع القفز لمسافات كبيرة.",
+      "أنا ماعز ماينكرافت."
+    ],
+    answer: "الماعز (Goat)",
+    imageUrl: "https://minecraft.wiki/images/Goat_JE1_BE1.png"
+  },
+  {
+    id: 19,
+    title: "شخصية غامضة #19",
+    hints: [
+      "أعيش في الغابات.",
+      "أستطيع تقليد بعض الأصوات.",
+      "ألواني كثيرة ومشهورة جداً."
+    ],
+    answer: "الببغاء (Parrot)",
+    imageUrl: "https://minecraft.wiki/images/Parrot_JE2_BE2.png"
+  },
+  {
+    id: 20,
+    title: "شخصية غامضة #20",
+    hints: [
+      "أعيش في الغابة.",
+      "أستطيع التسلق.",
+      "أنا حيوان بني صغير يحب الموز في الألعاب؟"
+    ],
+    answer: "الباندا (Panda)",
+    imageUrl: "https://minecraft.wiki/images/Panda_JE2_BE2.png"
+  },
+
+  {
+    id: 21,
+    title: "شخصية غامضة #21",
+    hints: [
+      "أعيش في المحيط.",
+      "أستطيع مهاجمتك باستخدام شوكة.",
+      "أنا من أخطر الكائنات البحرية."
+    ],
+    answer: "الـ Drowned",
+    imageUrl: "https://minecraft.wiki/images/Drowned_JE2_BE2.png"
+  },
+  {
+    id: 22,
+    title: "شخصية غامضة #22",
+    hints: [
+      "أعيش في المحيطات.",
+      "أحمي بعض المعالم البحرية.",
+      "أستطيع إطلاق شعاع مؤذٍ."
+    ],
+    answer: "الـ Guardian",
+    imageUrl: "https://minecraft.wiki/images/Guardian_JE2_BE2.png"
+  },
+  {
+    id: 23,
+    title: "شخصية غامضة #23",
+    hints: [
+      "أنا أكبر وأقوى من الـ Guardian العادي.",
+      "أعيش قرب المحيطات.",
+      "يمكنني إعطاء اللاعب Mining Fatigue."
+    ],
+    answer: "الـ Elder Guardian",
+    imageUrl: "https://minecraft.wiki/images/Elder_Guardian_JE2_BE2.png"
+  },
+  {
+    id: 24,
+    title: "شخصية غامضة #24",
+    hints: [
+      "أعيش في النذر.",
+      "أطلق النار على أعدائي.",
+      "أنا هيكل عظمي أسود."
+    ],
+    answer: "الـ Wither Skeleton",
+    imageUrl: "https://minecraft.wiki/images/Wither_Skeleton_JE2_BE2.png"
+  },
+  {
+    id: 25,
+    title: "شخصية غامضة #25",
+    hints: [
+      "أستطيع استدعاء وحوش صغيرة.",
+      "أطير وأحمل سيفاً.",
+      "أعيش في قصور الـ Woodland."
+    ],
+    answer: "الـ Vex",
+    imageUrl: "https://minecraft.wiki/images/Vex_JE2_BE2.png"
+  },
+  {
+    id: 26,
+    title: "شخصية غامضة #26",
+    hints: [
+      "أعيش في القصور والغابات.",
+      "أستخدم الفأس.",
+      "أنا من الـ Illagers."
+    ],
+    answer: "الـ Vindicator",
+    imageUrl: "https://minecraft.wiki/images/Vindicator_JE2_BE2.png"
+  },
+  {
+    id: 27,
+    title: "شخصية غامضة #27",
+    hints: [
+      "أستطيع استدعاء الـ Vex.",
+      "أحمل راية فوق رأسي أحياناً.",
+      "أنا قائد من قادة الـ Illagers."
+    ],
+    answer: "الـ Evoker",
+    imageUrl: "https://minecraft.wiki/images/Evoker_JE2_BE2.png"
+  },
+  {
+    id: 28,
+    title: "شخصية غامضة #28",
+    hints: [
+      "أظهر أثناء الـ Raids.",
+      "أركب حيواناً قوياً.",
+      "أنا مخلوق ضخم يشبه الثور."
+    ],
+    answer: "الـ Ravager",
+    imageUrl: "https://minecraft.wiki/images/Ravager_JE2_BE2.png"
+  },
+  {
+    id: 29,
+    title: "شخصية غامضة #29",
+    hints: [
+      "أعيش في النذر.",
+      "أشبه الخنزير.",
+      "إذا ضربتني قد أغضب مع باقي أفراد مجموعتي."
+    ],
+    answer: "الـ Zombified Piglin",
+    imageUrl: "https://minecraft.wiki/images/Zombified_Piglin_JE2_BE2.png"
+  },
+  {
+    id: 30,
+    title: "شخصية غامضة #30",
+    hints: [
+      "أعيش في النذر.",
+      "أستطيع الطيران.",
+      "أرمي عليك كرات نارية صغيرة."
+    ],
+    answer: "الـ Blaze",
+    imageUrl: "https://minecraft.wiki/images/Blaze_JE2_BE2.png"
+  },
+
+  {
+    id: 31,
+    title: "شخصية غامضة #31",
+    hints: [
+      "أنا مخلوق صغير جداً.",
+      "أستطيع القفز على اللاعب.",
+      "أعيش غالباً في المستنقعات."
+    ],
+    answer: "الـ Slime",
+    imageUrl: "https://minecraft.wiki/images/Slime_JE2_BE2.png"
+  },
+  {
+    id: 32,
+    title: "شخصية غامضة #32",
+    hints: [
+      "أعيش في النذر.",
+      "أشبه بالـ Slime.",
+      "لوني أسود وأقفز بطريقة مختلفة."
+    ],
+    answer: "الـ Magma Cube",
+    imageUrl: "https://minecraft.wiki/images/Magma_Cube_JE2_BE2.png"
+  },
+  {
+    id: 33,
+    title: "شخصية غامضة #33",
+    hints: [
+      "أعيش في الكهوف.",
+      "أتدلى من السقف.",
+      "أستطيع مهاجمة اللاعب إذا اقترب."
+    ],
+    answer: "الـ Cave Spider",
+    imageUrl: "https://minecraft.wiki/images/Cave_Spider_JE2_BE2.png"
+  },
+  {
+    id: 34,
+    title: "شخصية غامضة #34",
+    hints: [
+      "أعيش في الكهوف.",
+      "لوني بني.",
+      "أنا أكبر من العنكبوت العادي."
+    ],
+    answer: "العنكبوت (Spider)",
+    imageUrl: "https://minecraft.wiki/images/Spider_JE2_BE2.png"
+  },
+  {
+    id: 35,
+    title: "شخصية غامضة #35",
+    hints: [
+      "أعيش في الليل.",
+      "أستطيع تسلق الجدران.",
+      "أنا عنكبوت كبير."
+    ],
+    answer: "العنكبوت (Spider)",
+    imageUrl: "https://minecraft.wiki/images/Spider_JE2_BE2.png"
+  },
+  {
+    id: 36,
+    title: "شخصية غامضة #36",
+    hints: [
+      "أعيش في القرى.",
+      "أعمل طوال اليوم.",
+      "أستطيع أن أبيع لك أشياء مختلفة."
+    ],
+    answer: "القروي (Villager)",
+    imageUrl: "https://minecraft.wiki/images/Plains_Villager_Base.png"
+  },
+  {
+    id: 37,
+    title: "شخصية غامضة #37",
+    hints: [
+      "أنا لا أتكلم مثل القروي العادي.",
+      "أحب التجول ليلاً.",
+      "أظهر أحياناً مع الـ Wandering Trader."
+    ],
+    answer: "الـ Wandering Trader",
+    imageUrl: "https://minecraft.wiki/images/Wandering_Trader_JE1_BE1.png"
+  },
+  {
+    id: 38,
+    title: "شخصية غامضة #38",
+    hints: [
+      "أنا أعيش في الماء.",
+      "يمكنني أن أكون طعاماً.",
+      "لدي أنواع وألوان مختلفة."
+    ],
+    answer: "السمكة (Fish)",
+    imageUrl: "https://minecraft.wiki/images/Cod_JE2_BE2.png"
+  },
+  {
+    id: 39,
+    title: "شخصية غامضة #39",
+    hints: [
+      "أعيش في البحار.",
+      "لدي زعانف وأسنان.",
+      "يمكنني أن أكون خطيراً في الماء."
+    ],
+    answer: "الدلفين (Dolphin)",
+    imageUrl: "https://minecraft.wiki/images/Dolphin_JE1_BE1.png"
+  },
+  {
+    id: 40,
+    title: "شخصية غامضة #40",
+    hints: [
+      "أعيش في المحيط.",
+      "أستطيع تغيير لوني.",
+      "أنا حيوان بحري لطيف."
+    ],
+    answer: "السلحفاة (Turtle)",
+    imageUrl: "https://minecraft.wiki/images/Turtle_JE2_BE2.png"
+  },
+
+  {
+    id: 41,
+    title: "شخصية غامضة #41",
+    hints: [
+      "أستطيع أن أعيش في الماء وعلى اليابسة.",
+      "أضع البيوض على الشاطئ.",
+      "صدفتي مفيدة في صناعة خوذة."
+    ],
+    answer: "السلحفاة (Turtle)",
+    imageUrl: "https://minecraft.wiki/images/Turtle_JE2_BE2.png"
+  },
+  {
+    id: 42,
+    title: "شخصية غامضة #42",
+    hints: [
+      "أعيش في السهول.",
+      "يمكنك ركوب ظهري.",
+      "أستطيع إعطاءك الحليب."
+    ],
+    answer: "البقرة (Cow)",
+    imageUrl: "https://minecraft.wiki/images/Cow_JE7_BE4.png"
+  },
+  {
+    id: 43,
+    title: "شخصية غامضة #43",
+    hints: [
+      "أعطيك الحليب.",
+      "أعيش في المزارع.",
+      "أنا أبيض وأسود غالباً."
+    ],
+    answer: "البقرة (Cow)",
+    imageUrl: "https://minecraft.wiki/images/Cow_JE7_BE4.png"
+  },
+  {
+    id: 44,
+    title: "شخصية غامضة #44",
+    hints: [
+      "أعيش في المزارع.",
+      "أعطيك الصوف.",
+      "يمكنك قص صوفي باستخدام المقص."
+    ],
+    answer: "الخروف (Sheep)",
+    imageUrl: "https://minecraft.wiki/images/Sheep_JE3_BE6.png"
+  },
+  {
+    id: 45,
+    title: "شخصية غامضة #45",
+    hints: [
+      "أعيش في المزرعة.",
+      "أعطيك اللحم.",
+      "يمكن تلوين صوفي."
+    ],
+    answer: "الخروف (Sheep)",
+    imageUrl: "https://minecraft.wiki/images/Sheep_JE3_BE6.png"
+  },
+  {
+    id: 46,
+    title: "شخصية غامضة #46",
+    hints: [
+      "أعيش في المزرعة.",
+      "أستطيع إعطاءك الطعام.",
+      "لوني وردي."
+    ],
+    answer: "الخنزير (Pig)",
+    imageUrl: "https://minecraft.wiki/images/Pig_JE3_BE2.png"
+  },
+  {
+    id: 47,
+    title: "شخصية غامضة #47",
+    hints: [
+      "يمكنك ركوب ظهري.",
+      "أحتاج إلى سرج للركوب.",
+      "أنا حيوان وردي."
+    ],
+    answer: "الخنزير (Pig)",
+    imageUrl: "https://minecraft.wiki/images/Pig_JE3_BE2.png"
+  },
+  {
+    id: 48,
+    title: "شخصية غامضة #48",
+    hints: [
+      "أنا سريع ويمكنك ركوب ظهري.",
+      "أستطيع ارتداء الدرع.",
+      "أنا من أشهر حيوانات Minecraft."
+    ],
+    answer: "الحصان (Horse)",
+    imageUrl: "https://minecraft.wiki/images/Horse_JE7_BE4.png"
+  },
+  {
+    id: 49,
+    title: "شخصية غامضة #49",
+    hints: [
+      "أستطيع الركض بسرعة.",
+      "يمكن ترويضي.",
+      "يمكنك ركوب ظهري."
+    ],
+    answer: "الحصان (Horse)",
+    imageUrl: "https://minecraft.wiki/images/Horse_JE7_BE4.png"
+  },
+  {
+    id: 50,
+    title: "شخصية غامضة #50",
+    hints: [
+      "أعيش في المزارع.",
+      "يمكنني حمل الصناديق.",
+      "أنا قريب من الحصان لكنني أصغر."
+    ],
+    answer: "الحمار (Donkey)",
+    imageUrl: "https://minecraft.wiki/images/Donkey_JE3_BE2.png"
+  },
+
+  {
+    id: 51,
+    title: "شخصية غامضة #51",
+    hints: [
+      "أستطيع حمل صندوق على ظهري.",
+      "يمكنك ركوب ظهري.",
+      "أنا قريب من الحصان والبغل."
+    ],
+    answer: "الحمار (Donkey)",
+    imageUrl: "https://minecraft.wiki/images/Donkey_JE3_BE2.png"
+  },
+  {
+    id: 52,
+    title: "شخصية غامضة #52",
+    hints: [
+      "أستطيع الطيران.",
+      "يمكن ترويضي باستخدام البذور.",
+      "ألواني كثيرة."
+    ],
+    answer: "الببغاء (Parrot)",
+    imageUrl: "https://minecraft.wiki/images/Parrot_JE2_BE2.png"
+  },
+  {
+    id: 53,
+    title: "شخصية غامضة #53",
+    hints: [
+      "أستطيع تقليد أصوات الوحوش.",
+      "يمكنني الجلوس على كتفك.",
+      "أعيش في الغابة."
+    ],
+    answer: "الببغاء (Parrot)",
+    imageUrl: "https://minecraft.wiki/images/Parrot_JE2_BE2.png"
+  },
+  {
+    id: 54,
+    title: "شخصية غامضة #54",
+    hints: [
+      "أعيش في القرى.",
+      "أحب أكل الجزر.",
+      "أنا صغير ولطيف ويمكن تربيتي."
+    ],
+    answer: "الأرنب (Rabbit)",
+    imageUrl: "https://minecraft.wiki/images/Rabbit_JE3_BE2.png"
+  },
+  {
+    id: 55,
+    title: "شخصية غامضة #55",
+    hints: [
+      "أقفز كثيراً.",
+      "أعيش في الصحراء والمناطق المختلفة.",
+      "أنا حيوان صغير بأذنين طويلتين."
+    ],
+    answer: "الأرنب (Rabbit)",
+    imageUrl: "https://minecraft.wiki/images/Rabbit_JE3_BE2.png"
+  },
+  {
+    id: 56,
+    title: "شخصية غامضة #56",
+    hints: [
+      "أستطيع مساعدتك في القتال.",
+      "إذا أعطيتني عظمة قد أتبعك.",
+      "أصبح مخلصاً لك بعد ترويضي."
+    ],
+    answer: "الذئب (Wolf)",
+    imageUrl: "https://minecraft.wiki/images/Wolf_JE2_BE2.png"
+  },
+  {
+    id: 57,
+    title: "شخصية غامضة #57",
+    hints: [
+      "أعيش في المناطق الباردة.",
+      "أحب السمك.",
+      "أنا قط كبير يمكن ترويضه."
+    ],
+    answer: "القط (Cat)",
+    imageUrl: "https://minecraft.wiki/images/Cat_JE2_BE2.png"
+  },
+  {
+    id: 58,
+    title: "شخصية غامضة #58",
+    hints: [
+      "أستطيع تخويف الكريبر.",
+      "يمكن ترويضي.",
+      "أنا من أشهر الحيوانات الأليفة."
+    ],
+    answer: "القط (Cat)",
+    imageUrl: "https://minecraft.wiki/images/Cat_JE2_BE2.png"
+  },
+  {
+    id: 59,
+    title: "شخصية غامضة #59",
+    hints: [
+      "أعيش في السماء.",
+      "أستطيع إطلاق الريش؟",
+      "أنا دجاجة."
+    ],
+    answer: "الدجاجة (Chicken)",
+    imageUrl: "https://minecraft.wiki/images/Chicken_JE2_BE2.png"
+  },
+  {
+    id: 60,
+    title: "شخصية غامضة #60",
+    hints: [
+      "أضع البيض.",
+      "أستطيع إسقاط الريش.",
+      "أنا أصغر من معظم حيوانات المزرعة."
+    ],
+    answer: "الدجاجة (Chicken)",
+    imageUrl: "https://minecraft.wiki/images/Chicken_JE2_BE2.png"
+  },
+
+  {
+    id: 61,
+    title: "شخصية غامضة #61",
+    hints: [
+      "أنا أعيش في المناطق الثلجية.",
+      "يمكنك ركوب ظهري.",
+      "أنا نسخة مختلفة من الحصان."
+    ],
+    answer: "حصان الهيكل العظمي (Skeleton Horse)",
+    imageUrl: "https://minecraft.wiki/images/Skeleton_Horse_JE2_BE2.png"
+  },
+  {
+    id: 62,
+    title: "شخصية غامضة #62",
+    hints: [
+      "أنا هيكل عظمي لكنني أستطيع الركض.",
+      "يمكن ركوب ظهري.",
+      "أظهر أثناء عاصفة رعدية في ظروف معينة."
+    ],
+    answer: "حصان الهيكل العظمي (Skeleton Horse)",
+    imageUrl: "https://minecraft.wiki/images/Skeleton_Horse_JE2_BE2.png"
+  },
+  {
+    id: 63,
+    title: "شخصية غامضة #63",
+    hints: [
+      "أعيش في المحيط.",
+      "أملك درعاً طبيعياً.",
+      "أستطيع إعطاءك Scute عندما أكبر."
+    ],
+    answer: "السلحفاة (Turtle)",
+    imageUrl: "https://minecraft.wiki/images/Turtle_JE2_BE2.png"
+  },
+  {
+    id: 64,
+    title: "شخصية غامضة #64",
+    hints: [
+      "أنا أعيش في المناطق الثلجية.",
+      "أحب أكل الأسماك.",
+      "أنا أبيض وأسود وأشبه الدب."
+    ],
+    answer: "الدب القطبي (Polar Bear)",
+    imageUrl: "https://minecraft.wiki/images/Polar_Bear_JE2_BE2.png"
+  },
+  {
+    id: 65,
+    title: "شخصية غامضة #65",
+    hints: [
+      "أعيش في الجليد.",
+      "يمكنني السباحة.",
+      "أنا دب أبيض."
+    ],
+    answer: "الدب القطبي (Polar Bear)",
+    imageUrl: "https://minecraft.wiki/images/Polar_Bear_JE2_BE2.png"
+  },
+  {
+    id: 66,
+    title: "شخصية غامضة #66",
+    hints: [
+      "أعيش في النذر.",
+      "أستطيع المشي على الحمم.",
+      "أستطيع أن أكون وسيلة نقل فوق الحمم."
+    ],
+    answer: "الـ Strider",
+    imageUrl: "https://minecraft.wiki/images/Strider_JE1_BE1.png"
+  },
+  {
+    id: 67,
+    title: "شخصية غامضة #67",
+    hints: [
+      "أحب الحمم.",
+      "أتحرك فوقها.",
+      "يمكن ركوب ظهري باستخدام سرج."
+    ],
+    answer: "الـ Strider",
+    imageUrl: "https://minecraft.wiki/images/Strider_JE1_BE1.png"
+  },
+  {
+    id: 68,
+    title: "شخصية غامضة #68",
+    hints: [
+      "أنا وحش صغير جداً.",
+      "أخرج من جسم أكبر.",
+      "أستطيع القفز على اللاعبين."
+    ],
+    answer: "الـ Silverfish",
+    imageUrl: "https://minecraft.wiki/images/Silverfish_JE2_BE2.png"
+  },
+  {
+    id: 69,
+    title: "شخصية غامضة #69",
+    hints: [
+      "أعيش بالقرب من Strongholds.",
+      "أخرج من بعض البلوكات.",
+      "أنا حشرة صغيرة وعدوانية."
+    ],
+    answer: "الـ Silverfish",
+    imageUrl: "https://minecraft.wiki/images/Silverfish_JE2_BE2.png"
+  },
+  {
+    id: 70,
+    title: "شخصية غامضة #70",
+    hints: [
+      "أعيش في الـ End.",
+      "أستطيع الطيران.",
+      "أهاجمك عندما تكسر أشياء معينة."
+    ],
+    answer: "الـ Endermite",
+    imageUrl: "https://minecraft.wiki/images/Endermite_JE2_BE2.png"
+  },
+
+  {
+    id: 71,
+    title: "شخصية غامضة #71",
+    hints: [
+      "أنا صغير جداً.",
+      "يمكن أن أظهر بسبب استخدام Ender Pearl.",
+      "لوني بنفسجي."
+    ],
+    answer: "الـ Endermite",
+    imageUrl: "https://minecraft.wiki/images/Endermite_JE2_BE2.png"
+  },
+  {
+    id: 72,
+    title: "شخصية غامضة #72",
+    hints: [
+      "أعيش في الـ End.",
+      "أحمل صندوقاً بداخلي.",
+      "يمكن أن أفتح وأغلق مثل الصندوق."
+    ],
+    answer: "الـ Shulker",
+    imageUrl: "https://minecraft.wiki/images/Shulker_JE2_BE2.png"
+  },
+  {
+    id: 73,
+    title: "شخصية غامضة #73",
+    hints: [
+      "أعيش داخل مدينة في الـ End.",
+      "أطلق رصاصات تجعل اللاعب يطير.",
+      "أختبئ داخل صدفة."
+    ],
+    answer: "الـ Shulker",
+    imageUrl: "https://minecraft.wiki/images/Shulker_JE2_BE2.png"
+  },
+  {
+    id: 74,
+    title: "شخصية غامضة #74",
+    hints: [
+      "أستطيع التحكم بالأرض؟",
+      "أعيش في الـ Deep Dark.",
+      "أعتمد على الصوت والاهتزازات."
+    ],
+    answer: "الـ Warden",
+    imageUrl: "https://minecraft.wiki/images/Warden_JE1_BE1.png"
+  },
+  {
+    id: 75,
+    title: "شخصية غامضة #75",
+    hints: [
+      "لا أملك عيوناً.",
+      "أستطيع استخدام هجوم قوي من مسافة.",
+      "أنا أقوى مخلوق طبيعي تقريباً في اللعبة."
+    ],
+    answer: "الـ Warden",
+    imageUrl: "https://minecraft.wiki/images/Warden_JE1_BE1.png"
+  },
+  {
+    id: 76,
+    title: "شخصية غامضة #76",
+    hints: [
+      "أنا زعيم يمكن للاعب استدعائي.",
+      "أطير وأطلق جماجم.",
+      "أحتاج إلى 3 رؤوس من نوع معين لاستدعائي."
+    ],
+    answer: "الـ Wither",
+    imageUrl: "https://minecraft.wiki/images/Wither_JE2_BE2.png"
+  },
+  {
+    id: 77,
+    title: "شخصية غامضة #77",
+    hints: [
+      "لدي ثلاثة رؤوس.",
+      "أستطيع تدمير البلوكات.",
+      "يمكنني إسقاط Nether Star."
+    ],
+    answer: "الـ Wither",
+    imageUrl: "https://minecraft.wiki/images/Wither_JE2_BE2.png"
+  },
+  {
+    id: 78,
+    title: "شخصية غامضة #78",
+    hints: [
+      "أعيش في النذر.",
+      "أستخدم القوس.",
+      "أنا هيكل عظمي طويل وأسود."
+    ],
+    answer: "الـ Wither Skeleton",
+    imageUrl: "https://minecraft.wiki/images/Wither_Skeleton_JE2_BE2.png"
+  },
+  {
+    id: 79,
+    title: "شخصية غامضة #79",
+    hints: [
+      "أستطيع إعطاء اللاعب تأثيراً سيئاً.",
+      "أستخدم سيفاً.",
+      "يمكن أن أسقط رأسي."
+    ],
+    answer: "الـ Wither Skeleton",
+    imageUrl: "https://minecraft.wiki/images/Wither_Skeleton_JE2_BE2.png"
+  },
+  {
+    id: 80,
+    title: "شخصية غامضة #80",
+    hints: [
+      "أعيش في النذر.",
+      "أحب الذهب.",
+      "أنا نسخة غاضبة من الـ Piglin."
+    ],
+    answer: "الـ Piglin Brute",
+    imageUrl: "https://minecraft.wiki/images/Piglin_Brute_JE2_BE2.png"
+  },
+
+  {
+    id: 81,
+    title: "شخصية غامضة #81",
+    hints: [
+      "أحمل فأساً ذهبياً.",
+      "لا أهتم كثيراً بالذهب الذي تحمله.",
+      "أحرس Bastion Remnants."
+    ],
+    answer: "الـ Piglin Brute",
+    imageUrl: "https://minecraft.wiki/images/Piglin_Brute_JE2_BE2.png"
+  },
+  {
+    id: 82,
+    title: "شخصية غامضة #82",
+    hints: [
+      "أعيش في القرى.",
+      "أرتدي قبعة مميزة.",
+      "أستطيع بيع وشراء الأشياء."
+    ],
+    answer: "القروي (Villager)",
+    imageUrl: "https://minecraft.wiki/images/Plains_Villager_Base.png"
+  },
+  {
+    id: 83,
+    title: "شخصية غامضة #83",
+    hints: [
+      "أستطيع حمل أشياء كثيرة.",
+      "أظهر أحياناً في الغابات.",
+      "أنا حيوان يشبه الحصان لكنني لست حصاناً."
+    ],
+    answer: "البغل (Mule)",
+    imageUrl: "https://minecraft.wiki/images/Mule_JE3_BE2.png"
+  },
+  {
+    id: 84,
+    title: "شخصية غامضة #84",
+    hints: [
+      "أنا هجين بين حيوانين.",
+      "يمكنني حمل صندوق.",
+      "أنا أسرع من الحمار غالباً."
+    ],
+    answer: "البغل (Mule)",
+    imageUrl: "https://minecraft.wiki/images/Mule_JE3_BE2.png"
+  },
+  {
+    id: 85,
+    title: "شخصية غامضة #85",
+    hints: [
+      "أعيش في الغابات.",
+      "أستطيع أكل الخيزران.",
+      "أنا أبيض وأسود."
+    ],
+    answer: "الباندا (Panda)",
+    imageUrl: "https://minecraft.wiki/images/Panda_JE2_BE2.png"
+  },
+  {
+    id: 86,
+    title: "شخصية غامضة #86",
+    hints: [
+      "أحب الخيزران.",
+      "يمكنني التدحرج.",
+      "أنا من الحيوانات النادرة نسبياً."
+    ],
+    answer: "الباندا (Panda)",
+    imageUrl: "https://minecraft.wiki/images/Panda_JE2_BE2.png"
+  },
+  {
+    id: 87,
+    title: "شخصية غامضة #87",
+    hints: [
+      "أعيش في المستنقعات.",
+      "أستطيع القفز.",
+      "آكل الـ Slimes والـ Magma Cubes بطريقة خاصة."
+    ],
+    answer: "الضفدع (Frog)",
+    imageUrl: "https://minecraft.wiki/images/Frog_JE1_BE1.png"
+  },
+  {
+    id: 88,
+    title: "شخصية غامضة #88",
+    hints: [
+      "يمكنني إنتاج شيء يسمى Froglight.",
+      "أعيش في المستنقعات.",
+      "أنا صغير وأقفز كثيراً."
+    ],
+    answer: "الضفدع (Frog)",
+    imageUrl: "https://minecraft.wiki/images/Frog_JE1_BE1.png"
+  },
+  {
+    id: 89,
+    title: "شخصية غامضة #89",
+    hints: [
+      "أعيش في المحيط.",
+      "أستطيع إعطاء اللاعب تأثيراً مفيداً.",
+      "إذا سبحت بجانبي قد أساعدك على الحركة."
+    ],
+    answer: "الدلفين (Dolphin)",
+    imageUrl: "https://minecraft.wiki/images/Dolphin_JE1_BE1.png"
+  },
+  {
+    id: 90,
+    title: "شخصية غامضة #90",
+    hints: [
+      "أحب القفز من الماء.",
+      "أستطيع أن أقودك إلى كنوز مخفية.",
+      "أنا دلفين."
+    ],
+    answer: "الدلفين (Dolphin)",
+    imageUrl: "https://minecraft.wiki/images/Dolphin_JE1_BE1.png"
+  },
+
+  {
+    id: 91,
+    title: "شخصية غامضة #91",
+    hints: [
+      "أستطيع الاختباء داخل بلوك.",
+      "إذا قتلتني قد أحصل على شيء مفيد.",
+      "أنا حشرة مرتبطة بالـ Stronghold."
+    ],
+    answer: "الـ Silverfish",
+    imageUrl: "https://minecraft.wiki/images/Silverfish_JE2_BE2.png"
+  },
+  {
+    id: 92,
+    title: "شخصية غامضة #92",
+    hints: [
+      "أنا كائن لا يحب الضوء.",
+      "أعيش غالباً في الظلام.",
+      "أهاجم اللاعب بالقفز عليه."
+    ],
+    answer: "الـ Spider",
+    imageUrl: "https://minecraft.wiki/images/Spider_JE2_BE2.png"
+  },
+  {
+    id: 93,
+    title: "شخصية غامضة #93",
+    hints: [
+      "أستطيع إعطاء اللاعب تأثير Poison.",
+      "أعيش في مناطق مظلمة.",
+      "أنا عنكبوت أصغر من العادي."
+    ],
+    answer: "الـ Cave Spider",
+    imageUrl: "https://minecraft.wiki/images/Cave_Spider_JE2_BE2.png"
+  },
+  {
+    id: 94,
+    title: "شخصية غامضة #94",
+    hints: [
+      "أعيش في النذر.",
+      "لوني برتقالي وأسود.",
+      "أستطيع إعطاء اللاعب Fire Resistance بعد قتلي."
+    ],
+    answer: "الـ Blaze",
+    imageUrl: "https://minecraft.wiki/images/Blaze_JE2_BE2.png"
+  },
+  {
+    id: 95,
+    title: "شخصية غامضة #95",
+    hints: [
+      "أحتاج إلى نار لأعيش؟",
+      "أعيش في Nether Fortresses.",
+      "من قتلي يمكن الحصول على Blaze Rod."
+    ],
+    answer: "الـ Blaze",
+    imageUrl: "https://minecraft.wiki/images/Blaze_JE2_BE2.png"
+  },
+  {
+    id: 96,
+    title: "شخصية غامضة #96",
+    hints: [
+      "أنا وحش لا يحب الضوء.",
+      "أعيش في الكهوف والمناطق المظلمة.",
+      "أستطيع الانقسام إلى كائنات أصغر."
+    ],
+    answer: "الـ Slime",
+    imageUrl: "https://minecraft.wiki/images/Slime_JE2_BE2.png"
+  },
+  {
+    id: 97,
+    title: "شخصية غامضة #97",
+    hints: [
+      "أنا أعيش في النذر.",
+      "إذا قتلتني قد أحصل على Magma Cream.",
+      "أشبه بالـ Slime لكنني مصنوع من الماغما."
+    ],
+    answer: "الـ Magma Cube",
+    imageUrl: "https://minecraft.wiki/images/Magma_Cube_JE2_BE2.png"
+  },
+  {
+    id: 98,
+    title: "شخصية غامضة #98",
+    hints: [
+      "أنا أظهر أثناء الـ Raid.",
+      "أحمل راية.",
+      "إذا قتلتني قد تحصل على تأثير Bad Omen في الإصدارات التي تستخدمه."
+    ],
+    answer: "الـ Pillager",
+    imageUrl: "https://minecraft.wiki/images/Pillager_JE2_BE2.png"
+  },
+  {
+    id: 99,
+    title: "شخصية غامضة #99",
+    hints: [
+      "أعيش مع الـ Illagers.",
+      "أستخدم القوس والنشاب.",
+      "يمكنني الظهور أثناء الـ Raids."
+    ],
+    answer: "الـ Pillager",
+    imageUrl: "https://minecraft.wiki/images/Pillager_JE2_BE2.png"
+  },
+  {
+    id: 100,
+    title: "شخصية غامضة #100",
+    hints: [
+      "أنا زعيم يعيش في عالم مختلف عن العالم العلوي.",
+      "أحتاج إلى بوابة للوصول إليّ.",
+      "إذا هزمتني تحصل على بيضة التنين وتفتح طريق العودة."
+    ],
+    answer: "تنين الإندر (Ender Dragon)",
+    imageUrl: "https://minecraft.wiki/images/Ender_Dragon_JE2_BE2.png"
   }
 ];
