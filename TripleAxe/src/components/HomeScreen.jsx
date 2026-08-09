@@ -10,7 +10,7 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
       badge: '4 مستويات - 100 سؤال',
       color: '#4CAF50',
       backgroundImage: 'url(/images/HomeImages/1.png)',
-      sound: 'https://www.myinstants.com/media/sounds/levelup.mp3'
+      sound: 'https://www.myinstants.com/media/sounds/challenge_complete_uHsY1YS.mp3'
     },
     {
       id: 'who-am-i',
@@ -19,7 +19,7 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
       badge: 'حزازير',
       color: '#9C27B0',
       backgroundImage: 'url(/images/HomeImages/2.png)',
-      sound: 'https://www.myinstants.com/media/sounds/levelup.mp3'
+      sound: 'https://www.myinstants.com/media/sounds/challenge_complete_uHsY1YS.mp3'
     },
     {
       id: 'true-false',
@@ -42,7 +42,7 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
       badge: 'سماعي',
       color: '#E91E63',
       backgroundImage: 'url(/images/HomeImages/3.png)',
-      sound: 'https://www.myinstants.com/media/sounds/levelup.mp3'
+      sound: 'https://www.myinstants.com/media/sounds/challenge_complete_uHsY1YS.mp3'
     },
     {
       id: 'memory-game',

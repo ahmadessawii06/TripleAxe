@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { soundQuizData } from '../data/soundQuizData';
+import { soundQuizData } from '../data/SoundQuizData';
 import { playSound } from '../utils/audio';
 
 const soundLibrary = {

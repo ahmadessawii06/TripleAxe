@@ -44,7 +44,26 @@ const soundLibrary = {
   lava: '/sounds/lava.ogg',
   portal: '/sounds/portal.ogg',
   fireWorks: '/sounds/fireWorks.ogg',
-  crop: '/sounds/crop.ogg'
+  crop: '/sounds/crop.ogg',
+  end_portal_activation: '/sounds/end_portal_activation.mp3',
+  'ghast-fireball-minecraft-sound-sound-effect-for-editing': '/sounds/ghast-fireball-minecraft-sound-sound-effect-for-editing.mp3',
+  llama_idle3: '/sounds/llama_idle3.mp3',
+  meow_2Tmjbru: '/sounds/meow_2Tmjbru.mp3',
+  'minecraft-armor-equip': '/sounds/minecraft-armor-equip.mp3',
+  'minecraft-dog-bark': '/sounds/minecraft-dog-bark.mp3',
+  'minecraft-horse-death': '/sounds/minecraft-horse-death.mp3',
+  'minecraft-potion-drinking-sound-effect-1': '/sounds/minecraft-potion-drinking-sound-effect-1.mp3',
+  'minecraft-scream2': '/sounds/minecraft-scream2.mp3',
+  'minecraft-spider': '/sounds/minecraft-spider.mp3',
+  'minecraft-tool-break': '/sounds/minecraft-tool-break.mp3',
+  'minecraft-totem-sound': '/sounds/minecraft-totem-sound.mp3',
+  'old-sound-of-zombie-in-minecraft': '/sounds/old-sound-of-zombie-in-minecraft.mp3',
+  'portal_EIeiKty': '/sounds/portal_EIeiKty.mp3',
+  'skeleton-sounds-2': '/sounds/skeleton-sounds-2.mp3',
+  'teleport1_Cw1ot9l': '/sounds/teleport1_Cw1ot9l.mp3',
+  tnt: '/sounds/tnt.mp3',
+  'videoplayback-3_bnU0CN1': '/sounds/videoplayback-3_bnU0CN1.mp3',
+  villager: '/sounds/villager.mp3'
 };
 
 
