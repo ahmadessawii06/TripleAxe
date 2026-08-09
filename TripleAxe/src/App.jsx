@@ -70,374 +70,324 @@ function App() {
   return (
     <div style={{ padding: '10px', maxWidth: '480px', margin: '0 auto', position: 'relative' }}>
       {showSetupModal && (
-        <div style={{
-          position: 'fixed',
-          fontFamily: 'tahoma, sans-serif',
-          inset: 0,
-          backgroundColor: 'rgba(0,0,0,0.33)',
+  <div style={{
+    position: 'fixed',
+    inset: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.75)',
+    backdropFilter: 'blur(8px)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '12px',
+    zIndex: 2000,
+    direction: 'rtl'
+  }}>
+    <div style={{
+      width: '100%',
+      maxWidth: '440px',
+      maxHeight: '88vh',
+      backgroundColor: '#141414',
+      border: '2px solid #333',
+      borderRadius: '20px',
+      padding: '20px 16px',
+      boxShadow: '0 20px 50px rgba(0, 0, 0, 0.8), 0 0 15px rgba(85, 255, 85, 0.1)',
+      position: 'relative',
+      overflowY: 'auto',
+      boxSizing: 'border-box'
+    }}>
+      {/* زر الإغلاق العلوي */}
+      <button
+        type="button"
+        onClick={() => setShowSetupModal(false)}
+        style={{
+          position: 'absolute',
+          top: '14px',
+          left: '14px',
+          background: '#222',
+          border: '1px solid #444',
+          color: '#ff5555',
+          width: '36px',
+          height: '36px',
+          borderRadius: '10px',
+          cursor: 'pointer',
+          fontSize: '1.1rem',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          padding: '16px',
-          zIndex: 2000,
-          backdropFilter: 'blur(6px)'
+          fontWeight: 'bold',
+          transition: 'all 0.2s'
+        }}
+      >
+        ✕
+      </button>
+
+      {/* الهيدر الرئيسي */}
+      <div style={{ textAlign: 'center', marginBottom: '16px' }}>
+        <h2 style={{
+          margin: '0 0 4px 0',
+          color: '#55ffff',
+          fontSize: '1.3rem',
+          fontWeight: '900',
+          textShadow: '0 2px 4px rgba(0,0,0,0.5)'
         }}>
-          <div style={{
+          إعدادات اللعبة 
+        </h2>
+        <p style={{
+          margin: 0,
+          color: '#aaa',
+          fontSize: '0.85rem'
+        }}>
+          قم بضبط إعدادات اللعبة قبل البدء
+        </p>
+      </div>
+
+      {/* شريط شعار اللعبة الهيدر الماينكرافتي */}
+      <div style={{
+        textAlign: 'center',
+        marginBottom: '18px',
+        border: "1px solid rgba(255,255,255,0.08)",
+        padding: "12px 10px",
+        borderRadius: "12px",
+        backgroundColor: "#1a1a1a",
+        boxShadow: 'inset 0 2px 4px rgba(0,0,0,0.5)'
+      }}>
+        <h3 style={{
+          direction: 'ltr',
+          margin: '0 0 6px 0',
+          color: '#55ff55',
+          fontSize: '1.4rem',
+          fontWeight: 'bold',
+          fontFamily: 'MonoCraft, monospace',
+          letterSpacing: '1px',
+          textShadow: '0 2px 8px rgba(85,255,85,0.3)'
+        }}>
+          ⚔️ TripleAxe ⚔️
+        </h3>
+        <span style={{
+          color: '#ddd',
+          fontSize: '0.8rem',
+          background: 'rgba(0,0,0,0.4)',
+          padding: '4px 12px',
+          borderRadius: '20px',
+          border: '1px solid #333',
+          display: 'inline-block'
+        }}>
+          🕊️ طورها الحمامة 🕊️
+        </span>
+      </div>
+
+      {/* إدخال اسم اللاعب الأول */}
+      <div style={{ marginBottom: '16px' }}>
+        <label style={{
+          display: 'block',
+          marginBottom: '6px',
+          color: '#55ffff',
+          fontWeight: 'bold',
+          fontSize: '0.9rem'
+        }}>
+          🟦 اسم اللاعب الأول
+        </label>
+        <input
+          value={player1Name}
+          onChange={(e) => setPlayer1Name(e.target.value)}
+          placeholder="أدخل اسم اللاعب..."
+          style={{
             width: '100%',
-            maxWidth: '420px',
-            backgroundColor: '#171717',
-            border: '2px solid rgba(255,255,255,0.08)',
-            borderRadius: '14px',
-            padding: '18px 16px',
-            boxShadow: '0 24px 80px rgba(0,0,0,0.45)',
-            position: 'relative'
-          }}>
-            <button
-              type="button"
-              onClick={() => setShowSetupModal(false)}
-              style={{
-                position: 'absolute',
-                top: '12px',
-                right: '12px',
-                background: 'red',
-                border: '1px solid rgba(255,255,255,0.15)',
-                color: '#eee',
-                width: '32px',
-                height: '32px',
-                borderRadius: '8px',
-                cursor: 'pointer',
-                fontSize: '1rem',
-                lineHeight: '1'
-              }}
-            >
-              ✕
-            </button>
+            height: '46px',
+            padding: '0 12px',
+            borderRadius: '10px',
+            border: '2px solid #333',
+            background: '#0d0d0d',
+            color: '#fff',
+            fontSize: '1rem',
+            outline: 'none',
+            boxSizing: 'border-box',
+            transition: 'border-color 0.2s'
+          }}
+          onFocus={(e) => e.target.style.borderColor = '#55ffff'}
+          onBlur={(e) => e.target.style.borderColor = '#333'}
+        />
+      </div>
 
-            <div style={{ textAlign: 'center', marginBottom: '10px' }}>
-              <h2 style={{
-                margin: '0 0 4px 0',
-                color: '#aad8ff',
-                fontSize: '1.4rem',
-                fontWeight: '800'
-              }}>
-                إعدادات اللعبة
-              </h2>
-              <p style={{
-                margin: 0,
-                color: '#c8d8eb',
-                fontSize: '0.95rem'
-              }}>
-                عدّل الأسماء والبلوكات قبل اللعب.
-              </p>
-            </div>
-
-            <div style={{
-              height: '4px',
-              background: 'linear-gradient(90deg, #ffaa00, #ffdd55, #ffaa00)',
-              borderRadius: '2px',
-              marginBottom: '16px'
-            }} />
-
-            <div style={{ textAlign: 'center', marginBottom: '18px', border: " 1px solid rgba(255,255,255,0.12)", padding: "10px", borderRadius: "8px", backgroundColor: "#1a1a1a" }}>
-              <h2 style={{
-                textAlign: 'center',
-                direction: 'ltr',
-                margin: '0 0 4px 0',
-                color: '#55ff55',
-                fontSize: '1.7rem',
-                fontWeight: 'bold',
-                fontFamily: 'MonoCraft',
-                letterSpacing: '1px',
-                marginBottom: '20px'
-              }}>
-                ⚔️ TripleAxe ⚔️
-              </h2>
-              <p style={{
-                margin: 0,
-                color: '#b0b0b0',
-                fontSize: '0.95rem',
-                background: 'rgba(0,0,0,0.3)',
-                display: 'inline-block',
-                padding: '2px 14px',
-                border: '1px solid #555'
-              }}>
-                🕊️ طورها الحمامة 🕊️
-              </p>
-            </div>
-
-            <label style={{
-              display: 'block',
-              marginBottom: '12px',
-              color: '#e0e0e0',
-              fontWeight: 'bold',
-              fontSize: '0.95rem'
-            }}>
-              <span style={{ color: '#55ffff' }}>🟦</span> اسم اللاعب الأول
-              <input
-                value={player1Name}
-                onChange={(e) => setPlayer1Name(e.target.value)}
-                style={{
-                  width: '50%',
-                  marginTop: '6px',
-                  marginRight: '14px',
-                  padding: '10px 12px',
-                  borderRadius: '10px',
-                  border: '1px solid rgba(255,255,255,0.12)',
-                  background: '#111',
-                  color: '#fff',
-                  fontSize: '0.98rem',
-                  outline: 'none',
-                  transition: 'border-color 0.2s, box-shadow 0.2s'
-                }}
-                onFocus={(e) => {
-                  e.target.style.borderColor = '#55ffff';
-                  e.target.style.boxShadow = '0 0 10px rgba(85,255,255,0.14)';
-                }}
-                onBlur={(e) => {
-                  e.target.style.borderColor = 'rgba(255,255,255,0.12)';
-                  e.target.style.boxShadow = 'none';
-                }}
-              />
-            </label>
-
-            {/* Player 2 Name */}
-            <label style={{
-              display: 'block',
-              marginBottom: '14px',
-              color: '#e0e0e0',
-              fontWeight: 'bold',
-              fontSize: '0.95rem'
-            }}>
-              <span style={{ color: '#ff55ff' }}>🟪</span> اسم اللاعب الثاني
-              <input
-                value={player2Name}
-                onChange={(e) => setPlayer2Name(e.target.value)}
-                style={{
-                  width: '50%',
-                  marginTop: '5px',
-                  marginRight: '14px',
-                  padding: '10px 12px',
-                  borderRadius: '6px',
-                  border: '2px solid #5a4a32',
-                  background: '#1a1a1a',
-                  color: '#fff',
-                  fontSize: '1rem',
-                  outline: 'none',
-                  transition: 'border-color 0.2s'
-                }}
-                onFocus={(e) => e.target.style.borderColor = '#ff55ff'}
-                onBlur={(e) => e.target.style.borderColor = '#5a4a32'}
-              />
-            </label>
-
-            <div style={{
-              margin: '6px 0 12px',
-              color: '#ddd',
-              fontWeight: 'bold',
-              fontSize: '1rem',
-              borderBottom: '1px solid #444',
-              paddingBottom: '6px'
-            }}>
-              🧱 اختر بلوك لكل لاعب
-            </div>
-
-            {/* Block selection for player 1 */}
-            <div style={{ marginBottom: '14px' }}>
-              <div style={{
-                color: '#55ffff',
-                fontSize: '0.9rem',
-                marginBottom: '6px',
-                fontWeight: 'bold',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '6px'
-              }}>
-                <span>🟦</span> {displayPlayer1Name}
-              </div>
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(5, 1fr)',
-                gap: '6px'
-              }}>
-                {blockOptions.map((block) => (
-                  <button
-                    key={`p1-${block.id}`}
-                    onClick={() => setPlayer1Block(block)}
-                    type="button"
-                    style={{
-                      fontFamily: 'MonoCraft, monospace',
-                      background: 'transparent',
-                      border: player1Block.id === block.id ? '3px solid #ffdd55' : '2px solid #555',
-                      borderRadius: '8px',
-                      padding: '4px',
-                      cursor: 'pointer',
-                      transition: 'all 0.15s',
-                      boxShadow: player1Block.id === block.id ? '0 0 12px rgba(255,221,85,0.5)' : 'none',
-                      position: 'relative'
-                    }}
-                  >
-                    <img
-                      src={block.image}
-                      alt={block.label}
-                      style={{
-                        width: '100%',
-                        height: '32px',
-                        objectFit: 'cover',
-                        borderRadius: '4px',
-                        display: 'block'
-                      }}
-                    />
-                    <div style={{
-                      fontSize: '0.6rem',
-                      marginTop: '3px',
-                      color: '#ccc',
-                      fontWeight: 'bold',
-                      textShadow: '0 1px 2px #000'
-                    }}>
-                      {block.label}
-                    </div>
-                    {player1Block.id === block.id && (
-                      <div style={{
-                        position: 'absolute',
-                        top: '-6px',
-                        right: '-6px',
-                        background: '#ffdd55',
-                        color: '#1a1a1a',
-                        borderRadius: '50%',
-                        width: '18px',
-                        height: '18px',
-                        fontSize: '12px',
-                        lineHeight: '18px',
-                        textAlign: 'center',
-                        fontWeight: 'bold',
-                        boxShadow: '0 0 8px rgba(255,221,85,0.8)'
-                      }}>
-                        ✓
-                      </div>
-                    )}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Block selection for player 2 */}
-            <div style={{ marginBottom: '18px' }}>
-              <div style={{
-                color: '#ff55ff',
-                fontSize: '0.9rem',
-                marginBottom: '6px',
-                fontWeight: 'bold',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '6px'
-              }}>
-                <span>🟪</span> {displayPlayer2Name}
-              </div>
-              <div style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(5, 1fr)',
-                gap: '6px'
-              }}>
-                {blockOptions.map((block) => (
-                  <button
-                    key={`p2-${block.id}`}
-                    onClick={() => setPlayer2Block(block)}
-                    type="button"
-                    style={{
-                      fontFamily: 'MonoCraft, monospace',
-                      background: 'transparent',
-                      border: player2Block.id === block.id ? '3px solid #ffdd55' : '2px solid #555',
-                      borderRadius: '8px',
-                      padding: '4px',
-                      cursor: 'pointer',
-                      transition: 'all 0.15s',
-                      boxShadow: player2Block.id === block.id ? '0 0 12px rgba(255,221,85,0.5)' : 'none',
-                      position: 'relative'
-                    }}
-                  >
-                    <img
-                      src={block.image}
-                      alt={block.label}
-                      style={{
-                        width: '100%',
-                        height: '32px',
-                        objectFit: 'cover',
-                        borderRadius: '4px',
-                        display: 'block'
-                      }}
-                    />
-                    <div style={{
-                      fontSize: '0.6rem',
-                      marginTop: '3px',
-                      color: '#ccc',
-                      fontWeight: 'bold',
-                      textShadow: '0 1px 2px #000'
-                    }}>
-                      {block.label}
-                    </div>
-                    {player2Block.id === block.id && (
-                      <div style={{
-                        position: 'absolute',
-                        top: '-6px',
-                        right: '-6px',
-                        background: '#ffdd55',
-                        color: '#1a1a1a',
-                        borderRadius: '50%',
-                        width: '18px',
-                        height: '18px',
-                        fontSize: '12px',
-                        lineHeight: '18px',
-                        textAlign: 'center',
-                        fontWeight: 'bold',
-                        boxShadow: '0 0 8px rgba(255,221,85,0.8)'
-                      }}>
-                        ✓
-                      </div>
-                    )}
-                  </button>
-                ))}
-              </div>
-            </div>
-
-            {/* Launch button */}
-            <button
-              onClick={() => setShowSetupModal(false)}
-              type="button"
-              style={{
-                display: 'block',
-                width: '100%',
-                padding: '14px 0',
-                background: 'linear-gradient(180deg, #7ccf5e 0%, #4caf50 100%)',
-                border: '3px solid #2d6a2d',
-                borderRadius: '10px',
-                color: '#fff',
-                fontSize: '1.3rem',
-                fontWeight: 'bold',
-                textShadow: '0 2px 0 #1f4a1f',
-                boxShadow: '0 6px 0 #1f4a1f, 0 8px 16px rgba(0,0,0,0.4)',
-                cursor: 'pointer',
-                transition: 'all 0.08s ease',
-                fontFamily: 'inherit',
-                letterSpacing: '1px'
-              }}
-              onMouseDown={(e) => {
-                e.target.style.transform = 'translateY(4px)';
-                e.target.style.boxShadow = '0 2px 0 #1f4a1f, 0 4px 10px rgba(0,0,0,0.4)';
-              }}
-              onMouseUp={(e) => {
-                e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = '0 6px 0 #1f4a1f, 0 8px 16px rgba(0,0,0,0.4)';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.transform = 'translateY(0)';
-                e.target.style.boxShadow = '0 6px 0 #1f4a1f, 0 8px 16px rgba(0,0,0,0.4)';
-              }}
-            >
-              قول يارب وبلش ...
-            </button>
-          </div>
+      {/* اختيار بلوك اللاعب الأول */}
+      <div style={{ marginBottom: '20px' }}>
+        <div style={{ fontSize: '0.8rem', color: '#888', marginBottom: '8px', fontWeight: 'bold' }}>
+          اختر بلوك {displayPlayer1Name}:
         </div>
-      )}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(5, 1fr)',
+          gap: '8px'
+        }}>
+          {blockOptions.map((block) => {
+            const isSelected = player1Block.id === block.id;
+            return (
+              <button
+                key={`p1-${block.id}`}
+                onClick={() => setPlayer1Block(block)}
+                type="button"
+                style={{
+                  background: '#181818',
+                  border: isSelected ? '2px solid #55ffff' : '2px solid #282828',
+                  borderRadius: '10px',
+                  padding: '6px 4px',
+                  cursor: 'pointer',
+                  transition: 'all 0.15s ease',
+                  boxShadow: isSelected ? '0 0 10px rgba(85,255,255,0.3)' : 'none',
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center'
+                }}
+              >
+                <img
+                  src={block.image}
+                  alt={block.label}
+                  style={{
+                    width: '32px',
+                    height: '32px',
+                    objectFit: 'contain',
+                    imageRendering: 'pixelated'
+                  }}
+                />
+                <span style={{
+                  fontSize: '0.65rem',
+                  marginTop: '4px',
+                  color: isSelected ? '#55ffff' : '#aaa',
+                  fontWeight: 'bold'
+                }}>
+                  {block.label}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      <hr style={{ border: 'none', borderTop: '1px solid #222', margin: '16px 0' }} />
+
+      {/* إدخال اسم اللاعب الثاني */}
+      <div style={{ marginBottom: '16px' }}>
+        <label style={{
+          display: 'block',
+          marginBottom: '6px',
+          color: '#ff55ff',
+          fontWeight: 'bold',
+          fontSize: '0.9rem'
+        }}>
+          🟪 اسم اللاعب الثاني
+        </label>
+        <input
+          value={player2Name}
+          onChange={(e) => setPlayer2Name(e.target.value)}
+          placeholder="أدخل اسم اللاعب..."
+          style={{
+            width: '100%',
+            height: '46px',
+            padding: '0 12px',
+            borderRadius: '10px',
+            border: '2px solid #333',
+            background: '#0d0d0d',
+            color: '#fff',
+            fontSize: '1rem',
+            outline: 'none',
+            boxSizing: 'border-box',
+            transition: 'border-color 0.2s'
+          }}
+          onFocus={(e) => e.target.style.borderColor = '#ff55ff'}
+          onBlur={(e) => e.target.style.borderColor = '#333'}
+        />
+      </div>
+
+      {/* اختيار بلوك اللاعب الثاني */}
+      <div style={{ marginBottom: '24px' }}>
+        <div style={{ fontSize: '0.8rem', color: '#888', marginBottom: '8px', fontWeight: 'bold' }}>
+          اختر بلوك {displayPlayer2Name}:
+        </div>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(5, 1fr)',
+          gap: '8px'
+        }}>
+          {blockOptions.map((block) => {
+            const isSelected = player2Block.id === block.id;
+            return (
+              <button
+                key={`p2-${block.id}`}
+                onClick={() => setPlayer2Block(block)}
+                type="button"
+                style={{
+                  background: '#181818',
+                  border: isSelected ? '2px solid #ff55ff' : '2px solid #282828',
+                  borderRadius: '10px',
+                  padding: '6px 4px',
+                  cursor: 'pointer',
+                  transition: 'all 0.15s ease',
+                  boxShadow: isSelected ? '0 0 10px rgba(255,85,255,0.3)' : 'none',
+                  position: 'relative',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center'
+                }}
+              >
+                <img
+                  src={block.image}
+                  alt={block.label}
+                  style={{
+                    width: '32px',
+                    height: '32px',
+                    objectFit: 'contain',
+                    imageRendering: 'pixelated'
+                  }}
+                />
+                <span style={{
+                  fontSize: '0.65rem',
+                  marginTop: '4px',
+                  color: isSelected ? '#ff55ff' : '#aaa',
+                  fontWeight: 'bold'
+                }}>
+                  {block.label}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* زر الانطلاق */}
+      <button
+        onClick={() => setShowSetupModal(false)}
+        type="button"
+        style={{
+          width: '100%',
+          height: '52px',
+          background: 'linear-gradient(180deg, #55ff55 0%, #2b8a2b 100%)',
+          border: 'none',
+          borderRadius: '12px',
+          color: '#000',
+          fontSize: '1.2rem',
+          fontWeight: '900',
+          cursor: 'pointer',
+          boxShadow: '0 6px 0 #195219, 0 10px 20px rgba(0,0,0,0.5)',
+          transition: 'all 0.1s ease',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }}
+        onMouseDown={(e) => {
+          e.currentTarget.style.transform = 'translateY(4px)';
+          e.currentTarget.style.boxShadow = '0 2px 0 #195219, 0 4px 10px rgba(0,0,0,0.5)';
+        }}
+        onMouseUp={(e) => {
+          e.currentTarget.style.transform = 'translateY(0)';
+          e.currentTarget.style.boxShadow = '0 6px 0 #195219, 0 10px 20px rgba(0,0,0,0.5)';
+        }}
+      >
+        قول يارب وبلش ... 🚀
+      </button>
+    </div>
+  </div>
+)}
 
       {/* لوحة السكور العلوية الماينكرافتية */}
       <div className="minecraft-card" style={{
