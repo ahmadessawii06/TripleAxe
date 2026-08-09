@@ -8,27 +8,27 @@ import { playSound } from './utils/audio';
 const blockOptions = [
   {
     id: 'diamond',
-    label: 'Diamond',
+    label: 'دايموند',
     image: 'https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.19/assets/minecraft/textures/block/diamond_block.png'
   },
   {
     id: 'emerald',
-    label: 'Emerald',
+    label: 'ايميرالد',
     image: 'https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.19/assets/minecraft/textures/block/emerald_block.png'
   },
   {
     id: 'gold',
-    label: 'Gold',
+    label: 'جولد',
     image: 'https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.19/assets/minecraft/textures/block/gold_block.png'
   },
   {
     id: 'redstone',
-    label: 'Redstone',
+    label: 'ريدستون',
     image: 'https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.19/assets/minecraft/textures/block/redstone_block.png'
   },
   {
     id: 'netherite',
-    label: 'Netherite',
+    label: 'نذرايت',
     image: 'https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.19/assets/minecraft/textures/block/netherite_block.png'
   }
 ];
