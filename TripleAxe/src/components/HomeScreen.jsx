@@ -152,6 +152,9 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
         </div>
       </div>
 
+<button className="minecraft-btn" onClick={() => onSelectMode('crafting')} style={{ backgroundColor: '#55ff55', color: '#000' }}>
+  🛠️ تحدي الكرافتينج
+</button>
 
       {/* =========================
           عنوان الألعاب
