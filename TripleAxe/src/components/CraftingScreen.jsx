@@ -865,28 +865,90 @@ export function CraftingScreen({ onBack, onAddPoint, playerOneName, playerTwoNam
       </div>
 
       {/* الوصفة المطلوبة */}
-      <div style={{ textAlign: 'center', marginBottom: '14px' }}>
-        <div style={{ color: '#aaa', fontSize: '0.8rem', marginBottom: '6px' }}>اصنع:</div>
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px' }}>
-          <img src={recipe.result} alt={recipe.name} style={{ width: '48px', height: '48px', imageRendering: 'pixelated', filter: 'drop-shadow(0 3px 5px rgba(0,0,0,.6))' }} />
-          <span style={{ color: '#ffaa00', fontWeight: '900', fontSize: '1.1rem' }}>{recipe.name}</span>
-        </div>
-        <button
-          onClick={() => setShowHint((h) => !h)}
-          style={{ marginTop: '8px', background: '#222', color: '#55ffff', border: '1px solid #333', borderRadius: '8px', padding: '4px 12px', cursor: 'pointer', fontSize: '0.75rem' }}
+ <div
+  style={{
+    textAlign: 'center',
+    marginBottom: '16px',
+    background: 'rgba(20, 20, 20, 0.6)',
+    padding: '16px',
+    borderRadius: '16px',
+    border: '1px solid rgba(255, 255, 255, 0.08)',
+    backdropFilter: 'blur(8px)',
+  }}
+>
+  {/* صورة العنصر فقط (بحجم أكبر) */}
+  <div
+    style={{
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      background: 'rgba(0, 0, 0, 0.4)',
+      padding: '12px',
+      borderRadius: '24px',
+      border: '1px solid rgba(255, 170, 0, 0.3)',
+      boxShadow: '0 4px 15px rgba(0, 0, 0, 0.4)',
+    }}
+  >
+    <img
+      src={recipe.result}
+      alt={recipe.name}
+      style={{
+        width: '96px',
+        height: '96px',
+        imageRendering: 'pixelated',
+        filter: 'drop-shadow(0 0 12px rgba(255, 170, 0, 0.6))',
+      }}
+    />
+  </div>
+
+  {/* شبكة التصنيع (Crafting Grid) */}
+  {showHint && (
+    <div
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(3, 1fr)',
+        gap: '6px',
+        width: '136px',
+        margin: '14px auto 0',
+        padding: '8px',
+        background: '#0d0d0d',
+        borderRadius: '12px',
+        border: '2px solid #2a2a2a',
+        boxShadow: 'inset 0 2px 6px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.5)',
+      }}
+    >
+      {recipe.pattern.map((r, i) => (
+        <div
+          key={i}
+          style={{
+            width: '38px',
+            height: '38px',
+            background: r ? 'rgba(255, 255, 255, 0.03)' : '#171717',
+            border: '1px solid rgba(255, 255, 255, 0.08)',
+            borderRadius: '8px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            transition: 'transform 0.15s ease',
+          }}
         >
-          {showHint ? '🙈 إخفاء التلميح' : '💡 تلميح'}
-        </button>
-        {showHint && (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '4px', width: '120px', margin: '10px auto 0' }}>
-            {recipe.pattern.map((r, i) => (
-              <div key={i} style={{ width: '36px', height: '36px', background: '#141414', border: '1px solid #333', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                {r ? <img src={RESOURCES[r].image} alt="" style={{ width: '28px', height: '28px', imageRendering: 'pixelated', opacity: 0.85 }} /> : null}
-              </div>
-            ))}
-          </div>
-        )}
-      </div>
+          {r && (
+            <img
+              src={RESOURCES[r].image}
+              alt={RESOURCES[r].name || ''}
+              style={{
+                width: '28px',
+                height: '28px',
+                imageRendering: 'pixelated',
+                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.5))',
+              }}
+            />
+          )}
+        </div>
+      ))}
+    </div>
+  )}
+</div>
 
       {/* شبكة الصنع 3x3 */}
       <div style={{
