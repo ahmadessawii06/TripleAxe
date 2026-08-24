@@ -6,45 +6,45 @@ const ASSETS = 'https://raw.githubusercontent.com/InventivetalentDev/minecraft-a
 // الموارد القابلة للسحب
 const RESOURCES = {
   // ===== المواد الأساسية =====
-  wood:        { id: 'wood', label: 'خشب', image: `${ASSETS}/block/oak_planks.png` },
-  stick:       { id: 'stick', label: 'عصا', image: `${ASSETS}/item/stick.png` },
-  stone:       { id: 'stone', label: 'حجر', image: `${ASSETS}/block/stone.png` },
+  wood: { id: 'wood', label: 'خشب', image: `${ASSETS}/block/oak_planks.png` },
+  stick: { id: 'stick', label: 'عصا', image: `${ASSETS}/item/stick.png` },
+  stone: { id: 'stone', label: 'حجر', image: `${ASSETS}/block/stone.png` },
   cobblestone: { id: 'cobblestone', label: 'حصى', image: `${ASSETS}/block/cobblestone.png` },
-  iron:        { id: 'iron', label: 'حديد', image: `${ASSETS}/item/iron_ingot.png` },
-  gold:        { id: 'gold', label: 'ذهب', image: `${ASSETS}/item/gold_ingot.png` },
-  diamond:     { id: 'diamond', label: 'دايموند', image: `${ASSETS}/item/diamond.png` },
-  netherite:   { id: 'netherite', label: 'نيثريت', image: `${ASSETS}/item/netherite_ingot.png` },
-  emerald:     { id: 'emerald', label: 'زمرّد', image: `${ASSETS}/item/emerald.png` },
-  lapis:       { id: 'lapis', label: 'لازورد', image: `${ASSETS}/item/lapis_lazuli.png` },
-  redstone:    { id: 'redstone', label: 'ريدستون', image: `${ASSETS}/item/redstone.png` },
-  coal:        { id: 'coal', label: 'فحم', image: `${ASSETS}/item/coal.png` },
-  quartz:      { id: 'quartz', label: 'كوارتز', image: `${ASSETS}/item/quartz.png` },
-  copper:      { id: 'copper', label: 'نحاس', image: `${ASSETS}/item/copper_ingot.png` },
-  amethyst:    { id: 'amethyst', label: 'جمشت', image: `${ASSETS}/item/amethyst_shard.png` },
+  iron: { id: 'iron', label: 'حديد', image: `${ASSETS}/item/iron_ingot.png` },
+  gold: { id: 'gold', label: 'ذهب', image: `${ASSETS}/item/gold_ingot.png` },
+  diamond: { id: 'diamond', label: 'دايموند', image: `${ASSETS}/item/diamond.png` },
+  netherite: { id: 'netherite', label: 'نيثريت', image: `${ASSETS}/item/netherite_ingot.png` },
+  emerald: { id: 'emerald', label: 'زمرّد', image: `${ASSETS}/item/emerald.png` },
+  lapis: { id: 'lapis', label: 'لازورد', image: `${ASSETS}/item/lapis_lazuli.png` },
+  redstone: { id: 'redstone', label: 'ريدستون', image: `${ASSETS}/item/redstone.png` },
+  coal: { id: 'coal', label: 'فحم', image: `${ASSETS}/item/coal.png` },
+  quartz: { id: 'quartz', label: 'كوارتز', image: `${ASSETS}/item/quartz.png` },
+  copper: { id: 'copper', label: 'نحاس', image: `${ASSETS}/item/copper_ingot.png` },
+  amethyst: { id: 'amethyst', label: 'جمشت', image: `${ASSETS}/item/amethyst_shard.png` },
 
   // ===== الكتل =====
-  dirt:        { id: 'dirt', label: 'تراب', image: `${ASSETS}/block/dirt.png` },
-  grass:       { id: 'grass', label: 'عشب', image: `${ASSETS}/block/grass_block.png` },
-  sand:        { id: 'sand', label: 'رمل', image: `${ASSETS}/block/sand.png` },
-  gravel:      { id: 'gravel', label: 'حصى صغير', image: `${ASSETS}/block/gravel.png` },
-  clay:        { id: 'clay', label: 'طين', image: `${ASSETS}/item/clay_ball.png` },
-  brick:       { id: 'brick', label: 'طوب', image: `${ASSETS}/item/brick.png` },
-  netherrack:  { id: 'netherrack', label: 'نتيراك', image: `${ASSETS}/block/netherrack.png` },
-  end_stone:   { id: 'end_stone', label: 'حجر النهاية', image: `${ASSETS}/block/end_stone.png` },
-  obsidian:    { id: 'obsidian', label: 'أبسيديان', image: `${ASSETS}/block/obsidian.png` },
-  deepslate:   { id: 'deepslate', label: 'سليت عميق', image: `${ASSETS}/block/deepslate.png` },
+  dirt: { id: 'dirt', label: 'تراب', image: `${ASSETS}/block/dirt.png` },
+  grass: { id: 'grass', label: 'عشب', image: `${ASSETS}/block/grass_block.png` },
+  sand: { id: 'sand', label: 'رمل', image: `${ASSETS}/block/sand.png` },
+  gravel: { id: 'gravel', label: 'حصى صغير', image: `${ASSETS}/block/gravel.png` },
+  clay: { id: 'clay', label: 'طين', image: `${ASSETS}/item/clay_ball.png` },
+  brick: { id: 'brick', label: 'طوب', image: `${ASSETS}/item/brick.png` },
+  netherrack: { id: 'netherrack', label: 'نتيراك', image: `${ASSETS}/block/netherrack.png` },
+  end_stone: { id: 'end_stone', label: 'حجر النهاية', image: `${ASSETS}/block/end_stone.png` },
+  obsidian: { id: 'obsidian', label: 'أبسيديان', image: `${ASSETS}/block/obsidian.png` },
+  deepslate: { id: 'deepslate', label: 'سليت عميق', image: `${ASSETS}/block/deepslate.png` },
 
   // ===== المواد الخاصة =====
-  leather:     { id: 'leather', label: 'جلد', image: `${ASSETS}/item/leather.png` },
-  feather:     { id: 'feather', label: 'ريشة', image: `${ASSETS}/item/feather.png` },
-  string:      { id: 'string', label: 'خيط', image: `${ASSETS}/item/string.png` },
-  bone:        { id: 'bone', label: 'عظم', image: `${ASSETS}/item/bone.png` },
-  slime:       { id: 'slime', label: 'سلايم', image: `${ASSETS}/item/slime_ball.png` },
-  blaze:       { id: 'blaze', label: 'بلايز', image: `${ASSETS}/item/blaze_rod.png` },
-  ghast:       { id: 'ghast', label: 'دمعة غاست', image: `${ASSETS}/item/ghast_tear.png` },
-  spider_eye:  { id: 'spider_eye', label: 'عين عنكبوت', image: `${ASSETS}/item/spider_eye.png` },
-  gunpowder:   { id: 'gunpowder', label: 'بارود', image: `${ASSETS}/item/gunpowder.png` },
-  magma:       { id: 'magma', label: 'كريم ماغما', image: `${ASSETS}/item/magma_cream.png` },
+  leather: { id: 'leather', label: 'جلد', image: `${ASSETS}/item/leather.png` },
+  feather: { id: 'feather', label: 'ريشة', image: `${ASSETS}/item/feather.png` },
+  string: { id: 'string', label: 'خيط', image: `${ASSETS}/item/string.png` },
+  bone: { id: 'bone', label: 'عظم', image: `${ASSETS}/item/bone.png` },
+  slime: { id: 'slime', label: 'سلايم', image: `${ASSETS}/item/slime_ball.png` },
+  blaze: { id: 'blaze', label: 'بلايز', image: `${ASSETS}/item/blaze_rod.png` },
+  ghast: { id: 'ghast', label: 'دمعة غاست', image: `${ASSETS}/item/ghast_tear.png` },
+  spider_eye: { id: 'spider_eye', label: 'عين عنكبوت', image: `${ASSETS}/item/spider_eye.png` },
+  gunpowder: { id: 'gunpowder', label: 'بارود', image: `${ASSETS}/item/gunpowder.png` },
+  magma: { id: 'magma', label: 'كريم ماغما', image: `${ASSETS}/item/magma_cream.png` },
   ender_pearl: { id: 'ender_pearl', label: 'لؤلؤة إندر', image: `${ASSETS}/item/ender_pearl.png` },
   eye_of_ender: { id: 'eye_of_ender', label: 'عين إندر', image: `${ASSETS}/item/ender_eye.png` },
   chorus_fruit: { id: 'chorus_fruit', label: 'فاكهة كورس', image: `${ASSETS}/item/chorus_fruit.png` },
@@ -55,31 +55,31 @@ const RESOURCES = {
   heart_of_sea: { id: 'heart_of_sea', label: 'قلب البحر', image: `${ASSETS}/item/heart_of_the_sea.png` },
   phantom_membrane: { id: 'phantom_membrane', label: 'غشاء فانتوم', image: `${ASSETS}/item/phantom_membrane.png` },
   shulker_shell: { id: 'shulker_shell', label: 'صدفة شولكر', image: `${ASSETS}/item/shulker_shell.png` },
-  echo_shard:  { id: 'echo_shard', label: 'شظية صدى', image: `${ASSETS}/item/echo_shard.png` },
+  echo_shard: { id: 'echo_shard', label: 'شظية صدى', image: `${ASSETS}/item/echo_shard.png` },
   nether_star: { id: 'nether_star', label: 'نجم النيذر', image: `${ASSETS}/item/nether_star.png` },
 
   // ===== الطعام =====
-  wheat:       { id: 'wheat', label: 'قمح', image: `${ASSETS}/item/wheat.png` },
-  bread:       { id: 'bread', label: 'خبز', image: `${ASSETS}/item/bread.png` },
-  apple:       { id: 'apple', label: 'تفاح', image: `${ASSETS}/item/apple.png` },
-  carrot:      { id: 'carrot', label: 'جزر', image: `${ASSETS}/item/carrot.png` },
-  potato:      { id: 'potato', label: 'بطاطس', image: `${ASSETS}/item/potato.png` },
-  beetroot:    { id: 'beetroot', label: 'شمندر', image: `${ASSETS}/item/beetroot.png` },
-  sugar:       { id: 'sugar', label: 'سكر', image: `${ASSETS}/item/sugar.png` },
-  egg:         { id: 'egg', label: 'بيضة', image: `${ASSETS}/item/egg.png` },
+  wheat: { id: 'wheat', label: 'قمح', image: `${ASSETS}/item/wheat.png` },
+  bread: { id: 'bread', label: 'خبز', image: `${ASSETS}/item/bread.png` },
+  apple: { id: 'apple', label: 'تفاح', image: `${ASSETS}/item/apple.png` },
+  carrot: { id: 'carrot', label: 'جزر', image: `${ASSETS}/item/carrot.png` },
+  potato: { id: 'potato', label: 'بطاطس', image: `${ASSETS}/item/potato.png` },
+  beetroot: { id: 'beetroot', label: 'شمندر', image: `${ASSETS}/item/beetroot.png` },
+  sugar: { id: 'sugar', label: 'سكر', image: `${ASSETS}/item/sugar.png` },
+  egg: { id: 'egg', label: 'بيضة', image: `${ASSETS}/item/egg.png` },
 
   // ===== أخرى =====
-  book:        { id: 'book', label: 'كتاب', image: `${ASSETS}/item/book.png` },
-  paper:       { id: 'paper', label: 'ورق', image: `${ASSETS}/item/paper.png` },
-  glass:       { id: 'glass', label: 'زجاج', image: `${ASSETS}/block/glass.png` },
-  wool:        { id: 'wool', label: 'صوف', image: `${ASSETS}/block/white_wool.png` },
-  dye:         { id: 'dye', label: 'صبغة', image: `${ASSETS}/item/lapis_lazuli.png` },
+  book: { id: 'book', label: 'كتاب', image: `${ASSETS}/item/book.png` },
+  paper: { id: 'paper', label: 'ورق', image: `${ASSETS}/item/paper.png` },
+  glass: { id: 'glass', label: 'زجاج', image: `${ASSETS}/block/glass.png` },
+  wool: { id: 'wool', label: 'صوف', image: `${ASSETS}/block/white_wool.png` },
+  dye: { id: 'dye', label: 'صبغة', image: `${ASSETS}/item/lapis_lazuli.png` },
   brick_block: { id: 'brick_block', label: 'طوب أحمر', image: `${ASSETS}/block/bricks.png` },
-  iron_block:  { id: 'iron_block', label: 'كتلة حديد', image: `${ASSETS}/block/iron_block.png` },
-  gold_block:  { id: 'gold_block', label: 'كتلة ذهب', image: `${ASSETS}/block/gold_block.png` },
+  iron_block: { id: 'iron_block', label: 'كتلة حديد', image: `${ASSETS}/block/iron_block.png` },
+  gold_block: { id: 'gold_block', label: 'كتلة ذهب', image: `${ASSETS}/block/gold_block.png` },
   diamond_block: { id: 'diamond_block', label: 'كتلة دايموند', image: `${ASSETS}/block/diamond_block.png` },
-  glowstone:   { id: 'glowstone', label: 'حجر مضيء', image: `${ASSETS}/block/glowstone.png` },
-  sculk:       { id: 'sculk', label: 'سكالك', image: `${ASSETS}/block/sculk.png` },
+  glowstone: { id: 'glowstone', label: 'حجر مضيء', image: `${ASSETS}/block/glowstone.png` },
+  sculk: { id: 'sculk', label: 'سكالك', image: `${ASSETS}/block/sculk.png` },
 };
 // الوصفات (النمط 3x3: صف-عمود). null = خانة فارغة
 const RECIPES = [
@@ -654,6 +654,8 @@ const RECIPES = [
   },
 ];
 
+
+
 // انعكاس أفقي (يسمح بصنع الوصفة يمين أو يسار)
 const mirror = (p) => [p[2], p[1], p[0], p[5], p[4], p[3], p[8], p[7], p[6]];
 const matches = (grid, pattern) => grid.every((cell, i) => cell === pattern[i]);
@@ -670,6 +672,7 @@ export function CraftingScreen({ onBack, onAddPoint, playerOneName, playerTwoNam
   const [celebrating, setCelebrating] = useState(null);
   const [showHint, setShowHint] = useState(false);
   const justDropped = useRef(false);
+  const progressPercent = ((recipeIndex + 1) / RECIPES.length) * 100;
 
   const recipe = RECIPES[recipeIndex];
   const currentName = turn === 'player1' ? playerOneName : playerTwoName;
@@ -775,27 +778,90 @@ export function CraftingScreen({ onBack, onAddPoint, playerOneName, playerTwoNam
       `}</style>
 
       {/* الهيدر */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '14px' }}>
-        <button className="minecraft-btn" onClick={onBack} style={{ backgroundColor: '#444', color: '#fff', padding: '4px 10px', fontSize: '0.75rem' }}>
-          🏠 رجوع
+
+
+
+      {/* شريط تقدم الأسئلة التفاعلي */}
+      <div style={{
+        width: '100%',
+        height: '6px',
+        backgroundColor: '#222',
+        borderRadius: '3px',
+        overflow: 'hidden',
+        marginBottom: '12px',
+        border: '1px solid #444'
+      }}>
+        <div style={{
+          width: `${progressPercent}%`,
+          height: '100%',
+          backgroundColor: '#55ff55',
+          transition: 'width 0.3s ease-in-out',
+          boxShadow: '0 0 8px #55ff55'
+        }} />
+      </div>
+      {/* الهيدر وزر العودة */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '14px' }}>
+        <h2 style={{ color: '#ffff', margin: 0, fontSize: '1.1rem' }}>
+          تحدي الكرافتينج 🪨        </h2>
+        <button
+          className="minecraft-btn"
+          onClick={onBack}
+          style={{ backgroundColor: '#ff5555', color: '#fff', padding: '4px 10px', fontSize: '0.8rem' }}
+        >
+          🏠 القائمة
         </button>
-        <h2 style={{ margin: 0, color: '#55ff55', fontSize: '1.15rem', fontWeight: '900', textShadow: '0 2px 4px rgba(0,0,0,.5)' }}>
-          🛠️ تحدي الكرافتينج
-        </h2>
-        <span style={{ color: '#888', fontSize: '0.75rem' }}>
-          {recipeIndex + 1} / {RECIPES.length}
-        </span>
       </div>
 
-      {/* مؤشر الدور */}
+
+      {/* مؤشر الدور - تصميم عصري */}
       <div style={{
-        display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '8px',
-        background: '#1a1a1a', border: `2px solid ${turnColor}`, borderRadius: '12px',
-        padding: '8px 12px', marginBottom: '14px', boxShadow: `0 0 12px ${turnColor}33`
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        background: '#1a1a1a',
+        border: `2px solid ${turnColor}`,
+        borderRadius: '14px',
+        padding: '8px 16px',
+        marginBottom: '14px',
+        boxShadow: `0 0 15px ${turnColor}22`,
+        position: 'relative',
       }}>
-        <img src={currentBlock.image} alt="" style={{ width: '30px', height: '30px', imageRendering: 'pixelated' }} />
-        <span style={{ color: '#fff', fontWeight: 'bold' }}>دور:</span>
-        <span style={{ color: turnColor, fontWeight: '900' }}>{currentName}</span>
+        {/* النقاط المتحركة */}
+         <img
+          src={currentBlock.image}
+          alt=""
+          style={{
+            width: '34px',
+            height: '34px',
+            imageRendering: 'pixelated',
+            border: `2px solid ${turnColor}`,
+            borderRadius: '8px',
+            padding: '2px',
+            background: '#0a0a0a',
+            boxShadow: `0 0 12px ${turnColor}44`
+          }}
+        />
+
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px' }}>
+        
+          <span style={{ color: '#fff', fontWeight: 'bold', fontSize: '0.85rem' }}>يلعب الأن:</span>
+          <span style={{ color: turnColor, fontWeight: '900', fontSize: '1rem' }}>{currentName}</span>
+        </div>
+
+        <img
+          src={currentBlock.image}
+          alt=""
+          style={{
+            width: '34px',
+            height: '34px',
+            imageRendering: 'pixelated',
+            border: `2px solid ${turnColor}`,
+            borderRadius: '8px',
+            padding: '2px',
+            background: '#0a0a0a',
+            boxShadow: `0 0 12px ${turnColor}44`
+          }}
+        />
       </div>
 
       {/* الوصفة المطلوبة */}
