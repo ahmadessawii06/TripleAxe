@@ -33,7 +33,9 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
       title: 'الكرافتينج 🛠️',
       desc: 'طاولة الصنع 3x3',
       badge: 'تفاعلي',
-      color: '#FFFFFF'
+      color: '#FFFFFF',
+      backgroundImage: 'url(/images/HomeImages/4.png)',
+      sound: '/sounds/crafting.ogg'
     },
     {
       id: 'sound-quiz',
@@ -152,9 +154,7 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
         </div>
       </div>
 
-<button className="minecraft-btn" onClick={() => onSelectMode('crafting')} style={{ backgroundColor: '#55ff55', color: '#000' }}>
-  🛠️ تحدي الكرافتينج
-</button>
+
 
       {/* =========================
           عنوان الألعاب
@@ -188,6 +188,10 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
         }}
       >
 
+
+{/* <button className="minecraft-btn" onClick={() => onSelectMode('crafting')} style={{ backgroundColor: '#55ff55', color: '#000' }}>
+  🛠️ تحدي الكرافتينج
+</button> */}
         {gameModes.map((mode) => (
 
           <div
