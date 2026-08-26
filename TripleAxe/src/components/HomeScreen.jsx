@@ -78,8 +78,22 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
   };
 
   return (
-    <div>
-
+    <div style={{ position: 'relative', width: '100%', height: '100vh' }}>
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        style={{
+          position: 'absolute',
+          width: '100%',
+          height: '150%',
+          objectFit: 'cover',
+          zIndex: 0
+        }}
+      >
+        <source src="/vids/main.mp4" type="video/mp4" />
+      </video>
       {/* =========================
           الهيدر
       ========================== */}
@@ -189,7 +203,7 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
       >
 
 
-{/* <button className="minecraft-btn" onClick={() => onSelectMode('crafting')} style={{ backgroundColor: '#55ff55', color: '#000' }}>
+        {/* <button className="minecraft-btn" onClick={() => onSelectMode('crafting')} style={{ backgroundColor: '#55ff55', color: '#000' }}>
   🛠️ تحدي الكرافتينج
 </button> */}
         {gameModes.map((mode) => (
