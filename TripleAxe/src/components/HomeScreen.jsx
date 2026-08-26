@@ -100,7 +100,9 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
       <div
         className="home-hero-panel"
         style={{
-          position: 'relative'
+          position: 'relative',
+      
+          
         }}
       >
         {/* زر الإعدادات */}
@@ -116,26 +118,18 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
               'linear-gradient(135deg, #151515, #080808)',
 
             border: '1px solid rgba(255,255,255,0.15)',
-
             color: '#e0e0e0',
-
             padding: '8px 12px',
-
             borderRadius: '10px',
-
             fontSize: '0.85rem',
-
             fontWeight: '700',
-
             cursor: 'pointer',
-
             boxShadow:
               '0 4px 15px rgba(0,0,0,0.4)',
-
             transition:
               'all 0.2s ease',
-
             zIndex: 10
+            
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform =
@@ -169,20 +163,6 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
       </div>
 
 
-
-      {/* =========================
-          عنوان الألعاب
-      ========================== */}
-      <div
-        className="minecraft-card home-question-card"
-        style={{
-          marginBottom: '15px'
-        }}
-      >
-        <h2 className="home-question-title">
-          شوو بدنا نلعب اليوم؟ 🤔
-        </h2>
-      </div>
 
 
       {/* =========================
