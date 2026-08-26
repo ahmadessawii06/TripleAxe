@@ -77,6 +77,11 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
     onSelectMode(mode.id);
   };
 
+  const playClickSound = () => {
+    const audio = new Audio('/sounds/click.ogg');
+    audio.volume = 0.5;
+    audio.play();
+  };
   return (
     <div style={{ position: 'relative', width: '100%', height: '100vh' }}>
       <video
@@ -101,19 +106,21 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
         className="home-hero-panel"
         style={{
           position: 'relative',
-      
-          
+
+
         }}
       >
         {/* زر الإعدادات */}
         <button
           type="button"
-          onClick={onOpenSettings}
+          onClick={() => {
+            playClickSound();
+            onOpenSettings();
+          }}
           style={{
             position: 'absolute',
             top: '12px',
             left: '12px',
-
             background:
               'linear-gradient(135deg, #151515, #080808)',
 
@@ -129,7 +136,7 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
             transition:
               'all 0.2s ease',
             zIndex: 10
-            
+
           }}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform =
@@ -182,10 +189,6 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
         }}
       >
 
-
-        {/* <button className="minecraft-btn" onClick={() => onSelectMode('crafting')} style={{ backgroundColor: '#55ff55', color: '#000' }}>
-  🛠️ تحدي الكرافتينج
-</button> */}
         {gameModes.map((mode) => (
 
           <div
@@ -198,26 +201,14 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
 
             style={{
               position: 'relative',
-
               height: '210px',
-
               minHeight: '210px',
-
               overflow: 'hidden',
-
               cursor: 'pointer',
-
-              border:
-                `3px solid ${mode.color}`,
-
+              border: `3px solid ${mode.color}`,
               borderRadius: '12px',
-
-              backgroundImage:
-                mode.backgroundImage || 'none',
-
-              backgroundSize: 'cover',
-
-              backgroundPosition: 'center',
+              backgroundImage: mode.backgroundImage || 'none',
+              backgroundSize: 'cover', backgroundPosition: 'center',
 
               backgroundRepeat: 'no-repeat',
 
