@@ -51,10 +51,11 @@ body {
   font-weight: 900;
   border: 3px solid #000;
   box-shadow: inset -4px -4px 0px rgba(0, 0, 0, 0.5), inset 4px 4px 0px rgba(255, 255, 255, 0.35);
-  border-radius: 4px;
+ 
   cursor: pointer;
   touch-action: manipulation;
   transition: transform 0.05s, filter 0.1s;
+  
 }
 
 .minecraft-btn:active {
@@ -66,7 +67,7 @@ body {
   background-color: var(--mc-card-bg);
   border: 3px solid #000;
   box-shadow: inset -3px -3px 0px rgba(0, 0, 0, 0.6), inset 3px 3px 0px rgba(255, 255, 255, 0.15), 0 5px 0 #000;
-  border-radius: 6px;
+
 }
 
 /* مربع النتيجة الخلفية فوقها الرقم */
@@ -203,7 +204,7 @@ body {
   align-items: center;
   min-height: 112px;
   background: linear-gradient(145deg, #262626 0%, #1b1b1b 100%);
-  border-top: 4px solid transparent;
+border: red 10px sold;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }

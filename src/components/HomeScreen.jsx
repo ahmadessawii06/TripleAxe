@@ -206,7 +206,6 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
               overflow: 'hidden',
               cursor: 'pointer',
               border: `3px solid ${mode.color}`,
-              borderRadius: '12px',
               backgroundImage: mode.backgroundImage || 'none',
               backgroundSize: 'cover', backgroundPosition: 'center',
 
@@ -225,21 +224,23 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
             }}
 
             onMouseEnter={(e) => {
+  e.currentTarget.style.transform =
+    'translateY(-6px) scale(1.03)';
 
-              e.currentTarget.style.transform =
-                'translateY(-7px) scale(1.025)';
+  e.currentTarget.style.boxShadow = `
+    0 0 0 1px rgba(255,255,255,0.18) inset,
+    0 18px 45px rgba(0,0,0,0.4),
+    0 0 30px ${mode.color}66,
+    0 0 80px ${mode.color}22
+  `;
+}}
 
-              e.currentTarget.style.boxShadow = `
-                0 0 0 1px rgba(255,255,255,0.15) inset,
-                0 14px 35px rgba(0,0,0,0.75),
-                0 0 35px ${mode.color}99,
-                0 0 70px ${mode.color}44
-              `;
+onMouseLeave={(e) => {
+  e.currentTarget.style.transform =
+    'translateY(0) scale(1)';
 
-              e.currentTarget.style.backgroundSize =
-                '110%';
-            }}
-
+  e.currentTarget.style.boxShadow = '';
+}}
             onMouseLeave={(e) => {
 
               e.currentTarget.style.transform =
