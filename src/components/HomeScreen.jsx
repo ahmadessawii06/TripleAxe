@@ -26,7 +26,8 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
       title: 'صح أم خطأ ⏱️',
       desc: 'تحدي الإجابة السريعة',
       badge: 'سرعة',
-      color: '#FF9800'
+      color: '#FF9800',
+      backgroundImage: 'url(/images/HomeImages/100.png)',
     },
     {
       id: 'crafting',
@@ -51,21 +52,24 @@ export function HomeScreen({ onSelectMode, onOpenSettings }) {
       title: 'الذاكرة 🃏',
       desc: 'مطابقة البلوكات',
       badge: 'تركيز',
-      color: '#3F51B5'
+      color: '#3F51B5',
+      backgroundImage: 'url(/images/HomeImages/100.png)',
     },
     {
       id: 'zoom-quiz',
       title: 'خمن الصورة 🔍',
       desc: 'الزوم المستحيل',
       badge: 'ملاحظة',
-      color: '#00BCD4'
+      color: '#00BCD4',
+      backgroundImage: 'url(/images/HomeImages/100.png)',
     },
     {
       id: 'auction-quiz',
       title: 'أقرب رقم 🔢',
       desc: 'تخمين الأرقام والقلوب',
       badge: 'تخمين',
-      color: '#FF5722'
+      color: '#FF5722',
+      backgroundImage: 'url(/images/HomeImages/100.png)',
     }
   ];
 
